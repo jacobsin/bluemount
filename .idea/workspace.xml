@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4574e9f-d056-4099-8be5-1a7cad4b737c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/bluemount/RunJetty.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/bluemount/model/Project.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/bluemount/resource/ProjectsResource.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/bluemount/restlet/GuiceFinder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/bluemount/restlet/GuiceRouter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/bluemount/restlet/RestletModule.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/bluemount/service/ProjectService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/bluemount/service/ProjectServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/bluemount/servlet/RestletServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/bluemount/servlet/ServletConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/bluemount/servlet/ServletModule.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/bluemount/resource/ProjectsResourceTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/bluemount/ServiceMain.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/bluemount/resource/FirstServerResource.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/bluemount/resource/FirstServerResourceTest.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/artifacts.rb" afterPath="$PROJECT_DIR$/artifacts.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bluemount.iml" afterPath="$PROJECT_DIR$/bluemount.iml" />
     </list>
     <ignored path="bluemount.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -131,7 +111,7 @@
       <file leaf-file-name="ProjectsResourceTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/bluemount/resource/ProjectsResourceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="9" selection-start="526" selection-end="526" vertical-scroll-proportion="0.36842105">
+            <state line="30" column="32" selection-start="740" selection-end="740" vertical-scroll-proportion="0.5263158">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -617,7 +597,7 @@
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="first unit test" />
+    <option name="LAST_COMMIT_MESSAGE" value="jetty, guice, jackson and mockito" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -632,6 +612,7 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="with content this time" />
     <MESSAGE value="first unit test" />
+    <MESSAGE value="jetty, guice, jackson and mockito" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -671,7 +652,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/bluemount/resource/ProjectsResourceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="9" selection-start="526" selection-end="526" vertical-scroll-proportion="0.36842105">
+        <state line="30" column="32" selection-start="740" selection-end="740" vertical-scroll-proportion="0.5263158">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
