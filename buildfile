@@ -1,9 +1,7 @@
+require "artifacts"
+
 VERSION_NUMBER = "1.0.0"
 GROUP = "bluemount"
-
-repositories.remote << "http://repo2.maven.org/maven2/"
-repositories.remote << "http://www.ibiblio.org/maven2/"
-repositories.local = "./.m2"
 
 #options.proxy.http = 'http://myproxy:8080'
 
@@ -12,9 +10,11 @@ define "bluemount" do
 
   project.version = VERSION_NUMBER
   project.group = GROUP
-  compile.with
+
+  compile.with SHIPPED
   resources
-  test.compile.with 
+  test.compile.with SHIPPED, REFERENCE
+
   package(:jar)
 
 end
