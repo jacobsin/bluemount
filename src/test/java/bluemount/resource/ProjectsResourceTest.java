@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.mockito.Mockito.*;
@@ -29,7 +29,7 @@ public class ProjectsResourceTest {
 
     @Test
     public void testList() throws Exception {
-        List<Project> expected = Arrays.asList();
+        List<Project> expected = new ArrayList<Project>();
         when(projectService.list()).thenReturn(expected);
 
         List<Project> actual = projectsResource.list();
