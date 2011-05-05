@@ -1,0 +1,34 @@
+require 'artifacts'
+require 'cucumber/rake/task'
+
+VERSION_NUMBER = "1.0.0"
+GROUP = "bluemount"
+
+#options.proxy.http = 'http://myproxy:8080'
+
+desc 'The Bluemount project'
+define 'bluemount' do
+
+  project.version = VERSION_NUMBER
+  project.group = GROUP
+  project.no_ipr
+
+  compile.with SHIPPED
+  resources
+
+  test.compile.with SHIPPED, REFERENCE
+
+  package(:jar)
+
+  run.using :main => "bluemount.RunJetty"
+
+  iml.local_repository_env_override = nil
+end
+
+task :cucumber do
+  Cucumber::Rake::Task.new do |t|
+    t.cucumber_opts = %w{--format pretty}
+  end
+end
+
+

@@ -1,7 +1,7 @@
-repositories.remote << "http://repo2.maven.org/maven2/"
-repositories.remote << "http://mirrors.ibiblio.org/pub/mirrors/maven2/"
-repositories.remote << "http://maven.restlet.org/"
-repositories.local = "./m2"
+repositories.remote << 'http://repo2.maven.org/maven2/'
+repositories.remote << 'http://mirrors.ibiblio.org/pub/mirrors/maven2/'
+repositories.remote << 'http://maven.restlet.org/'
+repositories.local = './m2'
 
 SERVLET='javax.servlet:servlet-api:jar:2.5'
 JETTY='org.eclipse.jetty.aggregate:jetty-webapp:jar:7.3.0.v20110203'
