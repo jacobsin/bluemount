@@ -8,27 +8,23 @@ GROUP = "bluemount"
 
 desc 'The Bluemount project'
 define 'bluemount' do
-
   project.version = VERSION_NUMBER
   project.group = GROUP
   project.no_ipr
 
   compile.with SHIPPED
   resources
-
   test.compile.with SHIPPED, REFERENCE
+  test.enhance { Rake::Task['features'].execute }
 
   package(:jar)
 
   run.using :main => "bluemount.RunJetty"
-
   iml.local_repository_env_override = nil
 end
 
-task :cucumber do
-  Cucumber::Rake::Task.new do |t|
-    t.cucumber_opts = %w{--format pretty}
-  end
+Cucumber::Rake::Task.new(:features) do |t|
+  t.cucumber_opts = %w{--format pretty --expand --color}
 end
 
 

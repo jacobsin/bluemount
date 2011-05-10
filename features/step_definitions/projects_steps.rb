@@ -1,12 +1,14 @@
-Given /^project a exists$/ do
-  pending
+require 'rspec/expectations'
+
+Given /^project ([A-z]*) exists$/ do |title|
+  @projects ||= []
+  @projects << {'title'=>title}
 end
-When /^project b exists$/ do
-  pending
-end
+
 When /^I list projects$/ do
-  pending
+  @result = @projects
 end
+
 Then /^it should give me:$/ do |table|
-  pending
+  table.hashes.should == @projects
 end
