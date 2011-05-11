@@ -2,11 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4574e9f-d056-4099-8be5-1a7cad4b737c" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build.yaml" afterPath="$PROJECT_DIR$/build.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/features/support/env.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/bluemount/repository/InMemoryProjectRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/bluemount/repository/ProjectRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/artifacts.rb" afterPath="$PROJECT_DIR$/artifacts.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bluemount.iml" afterPath="$PROJECT_DIR$/bluemount.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.yml" afterPath="$PROJECT_DIR$/build.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/step_definitions/projects_steps.rb" afterPath="$PROJECT_DIR$/features/step_definitions/projects_steps.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rakefile" afterPath="$PROJECT_DIR$/rakefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/bluemount/RunJetty.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/RunJetty.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/bluemount/model/Project.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/model/Project.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/bluemount/resource/ProjectsResource.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/resource/ProjectsResource.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/bluemount/restlet/GuiceRouter.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/restlet/GuiceRouter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/bluemount/restlet/RestletModule.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/restlet/RestletModule.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/bluemount/service/ProjectService.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/service/ProjectService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/bluemount/service/ProjectServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/service/ProjectServiceImpl.java" />
     </list>
     <ignored path="bluemount.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,7 +40,7 @@
   </component>
   <component name="DebuggerManager">
     <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/bluemount/service/ProjectServiceImpl.java" line="10" class="bluemount.service.ProjectServiceImpl" package="bluemount.service">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/bluemount/service/ProjectServiceImpl.java" line="23" class="bluemount.service.ProjectServiceImpl" package="bluemount.service">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -81,39 +94,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="artifacts.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/artifacts.rb">
+      <file leaf-file-name="RestletModule.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/restlet/RestletModule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="39" selection-start="687" selection-end="687" vertical-scroll-proportion="0.0">
+            <state line="12" column="38" selection-start="431" selection-end="431" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProjectsResourceTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/bluemount/resource/ProjectsResourceTest.java">
+      <file leaf-file-name="ServletConfig.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/servlet/ServletConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="0" selection-start="1057" selection-end="1057" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RunJetty.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/RunJetty.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="475" selection-end="475" vertical-scroll-proportion="0.0">
+            <state line="7" column="13" selection-start="211" selection-end="211" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="projects_steps.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/features/step_definitions/projects_steps.rb">
+      <file leaf-file-name="RestletServlet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/servlet/RestletServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="28" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0">
+            <state line="29" column="41" selection-start="923" selection-end="923" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GuiceRouter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/restlet/GuiceRouter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="0" selection-start="296" selection-end="296" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServletModule.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/servlet/ServletModule.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="13" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -122,34 +142,45 @@
       <file leaf-file-name="projects.feature" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/features/projects.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="25" selection-start="146" selection-end="146" vertical-scroll-proportion="0.0">
+            <state line="6" column="26" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rakefile" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/rakefile">
+      <file leaf-file-name="ProjectRepository.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/repository/ProjectRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="95" selection-end="95" vertical-scroll-proportion="0.11295181">
+            <state line="6" column="24" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InMemoryProjectRepository.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/repository/InMemoryProjectRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="1" selection-start="451" selection-end="451" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.yml">
+      <file leaf-file-name="ProjectService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/service/ProjectService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="34" selection-start="675" selection-end="675" vertical-scroll-proportion="0.0">
+            <state line="6" column="26" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Project.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/model/Project.java">
+      <file leaf-file-name="ProjectServiceImpl.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/service/ProjectServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="25" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0">
+            <state line="13" column="32" selection-start="388" selection-end="388" vertical-scroll-proportion="0.25753012">
               <folding />
             </state>
           </provider>
@@ -169,22 +200,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/bluemount.iml" />
-        <option value="$PROJECT_DIR$/src/main/java/bluemount/restlet/RestletModule.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bluemount/model/Project.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bluemount/resource/ProjectsResource.java" />
-        <option value="$PROJECT_DIR$/src/test/java/bluemount/resource/ProjectsResourceTest.java" />
-        <option value="$PROJECT_DIR$/src/test/features/projects/list_projects.feature" />
-        <option value="$PROJECT_DIR$/src/test/features/list_projects.feature" />
-        <option value="$PROJECT_DIR$/src/test/features/projects.feature" />
-        <option value="$PROJECT_DIR$/src/test/features/step_definitions/projects_steps.rb" />
-        <option value="$PROJECT_DIR$/buildfile" />
-        <option value="$PROJECT_DIR$/artifacts.rb" />
-        <option value="$PROJECT_DIR$/build.yaml" />
         <option value="$PROJECT_DIR$/build.yml" />
-        <option value="$PROJECT_DIR$/features/step_definitions/projects_steps.rb" />
+        <option value="$PROJECT_DIR$/artifacts.rb" />
+        <option value="$PROJECT_DIR$/src/main/java/bluemount/RunJetty.java" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/features/support/env.rb" />
         <option value="$PROJECT_DIR$/features/projects.feature" />
-        <option value="$PROJECT_DIR$/rakefile" />
+        <option value="$PROJECT_DIR$/src/main/java/bluemount/resource/ProjectsResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bluemount/service/ProjectService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bluemount/model/Project.java" />
+        <option value="$PROJECT_DIR$/features/step_definitions/projects_steps.rb" />
+        <option value="$PROJECT_DIR$/src/main/java/bluemount/repository/ProjectsRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bluemount/repository/InMemoryProjectsRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bluemount/repository/ProjectRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bluemount/service/ProjectServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bluemount/restlet/RestletModule.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bluemount/restlet/GuiceRouter.java" />
       </list>
     </option>
   </component>
@@ -209,13 +240,10 @@
           <State>
             <id>Inspections</id>
           </State>
-          <State>
-            <id>Ruby</id>
-          </State>
         </expanded-state>
         <selected-state>
           <State>
-            <id>RubyResolve</id>
+            <id>Internationalization issues</id>
           </State>
         </selected-state>
       </profile-state>
@@ -247,7 +275,9 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -255,10 +285,6 @@
               <option name="myItemId" value="bluemount" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -298,26 +324,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="step_definitions" />
+              <option name="myItemId" value="support" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Favorites" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="editing.templates" />
+    <property name="options.lastSelected" value="Errors" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
@@ -325,79 +349,20 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="bluemount.resource" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="bluemount.repository" />
       <recent name="bluemount.service" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber.projects">
-    <configuration default="false" name="projects" type="CucumberRunConfigurationType" factoryName="Cucumber" temporary="true">
-      <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
-      <module name="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="true" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="Ruby SDK 1.8.7-p174" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs />
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/features/projects.feature" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TAGS_FILTER" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_ARGS" VALUE="--color -r features" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="VERBOSE_OPTION" VALUE="false" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
-      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="ProjectsResourceTest.testList" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false">
-        <pattern>
-          <option name="PATTERN" value="bluemount.resource.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="bluemount" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="bluemount.resource" />
-      <option name="MAIN_CLASS_NAME" value="bluemount.resource.ProjectsResourceTest" />
-      <option name="METHOD_NAME" value="testList" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Cucumber.Acceptance Tests">
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -494,7 +459,7 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="Ruby SDK 1.8.7-p174" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <envs />
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
       <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" track_test_folders="true" runner="rcov">
         <COVERAGE_PATTERN ENABLED="true">
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
@@ -548,7 +513,7 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="false" name="RunJetty" type="Application" factoryName="Application">
+    <configuration default="false" name="Run Jetty" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="bluemount.*" />
@@ -558,7 +523,7 @@
       <option name="MAIN_CLASS_NAME" value="bluemount.RunJetty" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/src/main/" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
@@ -576,10 +541,67 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="Acceptance Tests" type="CucumberRunConfigurationType" factoryName="Cucumber">
+      <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
+      <module name="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$/" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="true" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="Ruby SDK 1.8.7-p174" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RESTCLIENT_LOG" value="stdout" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="ALL_IN_FOLDER" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="$PROJECT_DIR$/features" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/features/projects.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TAGS_FILTER" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_ARGS" VALUE="--color -r features" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="VERBOSE_OPTION" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unit Tests" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="bluemount" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Application.RunJetty" />
-      <item index="1" class="java.lang.String" itemvalue="Cucumber.projects" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ProjectsResourceTest.testList" />
+      <item index="0" class="java.lang.String" itemvalue="Application.Run Jetty" />
+      <item index="1" class="java.lang.String" itemvalue="Cucumber.Acceptance Tests" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.Unit Tests" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -632,12 +654,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="68" y="118" width="1357" height="805" extended-state="0" />
+    <frame x="112" y="79" width="1357" height="805" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959327" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959327" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Buildr" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25076452" sideWeight="0.67040676" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.67040676" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6044881" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -646,11 +667,12 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959327" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2584098" sideWeight="0.37307152" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21024466" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2584098" sideWeight="0.6227209" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2584098" sideWeight="0.4908836" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3772791" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5091164" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959327" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -671,7 +693,7 @@
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="cucumber and iml generation" />
+    <option name="LAST_COMMIT_MESSAGE" value="passing the first cucumber&#10;simplified cucumber rake tasks and enhanced into test" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -689,6 +711,7 @@
     <MESSAGE value="jetty, guice, jackson and mockito" />
     <MESSAGE value="fixed unsafe ops" />
     <MESSAGE value="cucumber and iml generation" />
+    <MESSAGE value="passing the first cucumber&#10;simplified cucumber rake tasks and enhanced into test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -698,81 +721,116 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/m2/junit/junit/4.7/junit-4.7.jar!/org/junit/Assert.class">
+    <entry file="file://$PROJECT_DIR$/features/support/env.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="27" selection-start="6507" selection-end="6507" vertical-scroll-proportion="2.6102235">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/bluemount/resource/ProjectsResourceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="1057" selection-end="1057" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/resource/ProjectsResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="439" selection-end="439" vertical-scroll-proportion="0.26506025">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bluemount.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="16" selection-start="4387" selection-end="4387" vertical-scroll-proportion="3.391705">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/model/Project.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="25" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/RunJetty.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="475" selection-end="475" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/artifacts.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="39" selection-start="687" selection-end="687" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="34" selection-start="675" selection-end="675" vertical-scroll-proportion="0.0">
+        <state line="2" column="19" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/features/step_definitions/projects_steps.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="28" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0">
+        <state line="10" column="32" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/RunJetty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="22" selection-start="788" selection-end="788" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/resource/ProjectsResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="28" selection-start="520" selection-end="520" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/m2/com/google/inject/guice/3.0/guice-3.0-sources.jar!/com/google/inject/Singleton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="18" selection-start="1107" selection-end="1107" vertical-scroll-proportion="0.82981926">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/model/Project.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="40" selection-start="176" selection-end="176" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/servlet/RestletServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="41" selection-start="923" selection-end="923" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/restlet/GuiceRouter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="296" selection-end="296" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/servlet/ServletConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="13" selection-start="211" selection-end="211" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/servlet/ServletModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="13" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/features/projects.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="25" selection-start="146" selection-end="146" vertical-scroll-proportion="0.0">
+        <state line="6" column="26" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rakefile">
+    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/restlet/RestletModule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="95" selection-end="95" vertical-scroll-proportion="0.11295181">
+        <state line="12" column="38" selection-start="431" selection-end="431" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/repository/ProjectRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="24" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/repository/InMemoryProjectRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="1" selection-start="451" selection-end="451" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/service/ProjectService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="26" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/service/ProjectServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="32" selection-start="388" selection-end="388" vertical-scroll-proportion="0.25753012">
           <folding />
         </state>
       </provider>
@@ -806,7 +864,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
-          <last-edited>[gem] cucumber (v0.10.2, /Library/Ruby/Gems/1.8/gems/cucumber-0.10.2)</last-edited>
+          <last-edited>[gem] buildr (v1.4.5, /Library/Ruby/Gems/1.8/gems/buildr-1.4.5)</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -818,7 +876,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>Ruby SDK 1.8.7-p174</last-edited>
+          <last-edited>1.6</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -835,7 +893,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -843,7 +900,6 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Unnamed</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -855,7 +911,13 @@
       </state>
       <state key="ScopeChooserConfigurable.UI">
         <settings>
-          <splitter-proportions />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
         </settings>
       </state>
     </states>

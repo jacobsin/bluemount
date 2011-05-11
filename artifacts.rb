@@ -3,6 +3,7 @@ repositories.remote << 'http://mirrors.ibiblio.org/pub/mirrors/maven2/'
 repositories.remote << 'http://maven.restlet.org/'
 repositories.local = './m2'
 
+COMMONS = struct(:io=>'commons-io:commons-io:jar:2.0.1')
 SERVLET = :servlet
 JETTY = 'org.eclipse.jetty.aggregate:jetty-webapp:jar:7.3.0.v20110203'
 RESTLET = transitive(group('org.restlet', 'org.restlet.ext.servlet', 'org.restlet.ext.jackson', :under=>'org.restlet.jee', :version=>'2.1-M4'))
@@ -10,5 +11,5 @@ GUICE = transitive(['com.google.inject:guice:jar:3.0', 'com.google.inject.extens
 
 MOCKITO = transitive('org.mockito:mockito-core:jar:1.8.5')
 
-SHIPPED = [SERVLET,JETTY,RESTLET,GUICE]
+SHIPPED = [SERVLET,JETTY,RESTLET,GUICE,COMMONS.io]
 REFERENCE = [MOCKITO]

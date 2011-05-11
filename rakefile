@@ -6,11 +6,12 @@ GROUP = "bluemount"
 
 #options.proxy.http = 'http://myproxy:8080'
 
-desc 'The Bluemount project'
 define 'bluemount' do
   project.version = VERSION_NUMBER
   project.group = GROUP
   project.no_ipr
+
+  iml.local_repository_env_override = nil
 
   compile.with SHIPPED
   resources
@@ -19,12 +20,19 @@ define 'bluemount' do
 
   package(:jar)
 
-  run.using :main => "bluemount.RunJetty"
-  iml.local_repository_env_override = nil
+  run.using :main => 'bluemount.RunJetty'
+  run.enhance { cd 'src' }
 end
 
 Cucumber::Rake::Task.new(:features) do |t|
   t.cucumber_opts = %w{--format pretty --expand --color}
 end
 
-
+namespace :jetty1 do
+  task :start do
+    puts 'starting'
+  end
+  task :stop do
+    puts 'stopping'
+  end
+end

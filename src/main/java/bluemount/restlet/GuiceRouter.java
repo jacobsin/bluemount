@@ -9,7 +9,6 @@ import org.restlet.routing.Router;
 public abstract class GuiceRouter extends Router {
     private final Injector injector;
 
-
     public GuiceRouter(Injector injector, Context context) {
         super(context);
         this.injector = injector;
