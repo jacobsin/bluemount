@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4574e9f-d056-4099-8be5-1a7cad4b737c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/features/support/env.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/bluemount/repository/InMemoryProjectRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/bluemount/repository/ProjectRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/artifacts.rb" afterPath="$PROJECT_DIR$/artifacts.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bluemount.iml" afterPath="$PROJECT_DIR$/bluemount.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.yml" afterPath="$PROJECT_DIR$/build.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/step_definitions/projects_steps.rb" afterPath="$PROJECT_DIR$/features/step_definitions/projects_steps.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rakefile" afterPath="$PROJECT_DIR$/rakefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/bluemount/RunJetty.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/RunJetty.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/bluemount/model/Project.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/model/Project.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/bluemount/resource/ProjectsResource.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/resource/ProjectsResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/bluemount/restlet/GuiceRouter.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/restlet/GuiceRouter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/bluemount/restlet/RestletModule.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/restlet/RestletModule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/bluemount/service/ProjectService.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/service/ProjectService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/bluemount/service/ProjectServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/service/ProjectServiceImpl.java" />
     </list>
     <ignored path="bluemount.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -180,7 +163,7 @@
       <file leaf-file-name="ProjectServiceImpl.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/service/ProjectServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="32" selection-start="388" selection-end="388" vertical-scroll-proportion="0.25753012">
+            <state line="23" column="31" selection-start="610" selection-end="610" vertical-scroll-proportion="0.5436747">
               <folding />
             </state>
           </provider>
@@ -693,7 +676,7 @@
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="passing the first cucumber&#10;simplified cucumber rake tasks and enhanced into test" />
+    <option name="LAST_COMMIT_MESSAGE" value="passing the first cucumber for real with restclient" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -712,6 +695,7 @@
     <MESSAGE value="fixed unsafe ops" />
     <MESSAGE value="cucumber and iml generation" />
     <MESSAGE value="passing the first cucumber&#10;simplified cucumber rake tasks and enhanced into test" />
+    <MESSAGE value="passing the first cucumber for real with restclient" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -830,7 +814,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/service/ProjectServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="32" selection-start="388" selection-end="388" vertical-scroll-proportion="0.25753012">
+        <state line="23" column="31" selection-start="610" selection-end="610" vertical-scroll-proportion="0.5436747">
           <folding />
         </state>
       </provider>
