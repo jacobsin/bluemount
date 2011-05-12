@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a4574e9f-d056-4099-8be5-1a7cad4b737c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/artifacts.rb" afterPath="$PROJECT_DIR$/artifacts.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bluemount.iml" afterPath="$PROJECT_DIR$/bluemount.iml" />
     </list>
     <ignored path="bluemount.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,7 +82,7 @@
       <file leaf-file-name="artifacts.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/artifacts.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="74" selection-start="577" selection-end="577" vertical-scroll-proportion="0.29185867">
+            <state line="7" column="24" selection-start="380" selection-end="380" vertical-scroll-proportion="0.20430107">
               <folding />
             </state>
           </provider>
@@ -194,11 +196,11 @@
         <option value="$PROJECT_DIR$/features/step_definitions/projects_steps.rb" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/bluemount/servlet/ServletModule.java" />
-        <option value="$PROJECT_DIR$/artifacts.rb" />
         <option value="$PROJECT_DIR$/src/main/java/bluemount/servlet/ServletConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/bluemount/restlet/RestletModule.java" />
         <option value="$PROJECT_DIR$/src/main/java/bluemount/service/ProjectServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/bluemount/repository/InMemoryProjectRepository.java" />
+        <option value="$PROJECT_DIR$/artifacts.rb" />
       </list>
     </option>
   </component>
@@ -394,20 +396,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bluemount" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bluemount" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="m2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -917,7 +905,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/artifacts.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="74" selection-start="577" selection-end="577" vertical-scroll-proportion="0.29185867">
+        <state line="7" column="24" selection-start="380" selection-end="380" vertical-scroll-proportion="0.20430107">
           <folding />
         </state>
       </provider>
