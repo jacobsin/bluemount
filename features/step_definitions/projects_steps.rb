@@ -8,5 +8,7 @@ When /^I list projects$/ do
 end
 
 Then /^it should give me:$/ do |table|
-  @result.should == table.hashes
+  table.hashes.each do |h|
+    @result.should include h
+  end
 end
