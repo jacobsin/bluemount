@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4574e9f-d056-4099-8be5-1a7cad4b737c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/artifacts.rb" afterPath="$PROJECT_DIR$/artifacts.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bluemount.iml" afterPath="$PROJECT_DIR$/bluemount.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/bluemount/repository/InMemoryProjectRepository.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/repository/InMemoryProjectRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/bluemount/restlet/RestletModule.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/restlet/RestletModule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/bluemount/service/ProjectServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/service/ProjectServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/bluemount/servlet/ServletConfig.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/servlet/ServletConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/bluemount/servlet/ServletModule.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/servlet/ServletModule.java" />
     </list>
     <ignored path="bluemount.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,7 +80,7 @@
       <file leaf-file-name="artifacts.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/artifacts.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="18" selection-start="431" selection-end="431" vertical-scroll-proportion="0.23348695">
+            <state line="10" column="74" selection-start="577" selection-end="577" vertical-scroll-proportion="0.29185867">
               <folding />
             </state>
           </provider>
@@ -97,7 +89,7 @@
       <file leaf-file-name="RestletModule.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/restlet/RestletModule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="96" selection-start="251" selection-end="404" vertical-scroll-proportion="0.0">
+            <state line="9" column="0" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -784,7 +776,7 @@
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="made cucumber passes on multiple run" />
+    <option name="LAST_COMMIT_MESSAGE" value="added guice-auto-injection for classpath scanning for autobinding DI" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -806,6 +798,7 @@
     <MESSAGE value="passing the first cucumber for real with restclient" />
     <MESSAGE value="made cucumber then step check passes on multiple run" />
     <MESSAGE value="made cucumber passes on multiple run" />
+    <MESSAGE value="added guice-auto-injection for classpath scanning for autobinding DI" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -894,7 +887,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/restlet/RestletModule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="96" selection-start="251" selection-end="404" vertical-scroll-proportion="0.0">
+        <state line="9" column="0" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -924,7 +917,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/artifacts.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="18" selection-start="431" selection-end="431" vertical-scroll-proportion="0.23348695">
+        <state line="10" column="74" selection-start="577" selection-end="577" vertical-scroll-proportion="0.29185867">
           <folding />
         </state>
       </provider>
