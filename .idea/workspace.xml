@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a4574e9f-d056-4099-8be5-1a7cad4b737c" name="Default" comment="made cucumber then step check passes on multiple run">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+    <list default="true" id="a4574e9f-d056-4099-8be5-1a7cad4b737c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/artifacts.rb" afterPath="$PROJECT_DIR$/artifacts.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bluemount.iml" afterPath="$PROJECT_DIR$/bluemount.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/bluemount/repository/InMemoryProjectRepository.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/repository/InMemoryProjectRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/bluemount/restlet/RestletModule.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/restlet/RestletModule.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/bluemount/service/ProjectServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/service/ProjectServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/bluemount/servlet/ServletConfig.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/servlet/ServletConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/bluemount/servlet/ServletModule.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/servlet/ServletModule.java" />
     </list>
     <ignored path="bluemount.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,7 +31,7 @@
   </component>
   <component name="DebuggerManager">
     <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/bluemount/service/ProjectServiceImpl.java" line="23" class="bluemount.service.ProjectServiceImpl" package="bluemount.service">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/bluemount/service/ProjectServiceImpl.java" line="25" class="bluemount.service.ProjectServiceImpl" package="bluemount.service">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -78,19 +85,93 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="projects_steps.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/features/step_definitions/projects_steps.rb">
+      <file leaf-file-name="artifacts.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/artifacts.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="423" selection-end="423" vertical-scroll-proportion="0.39642325">
+            <state line="8" column="18" selection-start="431" selection-end="431" vertical-scroll-proportion="0.23348695">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="RestletModule.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/restlet/RestletModule.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
+            <state line="10" column="96" selection-start="251" selection-end="404" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProjectServiceImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/service/ProjectServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="0" selection-start="472" selection-end="472" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProjectRepository.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/repository/ProjectRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="17" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InMemoryProjectRepository.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/repository/InMemoryProjectRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="44" selection-start="408" selection-end="408" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GuiceModule.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/m2/de/devsurf/injection/guice/de.devsurf.injection.guice.core/0.8.7/de.devsurf.injection.guice.core-0.8.7-sources.jar!/de/devsurf/injection/guice/annotations/GuiceModule.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="47" selection-start="684" selection-end="684" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServletModule.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/servlet/ServletModule.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="40" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServletConfig.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/servlet/ServletConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="101" selection-start="595" selection-end="595" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PackageFilter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/m2/de/devsurf/injection/guice/de.devsurf.injection.guice.core/0.8.7/de.devsurf.injection.guice.core-0.8.7-sources.jar!/de/devsurf/injection/guice/scanner/PackageFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="32" selection-start="1449" selection-end="1449" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ASMClasspathScanner.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/m2/de/devsurf/injection/guice/scanner/de.devsurf.injection.guice.scanner.asm/0.8.7/de.devsurf.injection.guice.scanner.asm-0.8.7-sources.jar!/de/devsurf/injection/guice/scanner/asm/ASMClasspathScanner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="63" column="13" selection-start="2098" selection-end="2117" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -110,10 +191,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/artifacts.rb" />
-        <option value="$PROJECT_DIR$/src/main/java/bluemount/RunJetty.java" />
-        <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/features/support/env.rb" />
         <option value="$PROJECT_DIR$/features/projects.feature" />
         <option value="$PROJECT_DIR$/src/main/java/bluemount/resource/ProjectsResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/bluemount/service/ProjectService.java" />
@@ -121,11 +198,15 @@
         <option value="$PROJECT_DIR$/src/main/java/bluemount/repository/ProjectsRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/bluemount/repository/InMemoryProjectsRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/bluemount/repository/ProjectRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bluemount/service/ProjectServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bluemount/restlet/RestletModule.java" />
         <option value="$PROJECT_DIR$/src/main/java/bluemount/restlet/GuiceRouter.java" />
         <option value="$PROJECT_DIR$/features/step_definitions/projects_steps.rb" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/java/bluemount/servlet/ServletModule.java" />
+        <option value="$PROJECT_DIR$/artifacts.rb" />
+        <option value="$PROJECT_DIR$/src/main/java/bluemount/servlet/ServletConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bluemount/restlet/RestletModule.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bluemount/service/ProjectServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bluemount/repository/InMemoryProjectRepository.java" />
       </list>
     </option>
   </component>
@@ -216,7 +297,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="features" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -230,11 +311,111 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="features" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="support" />
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluemount" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluemount" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluemount" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluemount" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluemount" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluemount" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="servlet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluemount" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluemount" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluemount" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluemount" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluemount" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="m2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -564,11 +745,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="112" y="64" width="1357" height="805" extended-state="0" />
+    <frame x="104" y="39" width="1357" height="805" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959327" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959327" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Buildr" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25076452" sideWeight="0.67040676" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.67040676" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6044881" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -577,12 +759,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959327" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2584098" sideWeight="0.37307152" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21024466" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2584098" sideWeight="0.4908836" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18654434" sideWeight="0.4908836" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5091164" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959327" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -603,7 +784,7 @@
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="made cucumber then step check passes on multiple run" />
+    <option name="LAST_COMMIT_MESSAGE" value="made cucumber passes on multiple run" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -624,6 +805,7 @@
     <MESSAGE value="passing the first cucumber&#10;simplified cucumber rake tasks and enhanced into test" />
     <MESSAGE value="passing the first cucumber for real with restclient" />
     <MESSAGE value="made cucumber then step check passes on multiple run" />
+    <MESSAGE value="made cucumber passes on multiple run" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -633,116 +815,116 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/RunJetty.java">
+    <entry file="file://$PROJECT_DIR$/features/step_definitions/projects_steps.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="22" selection-start="788" selection-end="788" vertical-scroll-proportion="0.0">
+        <state line="14" column="0" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/resource/ProjectsResource.java">
+    <entry file="file://$PROJECT_DIR$/m2/de/devsurf/injection/guice/extensions/0.8.7/extensions-0.8.7.pom">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="28" selection-start="520" selection-end="520" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/m2/com/google/inject/guice/3.0/guice-3.0-sources.jar!/com/google/inject/Singleton.java">
+    <entry file="file://$PROJECT_DIR$/m2/de/devsurf/injection/guice/de.devsurf.injection.guice.core/0.8.7/de.devsurf.injection.guice.core-0.8.7.pom">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="18" selection-start="1107" selection-end="1107" vertical-scroll-proportion="0.82981926">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/model/Project.java">
+    <entry file="file://$PROJECT_DIR$/m2/de/devsurf/injection/guice/scanner/0.8.7/scanner-0.8.7.pom">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="40" selection-start="176" selection-end="176" vertical-scroll-proportion="0.0">
+        <state line="0" column="79" selection-start="79" selection-end="79" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/service/ProjectServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/m2/de/devsurf/injection/guice/scanner/de.devsurf.injection.guice.scanner.reflections/0.8.7/de.devsurf.injection.guice.scanner.reflections-0.8.7.pom">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="628" selection-end="628" vertical-scroll-proportion="0.6295181">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/service/ProjectService.java">
+    <entry file="jar://$PROJECT_DIR$/m2/de/devsurf/injection/guice/scanner/de.devsurf.injection.guice.scanner.reflections/0.8.7/de.devsurf.injection.guice.scanner.reflections-0.8.7.jar!/de/devsurf/injection/guice/scanner/reflections/ReflectionsScanner.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="26" selection-start="111" selection-end="111" vertical-scroll-proportion="0.11445783">
+        <state line="5" column="13" selection-start="184" selection-end="202" vertical-scroll-proportion="-3.8">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/repository/InMemoryProjectRepository.java">
+    <entry file="jar://$PROJECT_DIR$/m2/de/devsurf/injection/guice/scanner/de.devsurf.injection.guice.scanner.asm/0.8.7/de.devsurf.injection.guice.scanner.asm-0.8.7-sources.jar!/de/devsurf/injection/guice/scanner/asm/ASMClasspathScanner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="1" selection-start="451" selection-end="451" vertical-scroll-proportion="0.48644578">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/repository/ProjectRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="24" selection-start="112" selection-end="112" vertical-scroll-proportion="0.16666667">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/features/projects.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="26" selection-start="173" selection-end="173" vertical-scroll-proportion="0.16666667">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/servlet/ServletModule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="41" selection-end="41" vertical-scroll-proportion="0.055555556">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/restlet/GuiceRouter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="296" selection-end="296" vertical-scroll-proportion="0.19444445">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/servlet/RestletServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="41" selection-start="923" selection-end="923" vertical-scroll-proportion="0.44444445">
+        <state line="63" column="13" selection-start="2098" selection-end="2117" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/servlet/ServletConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="211" selection-end="211" vertical-scroll-proportion="0.11111111">
+        <state line="16" column="101" selection-start="595" selection-end="595" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/m2/de/devsurf/injection/guice/de.devsurf.injection.guice.core/0.8.7/de.devsurf.injection.guice.core-0.8.7-sources.jar!/de/devsurf/injection/guice/scanner/PackageFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="32" selection-start="1449" selection-end="1449" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/m2/de/devsurf/injection/guice/de.devsurf.injection.guice.core/0.8.7/de.devsurf.injection.guice.core-0.8.7-sources.jar!/de/devsurf/injection/guice/annotations/GuiceModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="47" selection-start="684" selection-end="684" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/servlet/ServletModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="40" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/restlet/RestletModule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="38" selection-start="431" selection-end="431" vertical-scroll-proportion="0.19444445">
+        <state line="10" column="96" selection-start="251" selection-end="404" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/service/ProjectServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
+        <state line="17" column="0" selection-start="472" selection-end="472" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/features/step_definitions/projects_steps.rb">
+    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/repository/ProjectRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="423" selection-end="423" vertical-scroll-proportion="0.39642325">
+        <state line="6" column="17" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/repository/InMemoryProjectRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="44" selection-start="408" selection-end="408" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/artifacts.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="18" selection-start="431" selection-end="431" vertical-scroll-proportion="0.23348695">
           <folding />
         </state>
       </provider>
