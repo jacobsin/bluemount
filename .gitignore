@@ -2,3 +2,4 @@ target/
 reports/
 m2/
 *.iws
+.idea/dictionaries/
