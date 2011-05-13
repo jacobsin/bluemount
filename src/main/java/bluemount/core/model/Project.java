@@ -1,4 +1,4 @@
-package bluemount.model;
+package bluemount.core.model;
 
 public class Project {
     private String title;

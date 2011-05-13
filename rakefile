@@ -20,7 +20,7 @@ define 'bluemount' do
 
   package(:jar)
 
-  run.using :main => 'bluemount.RunJetty'
+  run.using :main => 'bluemount.web.RunJetty'
   run.enhance { cd 'src' }
 end
 

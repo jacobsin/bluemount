@@ -1,8 +1,11 @@
-package bluemount;
+package bluemount.web;
 
+import ch.qos.logback.access.jetty.v7.RequestLogImpl;
 import org.apache.commons.io.filefilter.DirectoryFileFilter;
 import org.apache.commons.io.filefilter.NameFileFilter;
 import org.eclipse.jetty.server.Server;
+import org.eclipse.jetty.server.handler.HandlerList;
+import org.eclipse.jetty.server.handler.RequestLogHandler;
 import org.eclipse.jetty.webapp.WebAppContext;
 
 import java.io.File;
@@ -14,17 +17,31 @@ public class RunJetty {
     public static void main(String[] args) throws Exception {
         Server server = new Server(3000);
 
+        HandlerList handlers = new HandlerList();
+        handlers.addHandler(requestLog());
+        handlers.addHandler(context());
+        server.setHandler(handlers);
+
+        server.start();
+        server.join();
+    }
+
+    private static WebAppContext context() throws IOException {
         WebAppContext context = new WebAppContext();
         String webapp = webapp();
         context.setDescriptor(webapp + "/WEB-INF/web.xml");
         context.setResourceBase(webapp);
         context.setContextPath("/");
         context.setParentLoaderPriority(true);
+        return context;
+    }
 
-        server.setHandler(context);
-
-        server.start();
-        server.join();
+    private static RequestLogHandler requestLog() {
+        RequestLogHandler handler = new RequestLogHandler();
+        RequestLogImpl log = new RequestLogImpl();
+        handler.setRequestLog(log);
+        log.setFileName(System.getProperty("logback.access.config.file", "logback-access.xml"));
+        return handler;
     }
 
     private static String webapp() throws IOException {

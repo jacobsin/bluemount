@@ -1,4 +1,4 @@
-package bluemount.restlet;
+package bluemount.web.restlet;
 
 import com.google.inject.AbstractModule;
 import de.devsurf.injection.guice.annotations.GuiceModule;

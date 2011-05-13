@@ -1,6 +1,6 @@
-package bluemount.service;
+package bluemount.core.service;
 
-import bluemount.model.Project;
+import bluemount.core.model.Project;
 
 import java.util.List;
 

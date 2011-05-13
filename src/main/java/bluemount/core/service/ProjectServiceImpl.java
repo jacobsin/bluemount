@@ -1,7 +1,7 @@
-package bluemount.service;
+package bluemount.core.service;
 
-import bluemount.model.Project;
-import bluemount.repository.ProjectRepository;
+import bluemount.core.model.Project;
+import bluemount.core.repository.ProjectRepository;
 import com.google.inject.Inject;
 import de.devsurf.injection.guice.annotations.Bind;
 

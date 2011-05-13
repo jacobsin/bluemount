@@ -1,4 +1,4 @@
-package bluemount.restlet;
+package bluemount.web.restlet;
 
 import com.google.inject.Injector;
 import org.restlet.Context;

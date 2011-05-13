@@ -10,7 +10,7 @@
     </filter-mapping>
 
     <listener>
-        <listener-class>bluemount.servlet.ServletConfig</listener-class>
+        <listener-class>bluemount.web.servlet.ServletConfig</listener-class>
     </listener>
 
 </web-app>

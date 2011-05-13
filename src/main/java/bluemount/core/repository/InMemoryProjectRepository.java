@@ -1,6 +1,6 @@
-package bluemount.repository;
+package bluemount.core.repository;
 
-import bluemount.model.Project;
+import bluemount.core.model.Project;
 import de.devsurf.injection.guice.annotations.Bind;
 
 import javax.inject.Singleton;

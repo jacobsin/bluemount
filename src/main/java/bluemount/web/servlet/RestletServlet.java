@@ -1,7 +1,7 @@
-package bluemount.servlet;
+package bluemount.web.servlet;
 
-import bluemount.resource.ProjectsResource;
-import bluemount.restlet.GuiceRouter;
+import bluemount.web.resource.ProjectsResource;
+import bluemount.web.restlet.GuiceRouter;
 import com.google.inject.Inject;
 import com.google.inject.Injector;
 import com.google.inject.Singleton;

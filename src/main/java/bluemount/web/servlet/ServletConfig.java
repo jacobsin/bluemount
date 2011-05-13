@@ -1,4 +1,4 @@
-package bluemount.servlet;
+package bluemount.web.servlet;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;

@@ -1,4 +1,4 @@
-package bluemount.servlet;
+package bluemount.web.servlet;
 
 import de.devsurf.injection.guice.annotations.GuiceModule;
 

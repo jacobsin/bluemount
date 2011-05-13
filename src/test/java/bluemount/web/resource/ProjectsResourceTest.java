@@ -1,7 +1,7 @@
-package bluemount.resource;
+package bluemount.web.resource;
 
-import bluemount.model.Project;
-import bluemount.service.ProjectService;
+import bluemount.core.model.Project;
+import bluemount.core.service.ProjectService;
 import org.hamcrest.Matchers;
 import org.junit.Assert;
 import org.junit.Before;

@@ -1,5 +1,6 @@
 target/
 reports/
+logs/
 m2/
 *.iws
 .idea/dictionaries/

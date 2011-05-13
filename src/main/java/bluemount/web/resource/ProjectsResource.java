@@ -1,7 +1,7 @@
-package bluemount.resource;
+package bluemount.web.resource;
 
-import bluemount.model.Project;
-import bluemount.service.ProjectService;
+import bluemount.core.model.Project;
+import bluemount.core.service.ProjectService;
 import com.google.inject.Inject;
 import org.restlet.resource.Get;
 import org.restlet.resource.Post;
