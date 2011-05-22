@@ -13,9 +13,9 @@ define 'bluemount' do
 
   iml.local_repository_env_override = nil
 
-  compile.with SHIPPED
+  compile.into('target/java').with SHIPPED
   resources
-  test.compile.with SHIPPED, REFERENCE
+  test.compile.into('target/test/java').with SHIPPED, REFERENCE
   test.enhance { Rake::Task['features'].execute }
 
   package(:jar)
@@ -26,13 +26,4 @@ end
 
 Cucumber::Rake::Task.new(:features) do |t|
   t.cucumber_opts = %w{--format pretty --expand --color}
-end
-
-namespace :jetty1 do
-  task :start do
-    puts 'starting'
-  end
-  task :stop do
-    puts 'stopping'
-  end
 end

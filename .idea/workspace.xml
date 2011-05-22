@@ -2,31 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4574e9f-d056-4099-8be5-1a7cad4b737c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/projectCodeStyle.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/bluemount/web/RunJetty.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/logback-access.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/logging.properties" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/bluemount/RunJetty.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/bluemount/model/Project.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/core/model/Project.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/bluemount/repository/InMemoryProjectRepository.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/core/repository/InMemoryProjectRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/bluemount/repository/ProjectRepository.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/core/repository/ProjectRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/bluemount/resource/ProjectsResource.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/web/resource/ProjectsResource.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/bluemount/restlet/GuiceFinder.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/web/restlet/GuiceFinder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/bluemount/restlet/GuiceRouter.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/web/restlet/GuiceRouter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/bluemount/restlet/RestletModule.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/web/restlet/RestletModule.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/bluemount/service/ProjectService.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/core/service/ProjectService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/bluemount/service/ProjectServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/core/service/ProjectServiceImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/bluemount/servlet/RestletServlet.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/web/servlet/RestletServlet.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/bluemount/servlet/ServletConfig.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/web/servlet/ServletConfig.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/bluemount/servlet/ServletModule.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/web/servlet/ServletModule.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/bluemount/resource/ProjectsResourceTest.java" afterPath="$PROJECT_DIR$/src/test/java/bluemount/web/resource/ProjectsResourceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/features/support/lib/application.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/artifacts.rb" afterPath="$PROJECT_DIR$/artifacts.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bluemount.iml" afterPath="$PROJECT_DIR$/bluemount.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/step_definitions/projects_steps.rb" afterPath="$PROJECT_DIR$/features/step_definitions/projects_steps.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/support/env.rb" afterPath="$PROJECT_DIR$/features/support/env.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rakefile" afterPath="$PROJECT_DIR$/rakefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/bluemount/web/RunJetty.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/web/RunJetty.java" />
     </list>
     <ignored path="bluemount.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,21 +28,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <line_breakpoints>
-      <breakpoint url="jar://$PROJECT_DIR$/m2/ch/qos/logback/logback-access/0.9.27/logback-access-0.9.27-sources.jar!/ch/qos/logback/access/jetty/v7/RequestLogImpl.java" line="136" class="ch.qos.logback.access.jetty.v7.RequestLogImpl" package="ch.qos.logback.access.jetty.v7">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <breakpoint_any>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -101,19 +68,75 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="logging.properties" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/logging.properties">
+      <file leaf-file-name="application.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/features/support/lib/application.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="14" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0">
+            <state line="12" column="15" selection-start="294" selection-end="294" vertical-scroll-proportion="0.3433735">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="logback.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/logback.xml">
+      <file leaf-file-name="bluemount.iml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bluemount.iml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="37" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0">
+            <state line="16" column="15" selection-start="900" selection-end="900" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modules.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="workspace.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="940" column="18" selection-start="49695" selection-end="49695" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProjectsResourceTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/bluemount/web/resource/ProjectsResourceTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="0" selection-start="486" selection-end="486" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rakefile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rakefile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="37" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="env.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/features/support/env.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="25" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="projects_steps.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/features/step_definitions/projects_steps.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="31" selection-start="341" selection-end="341" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -122,70 +145,7 @@
       <file leaf-file-name="RunJetty.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/web/RunJetty.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="95" selection-start="1489" selection-end="1489" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logback-access.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/logback-access.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="21" selection-start="432" selection-end="432" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="access.log" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logs/access.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="5" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="projectCodeStyle.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/projectCodeStyle.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="vcs.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rakefile" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/rakefile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="28" selection-start="48" selection-end="48" vertical-scroll-proportion="-0.20180723">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RequestLogImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/m2/ch/qos/logback/logback-access/0.9.27/logback-access-0.9.27-sources.jar!/ch/qos/logback/access/jetty/v7/RequestLogImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="137" column="49" selection-start="5974" selection-end="5974" vertical-scroll-proportion="0.0">
+            <state line="37" column="30" selection-start="1097" selection-end="1097" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -205,12 +165,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/bluemount/repository/ProjectRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bluemount/restlet/GuiceRouter.java" />
-        <option value="$PROJECT_DIR$/features/step_definitions/projects_steps.rb" />
-        <option value="$PROJECT_DIR$/src/main/java/bluemount/servlet/ServletModule.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bluemount/servlet/ServletConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bluemount/restlet/RestletModule.java" />
         <option value="$PROJECT_DIR$/src/main/java/bluemount/service/ProjectServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/bluemount/repository/InMemoryProjectRepository.java" />
         <option value="$PROJECT_DIR$/src/main/resources/logback.groovy" />
@@ -218,9 +172,15 @@
         <option value="$PROJECT_DIR$/src/main/java/bluemount/RunJetty.java" />
         <option value="$PROJECT_DIR$/artifacts.rb" />
         <option value="$PROJECT_DIR$/src/main/resources/logging.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/bluemount/web/RunJetty.java" />
         <option value="$PROJECT_DIR$/src/main/resources/logback-access.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/features/step_definitions/projects_steps.rb" />
+        <option value="$PROJECT_DIR$/src/main/java/bluemount/web/RunJetty.java" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/features/support/env.rb" />
+        <option value="$PROJECT_DIR$/bluemount.iml" />
+        <option value="$PROJECT_DIR$/rakefile" />
+        <option value="$PROJECT_DIR$/features/support/lib/application.rb" />
       </list>
     </option>
   </component>
@@ -246,6 +206,11 @@
             <id>Inspections</id>
           </State>
         </expanded-state>
+        <selected-state>
+          <State>
+            <id>Android</id>
+          </State>
+        </selected-state>
       </profile-state>
     </entry>
   </component>
@@ -275,15 +240,19 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="Favorites" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="bluemount" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -296,20 +265,92 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluemount" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluemount" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluemount" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluemount" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluemount" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluemount" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluemount" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluemount" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluemount" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="features" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Groovy" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.General" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
@@ -317,9 +358,9 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -331,6 +372,34 @@
     </key>
   </component>
   <component name="RunManager" selected="Cucumber.Acceptance Tests">
+    <configuration default="true" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="true" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="Ruby SDK 1.8.7-p174" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Buildr.BeforeRunTask" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -348,8 +417,8 @@
       <module name="" />
       <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
       <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="" />
-      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="true" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="Ruby SDK 1.8.7-p174" />
       <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
       <envs />
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
@@ -389,6 +458,19 @@
       <option name="VM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Buildr.BeforeRunTask" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="RubyRemoteDebugConfigurationType" factoryName="Ruby remote debug">
+      <RUBY_REMOTE_DEBUG_CONFIG NAME="REMOTE_HOST" VALUE="localhost" />
+      <RUBY_REMOTE_DEBUG_CONFIG NAME="PORT" VALUE="1234" />
+      <RUBY_REMOTE_DEBUG_CONFIG NAME="REMOTE_ROOT" VALUE="" />
+      <RUBY_REMOTE_DEBUG_CONFIG NAME="LOCAL_ROOT" VALUE="" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -622,12 +704,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="75" y="64" width="1357" height="805" extended-state="0" />
+    <frame x="110" y="24" width="1357" height="805" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959327" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959327" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Buildr" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25076452" sideWeight="0.67040676" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.67040676" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3436185" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -636,11 +717,12 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959327" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2584098" sideWeight="0.37307152" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21024466" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16207951" sideWeight="0.6002805" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16207951" sideWeight="0.5610098" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997195" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43899018" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959327" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -661,7 +743,7 @@
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="added slf4j and logback" />
+    <option name="LAST_COMMIT_MESSAGE" value="added logback-access&#10;separate java codes into core and web tiers" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -685,6 +767,7 @@
     <MESSAGE value="made cucumber passes on multiple run" />
     <MESSAGE value="added guice-auto-injection for classpath scanning for autobinding DI" />
     <MESSAGE value="added slf4j and logback" />
+    <MESSAGE value="added logback-access&#10;separate java codes into core and web tiers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -694,116 +777,99 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/m2/de/devsurf/injection/guice/de.devsurf.injection.guice.core/0.8.7/de.devsurf.injection.guice.core-0.8.7-sources.jar!/de/devsurf/injection/guice/annotations/features/ModuleBindingFeature.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/logback.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="32" selection-start="714" selection-end="714" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="1" column="37" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/web/restlet/RestletModule.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/logback-access.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="10" column="21" selection-start="432" selection-end="432" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/core/service/ProjectServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/logs/access.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="652" selection-end="652" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="3" column="0" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/m2/org/eclipse/jetty/aggregate/jetty-webapp/7.3.0.v20110203/jetty-webapp-7.3.0.v20110203-sources.jar!/org/eclipse/jetty/server/handler/HandlerList.java">
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="34" selection-start="1160" selection-end="1160" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/m2/org/eclipse/jetty/aggregate/jetty-webapp/7.3.0.v20110203/jetty-webapp-7.3.0.v20110203-sources.jar!/org/eclipse/jetty/server/handler/HandlerCollection.java">
+    <entry file="file://$PROJECT_DIR$/.idea/projectCodeStyle.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="0" selection-start="1582" selection-end="1582" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/m2/org/eclipse/jetty/aggregate/jetty-webapp/7.3.0.v20110203/jetty-webapp-7.3.0.v20110203-sources.jar!/org/eclipse/jetty/server/handler/ContextHandlerCollection.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="13" selection-start="1961" selection-end="1961" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/m2/ch/qos/logback/logback-access/0.9.27/logback-access-0.9.27-sources.jar!/ch/qos/logback/access/jetty/v7/RequestLogImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="49" selection-start="5974" selection-end="5974" vertical-scroll-proportion="0.0">
+        <state line="2" column="5" selection-start="22" selection-end="22" vertical-scroll-proportion="0.055555556">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/web/RunJetty.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="95" selection-start="1489" selection-end="1489" vertical-scroll-proportion="0.0">
+        <state line="37" column="30" selection-start="1097" selection-end="1097" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/logging.properties">
+    <entry file="file://$PROJECT_DIR$/features/step_definitions/projects_steps.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="14" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0">
+        <state line="9" column="31" selection-start="341" selection-end="341" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/logback-access.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="21" selection-start="432" selection-end="432" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/logback.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="37" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/access.log">
+    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/bluemount.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="5" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/projectCodeStyle.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="16" column="15" selection-start="900" selection-end="900" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rakefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="28" selection-start="48" selection-end="48" vertical-scroll-proportion="-0.20180723">
+        <state line="17" column="37" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/support/env.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="25" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="940" column="18" selection-start="49695" selection-end="49695" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/bluemount/web/resource/ProjectsResourceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="486" selection-end="486" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/support/lib/application.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="15" selection-start="294" selection-end="294" vertical-scroll-proportion="0.3433735">
           <folding />
         </state>
       </provider>
@@ -837,7 +903,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
-          <last-edited>[gem] buildr (v1.4.5, /Library/Ruby/Gems/1.8/gems/buildr-1.4.5)</last-edited>
+          <last-edited>[gem] actionmailer (v1.3.6, /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionmailer-1.3.6)</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -866,7 +932,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -885,13 +950,7 @@
       </state>
       <state key="ScopeChooserConfigurable.UI">
         <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
+          <splitter-proportions />
         </settings>
       </state>
     </states>

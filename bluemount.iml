@@ -252,17 +252,6 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/m2/org/slf4j/jul-to-slf4j/1.6.1/jul-to-slf4j-1.6.1.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="jar://$MODULE_DIR$/m2/org/slf4j/jul-to-slf4j/1.6.1/jul-to-slf4j-1.6.1-sources.jar!/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
           <root url="jar://$MODULE_DIR$/m2/ch/qos/logback/logback-core/0.9.27/logback-core-0.9.27.jar!/" />
         </CLASSES>
         <JAVADOC />

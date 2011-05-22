@@ -14,16 +14,28 @@ import java.io.IOException;
 
 public class RunJetty {
 
+    private Server server;
+
     public static void main(String[] args) throws Exception {
-        Server server = new Server(3000);
+        new RunJetty(3000).start(true);
+    }
+
+    public RunJetty(int port) throws IOException {
+        server = new Server(port);
 
         HandlerList handlers = new HandlerList();
         handlers.addHandler(requestLog());
         handlers.addHandler(context());
         server.setHandler(handlers);
+    }
 
+    public void start(boolean embedded) throws Exception {
         server.start();
-        server.join();
+        if (embedded) server.join();
+    }
+
+    public void stop() throws Exception {
+        if (server.isRunning()) server.stop();
     }
 
     private static WebAppContext context() throws IOException {
