@@ -16,7 +16,7 @@ define 'bluemount' do
   compile.into('target/java').with SHIPPED
   resources
   test.compile.into('target/test/java').with SHIPPED, REFERENCE
-  test.enhance { Rake::Task['features'].execute }
+#  test.enhance { Rake::Task['features'].execute }
 
   package(:jar)
 
@@ -24,6 +24,7 @@ define 'bluemount' do
   run.enhance { cd 'src' }
 end
 
-Cucumber::Rake::Task.new(:features) do |t|
-  t.cucumber_opts = %w{--format pretty --expand --color}
+Cucumber::Rake::Task.new(:features => task('compile')) do |t|
+#  t.cucumber_opts = %w{--format pretty --expand --color}
+  t.cucumber_opts = %w{--format junit --out reports/cucumber}
 end
