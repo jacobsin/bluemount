@@ -4,6 +4,9 @@ require 'cucumber/rake/task'
 VERSION_NUMBER = "1.0.0"
 GROUP = "bluemount"
 
+TARGET_JAVA = 'target/java'
+TARGET_TEST_JAVA = 'target/test/java'
+
 #options.proxy.http = 'http://myproxy:8080'
 
 define 'bluemount' do
@@ -13,9 +16,11 @@ define 'bluemount' do
 
   iml.local_repository_env_override = nil
 
-  compile.into('target/java').with SHIPPED
-  resources
-  test.compile.into('target/test/java').with SHIPPED, REFERENCE
+  compile.into(TARGET_JAVA).with SHIPPED
+  resources.filter.into(TARGET_JAVA)
+
+  test.compile.into(TARGET_TEST_JAVA).with SHIPPED, REFERENCE
+  test.resources.filter.into(TARGET_TEST_JAVA)
 #  test.enhance { Rake::Task['features'].execute }
 
   package(:jar)
