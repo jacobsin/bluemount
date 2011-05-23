@@ -19,9 +19,6 @@ define 'bluemount' do
 #  test.enhance { Rake::Task['features'].execute }
 
   package(:jar)
-
-  run.using :main => 'bluemount.web.RunJetty'
-  run.enhance { cd 'src' }
 end
 
 Cucumber::Rake::Task.new(:features => task('compile')) do |t|
