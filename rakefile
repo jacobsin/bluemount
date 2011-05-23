@@ -25,6 +25,5 @@ define 'bluemount' do
 end
 
 Cucumber::Rake::Task.new(:features => task('compile')) do |t|
-#  t.cucumber_opts = %w{--format pretty --expand --color}
-  t.cucumber_opts = %w{--format junit --out reports/cucumber}
+  t.cucumber_opts = %w{--format junit --out reports/cucumber --format pretty --expand --color}
 end

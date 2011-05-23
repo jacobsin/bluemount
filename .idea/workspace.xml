@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a4574e9f-d056-4099-8be5-1a7cad4b737c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rakefile" afterPath="$PROJECT_DIR$/rakefile" />
     </list>
     <ignored path="bluemount.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,7 +66,7 @@
       <file leaf-file-name="rakefile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rakefile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="470" selection-end="470" vertical-scroll-proportion="0.57327586">
+            <state line="24" column="3" selection-start="547" selection-end="547" vertical-scroll-proportion="0.6551724">
               <folding />
             </state>
           </provider>
@@ -790,7 +791,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rakefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="470" selection-end="470" vertical-scroll-proportion="0.57327586">
+        <state line="24" column="3" selection-start="547" selection-end="547" vertical-scroll-proportion="0.6551724">
           <folding />
         </state>
       </provider>
