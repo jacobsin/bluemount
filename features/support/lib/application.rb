@@ -13,7 +13,7 @@ class Application
     @jetty.start false
   end
 
-  def self.api(path)
+  def self.uri(path)
     File.join "http://localhost:#{self.instance.port}", path
   end
 
