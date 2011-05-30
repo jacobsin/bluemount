@@ -24,9 +24,10 @@ class Application
   private
 
   def rjb_load
-    separator = Config::CONFIG['target_os'] =~ /windows/ ? ';' : ':'
+    separator = Config::CONFIG['target_os'] =~ /windows|mingw32/ ? ';' : ':'
     jars = Dir.glob(File.join('m2', '**', '*.jar')).select{|f| f !~ /sources\.jar/ }
-    classpath = "target/test/java:target/java:#{jars.join(separator)}"
+    classes = ["target/test/java", "target/java"]
+    classpath = (classes | jars).join(separator)
     jvmargs = [
         '-Duser.timezone=UTC',
         '-Djava.util.logging.config.file=src/main/resources/logging.properties',
