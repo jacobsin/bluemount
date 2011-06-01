@@ -23,16 +23,23 @@ class Application
 
   private
 
+  def jars(dir)
+    Dir.glob(File.join(dir, '**', '*.jar')).select { |f| f !~ /sources\.jar/ }
+  end
+
+  def debug?
+    ENV['RUBYLIB'] =~ /ruby-debug-ide/
+  end
+
   def rjb_load
-    separator = Config::CONFIG['target_os'] =~ /windows|mingw32/ ? ';' : ':'
-    jars = Dir.glob(File.join('m2', '**', '*.jar')).select{|f| f !~ /sources\.jar/ }
     classes = ["target/test/java", "target/java"]
-    classpath = (classes | jars).join(separator)
+    classpath = (classes | jars('local') | jars('m2')).join(File::PATH_SEPARATOR)
     jvmargs = [
         '-Duser.timezone=UTC',
         '-Djava.util.logging.config.file=src/main/resources/logging.properties',
         '-Dlogback.access.config.file=src/main/resources/logback-access.xml'
     ]
+    jvmargs |= ['-Xdebug', '-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005'] if debug?
     Rjb::load(classpath, jvmargs)
   end
 

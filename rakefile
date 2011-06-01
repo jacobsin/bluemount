@@ -16,10 +16,12 @@ define 'bluemount' do
 
   iml.local_repository_env_override = nil
 
-  compile.into(TARGET_JAVA).with SHIPPED
+  local_shipped = Dir[_("lib/shipped/*.jar")]
+  compile.into(TARGET_JAVA).with local_shipped, SHIPPED
   resources.filter.into(TARGET_JAVA)
 
-  test.compile.into(TARGET_TEST_JAVA).with SHIPPED, REFERENCE
+  local_reference = Dir[_("lib/reference/*.jar")]
+  test.compile.into(TARGET_TEST_JAVA).with local_shipped, SHIPPED, local_reference, REFERENCE
   test.resources.filter.into(TARGET_TEST_JAVA)
 #  test.enhance { Rake::Task['features'].execute }
 
