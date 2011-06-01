@@ -8,6 +8,6 @@ Feature: Projects
     And project b exists
     When I list projects
     Then it should give me:
-    | title |
-    | a     |
-    | b     |
+    | title | owner      |
+    | a     | Mr Default |
+    | b     | Mr Default |
