@@ -318,7 +318,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/target/resources" />
+          <root url="file://$MODULE_DIR$/target/java" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
