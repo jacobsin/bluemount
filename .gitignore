@@ -4,3 +4,4 @@ logs/
 m2/
 *.iws
 .idea/dictionaries/
+.idea/workspace.xml
