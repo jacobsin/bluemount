@@ -4,7 +4,7 @@ import ch.qos.logback.access.jetty.v7.RequestLogImpl;
 import org.apache.commons.io.filefilter.DirectoryFileFilter;
 import org.apache.commons.io.filefilter.NameFileFilter;
 import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.server.handler.HandlerList;
+import org.eclipse.jetty.server.handler.HandlerCollection;
 import org.eclipse.jetty.server.handler.RequestLogHandler;
 import org.eclipse.jetty.webapp.WebAppContext;
 
@@ -23,9 +23,9 @@ public class RunJetty {
     public RunJetty(int port) throws IOException {
         server = new Server(port);
 
-        HandlerList handlers = new HandlerList();
-        handlers.addHandler(requestLog());
+        HandlerCollection handlers = new HandlerCollection();
         handlers.addHandler(context());
+        handlers.addHandler(requestLog());
         server.setHandler(handlers);
     }
 

@@ -7,10 +7,8 @@ import org.restlet.Response;
 import org.restlet.resource.Finder;
 import org.restlet.resource.ServerResource;
 
-public class GuiceFinder extends Finder
-{
+public class GuiceFinder extends Finder {
     private final Injector injector;
-
 
     public GuiceFinder(Injector injector, Context context, Class<? extends ServerResource> targetClass) {
         super(context, targetClass);
