@@ -1,12 +1,15 @@
 class Projects
-  @@path = '/rest/v1/projects'
+  @@path = '/api/projects'
 
-  def self.create(project)
-    RestClient.post Application.uri(@@path), project.to_json, :content_type => :json, :accept => :json
+  class << self
+    def create(project)
+      RestClient.post Application.uri(@@path), project.to_json, :content_type => :json
+    end
+
+    def list
+      response = RestClient.get Application.uri(@@path)
+      JSON.parse(response.to_str)
+    end
   end
 
-  def self.list
-    response = RestClient.get Application.uri(@@path)
-    JSON.parse(response.to_str)
-  end
 end
