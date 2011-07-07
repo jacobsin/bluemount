@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <bean class="bluemount.web.resource.ProjectsResource" scope="prototype">
+    <constructor-arg ref="projectService"/>
+  </bean>
+
+  <bean id="projectService" class="bluemount.core.service.ProjectServiceImpl">
+    <constructor-arg ref="projectRepository"/>
+    <constructor-arg value="Mr Spring"/>
+  </bean>
+
+  <bean id="projectRepository" class="bluemount.core.repository.InMemoryProjectRepository"/>
+</beans>

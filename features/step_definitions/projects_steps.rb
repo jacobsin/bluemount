@@ -11,3 +11,6 @@ Then /^it should give me:$/ do |table|
     @result.should include h
   end
 end
+Given /^spring project a exists$/ do
+  pending
+end

@@ -14,7 +14,7 @@ class Application
   end
 
   def self.uri(path)
-    File.join "http://localhost:#{self.instance.port}", path
+    Api.uri path
   end
 
   def stop

@@ -11,3 +11,13 @@ Feature: Projects
     | title | owner      |
     | a     | Mr Default |
     | b     | Mr Default |
+
+  Scenario: list projects using spring api
+    Given spring api is used
+    And project a exists
+    And project b exists
+    When I list projects
+    Then it should give me:
+    | title | owner      |
+    | a     | Mr Spring  |
+    | b     | Mr Spring  |

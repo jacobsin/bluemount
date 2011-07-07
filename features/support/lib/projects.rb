@@ -2,6 +2,7 @@ class Projects
   @@path = '/api/projects'
 
   class << self
+
     def create(project)
       RestClient.post Application.uri(@@path), project.to_json, :content_type => :json
     end
