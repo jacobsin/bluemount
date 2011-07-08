@@ -2,10 +2,10 @@ package bluemount.core.service;
 
 import bluemount.core.model.Project;
 import bluemount.core.repository.ProjectRepository;
-import com.google.inject.Inject;
-import com.google.inject.name.Named;
 import de.devsurf.injection.guice.annotations.Bind;
 
+import javax.inject.Inject;
+import javax.inject.Named;
 import java.util.List;
 
 @Bind
