@@ -1,6 +1,6 @@
 package bluemount.core.model;
 
-public class Project {
+public abstract class Project {
     private String title;
     private String owner;
 

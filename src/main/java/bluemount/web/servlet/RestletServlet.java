@@ -1,7 +1,9 @@
 package bluemount.web.servlet;
 
+import bluemount.web.jackson.JacksonConverter;
 import bluemount.web.resource.ProjectsResource;
 import bluemount.web.restlet.GuiceRouter;
+import bluemount.web.restlet.RestletUtils;
 import com.google.inject.Inject;
 import com.google.inject.Injector;
 import com.google.inject.Singleton;
@@ -33,10 +35,10 @@ public class RestletServlet extends HttpServlet {
                 attach("/projects", ProjectsResource.class);
             }
         });
+        RestletUtils.replaceConverter(org.restlet.ext.jackson.JacksonConverter.class, new JacksonConverter());
         adapter = new ServletAdapter(getServletContext());
         adapter.setNext(application);
     }
-
 
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
