@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4574e9f-d056-4099-8be5-1a7cad4b737c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/features/step_definitions/common_steps.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/bluemount/core/model/CloseSourceProject.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/bluemount/core/model/OpenSourceProject.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/bluemount/web/jackson/JacksonConverter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/bluemount/web/jackson/JacksonRepresentation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/bluemount/web/restlet/RestletUtils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/projects.feature" afterPath="$PROJECT_DIR$/features/projects.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/step_definitions/projects_steps.rb" afterPath="$PROJECT_DIR$/features/step_definitions/projects_steps.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/support/lib/projects.rb" afterPath="$PROJECT_DIR$/features/support/lib/projects.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/bluemount/core/model/Project.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/core/model/Project.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/bluemount/web/servlet/RestletServlet.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/web/servlet/RestletServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/bluemount/web/servlet/ServletModule.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/web/servlet/ServletModule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
     </list>
     <ignored path="bluemount.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -115,7 +102,7 @@
       <file leaf-file-name="projects.feature" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/features/projects.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="26" selection-start="452" selection-end="452" vertical-scroll-proportion="0.43304843">
+            <state line="30" column="34" selection-start="865" selection-end="865" vertical-scroll-proportion="0.8119658">
               <folding />
             </state>
           </provider>
@@ -858,7 +845,7 @@
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="use spring autoscan and autowire" />
+    <option name="LAST_COMMIT_MESSAGE" value="customised jackson converter and representation allow further configuration&#10;polymophic jackson serialisation/deserialiation via property&#10;removed spring restlet api from guice servlet module&#10;cucumber table diff allowing surplus row and col" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -894,6 +881,7 @@
     <MESSAGE value="added restlet-spring integration for more legacy project" />
     <MESSAGE value="minor fixes" />
     <MESSAGE value="use spring autoscan and autowire" />
+    <MESSAGE value="customised jackson converter and representation allow further configuration&#10;polymophic jackson serialisation/deserialiation via property&#10;removed spring restlet api from guice servlet module&#10;cucumber table diff allowing surplus row and col" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -988,7 +976,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/features/projects.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="26" selection-start="452" selection-end="452" vertical-scroll-proportion="0.43304843">
+        <state line="30" column="34" selection-start="865" selection-end="865" vertical-scroll-proportion="0.8119658">
           <folding />
         </state>
       </provider>
