@@ -9,14 +9,14 @@ class Projects
     end
 
     def list
-      response = RestClient.get Application.uri(@@path)
+      response = RestClient.get Application.uri(@@path), :content_type => :json
       JSON.parse(response.to_str)
     end
 
     def sample
       {
         'title'=>'some-title',
-        '@class'=>'bluemount.core.model.OpenSourceProject'
+        '@type'=>'OpenSourceProject'
       }
     end
   end

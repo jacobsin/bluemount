@@ -12,6 +12,7 @@ Feature: Projects
     | title   | a        |
     | owner   | Mr Owner |
     | license | LGPL     |
+    | @type   | OpenSourceProject |
 
   Scenario: create close source project
     When I create CloseSource project:
@@ -22,15 +23,16 @@ Feature: Projects
     | title     | a        |
     | owner     | Mr Owner |
     | copyright | Company  |
+    | @type     | CloseSourceProject |
 
   Scenario: list projects
     Given OpenSource project a exists
     And CloseSource project b exists
     When I list projects
     Then it should give at least these:
-    | title | owner      | @class                                  |
-    | a     | Mr Default | bluemount.core.model.OpenSourceProject  |
-    | b     | Mr Default | bluemount.core.model.CloseSourceProject |
+    | title | owner      |
+    | a     | Mr Default |
+    | b     | Mr Default |
 
   Scenario: list projects using spring api
     Given spring api is used
@@ -38,6 +40,6 @@ Feature: Projects
     And CloseSource project b exists
     When I list projects
     Then it should give at least these:
-    | title | owner     | @class                                  |
-    | a     | Mr Spring | bluemount.core.model.OpenSourceProject  |
-    | b     | Mr Spring | bluemount.core.model.CloseSourceProject |
+    | title | owner     |
+    | a     | Mr Spring |
+    | b     | Mr Spring |

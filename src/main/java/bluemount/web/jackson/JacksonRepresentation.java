@@ -1,6 +1,7 @@
 package bluemount.web.jackson;
 
-import org.codehaus.jackson.annotate.JsonTypeInfo;
+import bluemount.core.model.CloseSourceProject;
+import bluemount.core.model.OpenSourceProject;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.restlet.data.MediaType;
 import org.restlet.representation.Representation;
@@ -26,6 +27,6 @@ public class JacksonRepresentation<T> extends org.restlet.ext.jackson.JacksonRep
     }
 
     private void configure(ObjectMapper objectMapper) {
-        objectMapper.enableDefaultTyping(ObjectMapper.DefaultTyping.OBJECT_AND_NON_CONCRETE, JsonTypeInfo.As.PROPERTY);
+        objectMapper.registerSubtypes(OpenSourceProject.class, CloseSourceProject.class);
     }
 }

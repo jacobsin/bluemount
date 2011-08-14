@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a4574e9f-d056-4099-8be5-1a7cad4b737c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/projects.feature" afterPath="$PROJECT_DIR$/features/projects.feature" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/step_definitions/projects_steps.rb" afterPath="$PROJECT_DIR$/features/step_definitions/projects_steps.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/support/lib/projects.rb" afterPath="$PROJECT_DIR$/features/support/lib/projects.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/bluemount/core/model/Project.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/core/model/Project.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/bluemount/web/jackson/JacksonRepresentation.java" afterPath="$PROJECT_DIR$/src/main/java/bluemount/web/jackson/JacksonRepresentation.java" />
     </list>
     <ignored path="bluemount.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,19 +28,6 @@
   </component>
   <component name="DebuggerManager">
     <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/bluemount/web/jackson/JacksonRepresentation.java" line="28" class="bluemount.web.jackson.JacksonRepresentation" package="bluemount.web.jackson">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
       <breakpoint url="file://$PROJECT_DIR$/src/main/java/bluemount/web/restlet/RestletUtils.java" line="15" class="bluemount.web.restlet.RestletUtils" package="bluemount.web.restlet">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
@@ -90,55 +82,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="OpenSourceProject.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/core/model/OpenSourceProject.java">
+      <file leaf-file-name="Project.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/core/model/Project.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="13" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="projects.feature" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/features/projects.feature">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="34" selection-start="865" selection-end="865" vertical-scroll-proportion="0.8119658">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CloseSourceProject.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/core/model/CloseSourceProject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="projects_steps.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/features/step_definitions/projects_steps.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="31" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="projects.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/features/support/lib/projects.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="28" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ObjectMapper.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/m2/org/codehaus/jackson/jackson-mapper-asl/1.7.1/jackson-mapper-asl-1.7.1-sources.jar!/org/codehaus/jackson/map/ObjectMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="163" column="26" selection-start="6729" selection-end="6738" vertical-scroll-proportion="0.0">
+            <state line="5" column="31" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -147,7 +94,43 @@
       <file leaf-file-name="JacksonConverter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/web/jackson/JacksonConverter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="478" selection-end="478" vertical-scroll-proportion="0.0">
+            <state line="8" column="25" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JacksonRepresentation.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/web/jackson/JacksonRepresentation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="0" selection-start="932" selection-end="1151" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="projects.feature" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/features/projects.feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="45" selection-start="278" selection-end="278" vertical-scroll-proportion="0.38863635">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="projects_steps.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/features/step_definitions/projects_steps.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="54" selection-start="398" selection-end="398" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="projects.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/features/support/lib/projects.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="79" selection-start="331" selection-end="331" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -162,19 +145,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="common.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Library/Application Support/IntelliJIdea10/ruby/rb/testing/patch/bdd/teamcity/cucumber/common.rb">
+      <file leaf-file-name="ConverterHelper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/m2/org/restlet/jee/org.restlet/2.1-M4/org.restlet-2.1-M4-sources.jar!/org/restlet/engine/converter/ConverterHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="514" column="43" selection-start="20259" selection-end="20259" vertical-scroll-proportion="0.0">
+            <state line="124" column="0" selection-start="4023" selection-end="4023" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RestletUtils.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/web/restlet/RestletUtils.java">
+      <file leaf-file-name="DefaultConverter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/m2/org/restlet/jee/org.restlet/2.1-M4/org.restlet-2.1-M4-sources.jar!/org/restlet/engine/converter/DefaultConverter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="21" selection-start="1018" selection-end="1018" vertical-scroll-proportion="0.0">
+            <state line="63" column="16" selection-start="2267" selection-end="2267" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MediaType.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/m2/org/restlet/jee/org.restlet/2.1-M4/org.restlet-2.1-M4-sources.jar!/org/restlet/data/MediaType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="19" selection-start="1657" selection-end="1657" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -203,12 +195,12 @@
         <option value="$PROJECT_DIR$/src/main/java/bluemount/web/servlet/RestletServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/bluemount/web/jackson/JacksonConverter.java" />
         <option value="$PROJECT_DIR$/src/main/java/bluemount/web/restlet/RestletUtils.java" />
-        <option value="$PROJECT_DIR$/features/support/lib/projects.rb" />
-        <option value="$PROJECT_DIR$/src/main/java/bluemount/core/model/Project.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bluemount/web/jackson/JacksonRepresentation.java" />
         <option value="$PROJECT_DIR$/features/step_definitions/common_steps.rb" />
         <option value="$PROJECT_DIR$/src/main/java/bluemount/core/model/CloseSourceProject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bluemount/core/model/Project.java" />
         <option value="$PROJECT_DIR$/features/step_definitions/projects_steps.rb" />
+        <option value="$PROJECT_DIR$/features/support/lib/projects.rb" />
+        <option value="$PROJECT_DIR$/src/main/java/bluemount/web/jackson/JacksonRepresentation.java" />
         <option value="$PROJECT_DIR$/features/projects.feature" />
       </list>
     </option>
@@ -269,6 +261,9 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -409,11 +404,80 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluemount" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluemount" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="features" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluemount" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluemount" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="features" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="support" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluemount" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluemount" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="features" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="support" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluemount" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluemount" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="features" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="step_definitions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Favorites" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -454,7 +518,7 @@
       <recent name="bluemount.service" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Unit Tests">
+  <component name="RunManager" selected="Cucumber.Acceptance Tests">
     <configuration default="true" type="RakeRunConfigurationType" factoryName="Rake">
       <module name="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -806,25 +870,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="56" y="36" width="1376" height="843" extended-state="0" />
+    <frame x="4" y="22" width="1376" height="878" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959327" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Buildr" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24943481" sideWeight="0.67040676" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.67040676" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5219707" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42343542" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959327" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288948" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32756326" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2577242" sideWeight="0.37307152" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21024466" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24039187" sideWeight="0.62716377" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23963828" sideWeight="0.6221374" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37283623" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3778626" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5219707" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -891,39 +955,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/m2/org/restlet/jee/org.restlet.ext.jackson/2.1-M4/org.restlet.ext.jackson-2.1-M4-sources.jar!/org/restlet/ext/jackson/JacksonConverter.java">
+    <entry file="file://$USER_HOME$/Library/Application Support/IntelliJIdea10/ruby/rb/testing/patch/bdd/teamcity/cucumber/common.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="62" selection-start="2222" selection-end="2269" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/m2/org/restlet/jee/org.restlet/2.1-M4/org.restlet-2.1-M4-sources.jar!/org/restlet/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="11" selection-start="5340" selection-end="5340" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/web/servlet/RestletServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="99" selection-start="1308" selection-end="1308" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/m2/org/restlet/jee/org.restlet.ext.jackson/2.1-M4/org.restlet.ext.jackson-2.1-M4-sources.jar!/org/restlet/ext/jackson/JacksonRepresentation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="3" selection-start="1689" selection-end="1689" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/web/jackson/JacksonRepresentation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="50" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/core/model/Project.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="16" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/m2/org/codehaus/jackson/jackson-mapper-asl/1.7.1/jackson-mapper-asl-1.7.1-sources.jar!/org/codehaus/jackson/map/ObjectMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="163" column="26" selection-start="6729" selection-end="6738" vertical-scroll-proportion="0.0" />
+        <state line="514" column="43" selection-start="20259" selection-end="20259" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/web/restlet/RestletUtils.java">
@@ -931,52 +965,78 @@
         <state line="31" column="21" selection-start="1018" selection-end="1018" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Application Support/IntelliJIdea10/ruby/rb/testing/patch/bdd/teamcity/cucumber/common.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="514" column="43" selection-start="20259" selection-end="20259" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/core/model/OpenSourceProject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0" />
+        <state line="2" column="43" selection-start="74" selection-end="74" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/m2/org/restlet/jee/org.restlet.ext.jackson/2.1-M4/org.restlet.ext.jackson-2.1-M4-sources.jar!/org/restlet/ext/jackson/JacksonConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="106" column="0" selection-start="3377" selection-end="3377" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/m2/org/codehaus/jackson/jackson-mapper-asl/1.7.1/jackson-mapper-asl-1.7.1-sources.jar!/org/codehaus/jackson/map/jsontype/TypeResolverBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="1105" selection-end="1105" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/m2/org/codehaus/jackson/jackson-mapper-asl/1.7.1/jackson-mapper-asl-1.7.1-sources.jar!/org/codehaus/jackson/map/jsontype/impl/StdTypeResolverBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="35" selection-start="598" selection-end="620" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/m2/org/restlet/jee/org.restlet/2.1-M4/org.restlet-2.1-M4-sources.jar!/org/restlet/engine/converter/ConverterHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="124" column="0" selection-start="4023" selection-end="4023" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/m2/org/restlet/jee/org.restlet/2.1-M4/org.restlet-2.1-M4-sources.jar!/org/restlet/engine/converter/DefaultConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="16" selection-start="2267" selection-end="2267" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/m2/org/restlet/jee/org.restlet/2.1-M4/org.restlet-2.1-M4-sources.jar!/org/restlet/data/MediaType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="19" selection-start="1657" selection-end="1657" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/core/model/Project.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="31" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/web/jackson/JacksonConverter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="478" selection-end="478" vertical-scroll-proportion="0.0" />
+        <state line="8" column="25" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/features/step_definitions/common_steps.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="29" selection-start="135" selection-end="135" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/core/model/CloseSourceProject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/features/support/lib/projects.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="28" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0" />
+        <state line="6" column="29" selection-start="135" selection-end="135" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/features/step_definitions/projects_steps.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="31" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0">
+        <state line="9" column="54" selection-start="398" selection-end="398" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/support/lib/projects.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="79" selection-start="331" selection-end="331" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bluemount/web/jackson/JacksonRepresentation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="932" selection-end="1151" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/features/projects.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="34" selection-start="865" selection-end="865" vertical-scroll-proportion="0.8119658">
+        <state line="9" column="45" selection-start="278" selection-end="278" vertical-scroll-proportion="0.38863635">
           <folding />
         </state>
       </provider>
