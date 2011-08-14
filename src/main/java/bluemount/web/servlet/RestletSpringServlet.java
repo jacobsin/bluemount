@@ -29,6 +29,7 @@ public class RestletSpringServlet extends HttpServlet {
 
             @Override
             protected void attachRoutes() {
+                attach("/projects/{projectType}", ProjectsResource.class);
                 attach("/projects", ProjectsResource.class);
             }
         });

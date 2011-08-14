@@ -1,8 +1,6 @@
 package bluemount.core.model;
 
-import org.codehaus.jackson.annotate.JsonTypeInfo;
 
-@JsonTypeInfo(use=JsonTypeInfo.Id.NAME)
 public abstract class Project {
     private String title;
     private String owner;

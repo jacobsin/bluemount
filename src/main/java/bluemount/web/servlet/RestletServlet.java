@@ -32,6 +32,7 @@ public class RestletServlet extends HttpServlet {
         application.setInboundRoot(new GuiceRouter(injector, context) {
             @Override
             protected void attachRoutes() {
+                attach("/projects/{projectType}", ProjectsResource.class);
                 attach("/projects", ProjectsResource.class);
             }
         });

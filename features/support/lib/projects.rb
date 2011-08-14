@@ -3,8 +3,8 @@ class Projects
 
   class << self
 
-    def create(project)
-      response = RestClient.post Application.uri(@@path), sample.merge(project).to_json, :content_type => :json
+    def create(project_type, project)
+      response = RestClient.post Application.uri("#{@@path}/#{project_type.downcase}"), sample.merge(project).to_json, :content_type => :json
       JSON.parse(response.to_str)
     end
 
@@ -16,7 +16,6 @@ class Projects
     def sample
       {
         'title'=>'some-title',
-        '@type'=>'OpenSourceProject'
       }
     end
   end

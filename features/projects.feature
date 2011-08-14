@@ -12,7 +12,6 @@ Feature: Projects
     | title   | a        |
     | owner   | Mr Owner |
     | license | LGPL     |
-    | @type   | OpenSourceProject |
 
   Scenario: create close source project
     When I create CloseSource project:
@@ -23,7 +22,6 @@ Feature: Projects
     | title     | a        |
     | owner     | Mr Owner |
     | copyright | Company  |
-    | @type     | CloseSourceProject |
 
   Scenario: list projects
     Given OpenSource project a exists

@@ -16,15 +16,13 @@ public class RestletUtils {
         ConverterHelper oldConverter = null;
 
         List<ConverterHelper> converters = Engine.getInstance().getRegisteredConverters();
-        for (ConverterHelper converter : converters) {
+        for (int i = 0; i < converters.size(); i++) {
+            ConverterHelper converter = converters.get(i);
             if (converter.getClass().equals(converterClass)) {
-                converters.remove(converter);
-                oldConverter = converter;
+                oldConverter = converters.set(i, newConverter);
                 break;
             }
         }
-
-        converters.add(newConverter);
 
         if (oldConverter == null) {
             log.debug("Added {} to Restlet Engine", newConverter.getClass());

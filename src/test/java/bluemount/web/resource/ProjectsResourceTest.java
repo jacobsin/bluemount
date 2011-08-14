@@ -19,8 +19,7 @@ import static org.mockito.Mockito.*;
 public class ProjectsResourceTest {
 
     private ProjectsResource projectsResource;
-    @Mock
-    private ProjectService projectService;
+    @Mock private ProjectService projectService;
 
     @Before
     public void setUp() throws Exception {

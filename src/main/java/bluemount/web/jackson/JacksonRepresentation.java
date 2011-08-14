@@ -1,7 +1,5 @@
 package bluemount.web.jackson;
 
-import bluemount.core.model.CloseSourceProject;
-import bluemount.core.model.OpenSourceProject;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.restlet.data.MediaType;
 import org.restlet.representation.Representation;
@@ -27,6 +25,11 @@ public class JacksonRepresentation<T> extends org.restlet.ext.jackson.JacksonRep
     }
 
     private void configure(ObjectMapper objectMapper) {
-        objectMapper.registerSubtypes(OpenSourceProject.class, CloseSourceProject.class);
+    }
+
+    @SuppressWarnings({"unchecked"})
+    public <O> O getObject(Class<O> objectClass) {
+        setObjectClass((Class<T>) objectClass);
+        return (O) getObject();
     }
 }
