@@ -8,6 +8,8 @@
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/groovy" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/groovy" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/reports" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
@@ -270,7 +272,9 @@
           <root url="jar://$MODULE_DIR$/m2/asm/asm/3.1/asm-3.1.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/m2/asm/asm/3.1/asm-3.1-sources.jar!/" />
+        </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library" exported="">
@@ -351,6 +355,17 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
+          <root url="jar://$MODULE_DIR$/m2/org/codehaus/groovy/groovy-all/1.8.6/groovy-all-1.8.6.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/m2/org/codehaus/groovy/groovy-all/1.8.6/groovy-all-1.8.6-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
           <root url="jar://$MODULE_DIR$/m2/commons-io/commons-io/2.0.1/commons-io-2.0.1.jar!/" />
         </CLASSES>
         <JAVADOC />
@@ -403,7 +418,7 @@
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" scope="TEST">
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/m2/org/mockito/mockito-core/1.8.5/mockito-core-1.8.5.jar!/" />
@@ -414,7 +429,7 @@
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" scope="TEST">
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/m2/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar!/" />
@@ -425,7 +440,7 @@
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" scope="TEST">
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/m2/org/objenesis/objenesis/1.0/objenesis-1.0.jar!/" />
@@ -436,27 +451,18 @@
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" scope="TEST">
       <library>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/target/java" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/m2/junit/junit/4.7/junit-4.7.jar!/" />
+          <root url="jar://$MODULE_DIR$/m2/junit/junit/4.8.2/junit-4.8.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$MODULE_DIR$/m2/junit/junit/4.7/junit-4.7-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/m2/junit/junit/4.8.2/junit-4.8.2-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" scope="TEST">
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/m2/org/jmock/jmock/2.5.1/jmock-2.5.1.jar!/" />
@@ -467,7 +473,7 @@
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" scope="TEST">
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/m2/org/jmock/jmock-junit4/2.5.1/jmock-junit4-2.5.1.jar!/" />
@@ -478,7 +484,7 @@
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" scope="TEST">
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/m2/org/hamcrest/hamcrest-library/1.1/hamcrest-library-1.1.jar!/" />
