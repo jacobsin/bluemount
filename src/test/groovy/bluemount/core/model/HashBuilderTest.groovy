@@ -1,6 +1,5 @@
 package bluemount.core.model
 
-import org.junit.Ignore
 import org.junit.Test
 
 class HashBuilderTest {
@@ -47,29 +46,9 @@ class HashBuilderTest {
 }'''
   }
 
-  class BuilderWithDefaults extends HashBuilder {
-    def defaults = {
-      departments {
-        management {
-          employee {
-            firstname "Steve"
-            lastname "Jobs"
-            title "CEO"
-            fullname "$c.firstname $c.lastname"
-          }
-        }
-      }
-    }
-
-    BuilderWithDefaults() {
-      def defaultsBuilder = new HashBuilder()
-      this.content = defaultsBuilder(defaults)
-    }
-  }
-
   @Test
   def void buildWithDefaults() {
-    def apple = new BuilderWithDefaults()
+    def apple = new AppleBuilder()
     assert apple() == [
         departments: [
             management: [
@@ -84,13 +63,15 @@ class HashBuilderTest {
     ]
   }
 
-  @Test @Ignore('wip')
-  def void buildWithOverridenDefaults() {
-    def apple = new BuilderWithDefaults()
+  @Test
+  def void buildWithOverriddenDefaults() {
+    def apple = new AppleBuilder()
+    def employeeBuilder = new EmployeeBuilder()
+
     def actual = apple {
       departments {
         management {
-          employee {
+          employee employeeBuilder {
             lastname "Sobs"
           }
         }
@@ -110,4 +91,63 @@ class HashBuilderTest {
         ]
     ]
   }
+}
+
+class SampleHashBuilder extends HashBuilder {
+
+  Closure defaults
+  Closure deriveds
+
+  SampleHashBuilder() {
+    this.content = [:]
+  }
+
+  def call() {
+    callClosures([defaults, deriveds])
+  }
+
+  @Override
+  def call(Closure c) {
+    callClosures([defaults, c, deriveds])
+  }
+
+  def callClosures(List<Closure> closures) {
+    def map = content ? content.clone() : [:]
+    closures.grep{it}.each{
+      map << HashDelegate.cloneDelegateAndGetContent(it, map)
+    }
+    call(map)
+  }
+}
+
+class AppleBuilder extends SampleHashBuilder {
+
+  AppleBuilder() {
+    defaults = {
+      departments {
+        management {
+          def employeeBuilder = new EmployeeBuilder()
+          employee employeeBuilder()
+        }
+      }
+    }
+  }
+
+
+}
+
+class EmployeeBuilder extends SampleHashBuilder {
+  EmployeeBuilder() {
+    defaults = {
+      firstname "Steve"
+      lastname "Jobs"
+      title "CEO"
+    }
+
+    deriveds = {
+      fullname "$c.firstname $c.lastname"
+    }
+  }
+
+
 }

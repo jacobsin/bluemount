@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a4574e9f-d056-4099-8be5-1a7cad4b737c" name="Default" comment="`">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/groovy/bluemount/core/model/HashBuilder.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/groovy/bluemount/core/model/GroovyCompileTest.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/groovy/bluemount/core/model/HashBuilderTest.groovy" />
+    <list default="true" id="a4574e9f-d056-4099-8be5-1a7cad4b737c" name="Default" comment="Enhanced HashBuilder to support defaults, deriveds and overrides">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/groovy/bluemount/core/model/ModelBuilderTest.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/artifacts.rb" afterPath="$PROJECT_DIR$/artifacts.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bluemount.iml" afterPath="$PROJECT_DIR$/bluemount.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/bluemount/core/model/HashBuilder.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/bluemount/core/model/HashBuilder.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/groovy/bluemount/core/model/GroovyCompileTest.groovy" afterPath="$PROJECT_DIR$/src/test/groovy/bluemount/core/model/GroovyCompileTest.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/groovy/bluemount/core/model/HashBuilderTest.groovy" afterPath="$PROJECT_DIR$/src/test/groovy/bluemount/core/model/HashBuilderTest.groovy" />
     </list>
     <ignored path="bluemount.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,6 +24,21 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <line_breakpoints>
+      <breakpoint url="file://$PROJECT_DIR$/src/test/groovy/bluemount/core/model/HashBuilderTest.groovy" line="116" class="bluemount.core.model.SampleHashBuilder" package="bluemount.core.model">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -72,16 +82,16 @@
       <file leaf-file-name="ModelBuilderTest.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/groovy/bluemount/core/model/ModelBuilderTest.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="22" selection-start="53" selection-end="53" vertical-scroll-proportion="0.0">
+            <state line="2" column="0" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HashBuilder.groovy" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="HashBuilder.groovy" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/groovy/bluemount/core/model/HashBuilder.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="33" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0">
+            <state line="21" column="50" selection-start="368" selection-end="368" vertical-scroll-proportion="0.46952596">
               <folding>
                 <element signature="e#30#60#0" expanded="true" />
               </folding>
@@ -89,16 +99,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Closure.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/m2/org/codehaus/groovy/groovy-all/1.8.6/groovy-all-1.8.6-sources.jar!/groovy/lang/Closure.java">
+      <file leaf-file-name="CallSiteArray.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/m2/org/codehaus/groovy/groovy-all/1.8.6/groovy-all-1.8.6-sources.jar!/org/codehaus/groovy/runtime/callsite/CallSiteArray.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="527" column="22" selection-start="18145" selection-end="18145" vertical-scroll-proportion="0.0">
+            <state line="41" column="0" selection-start="1490" selection-end="1490" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#0#38951#0" expanded="false" />
+                <element signature="e#0#6396#0" expanded="false" />
                 <element signature="imports" expanded="false" />
-                <element signature="e#14364#14394#0" expanded="false" />
-                <element signature="e#37860#37890#0" expanded="false" />
-                <element signature="e#38644#38674#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -107,28 +114,7 @@
       <file leaf-file-name="JsonBuilder.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://$PROJECT_DIR$/m2/org/codehaus/groovy/groovy-all/1.8.6/groovy-all-1.8.6-sources.jar!/groovy/json/JsonBuilder.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="8" selection-start="2861" selection-end="2861" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Writable.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/m2/org/codehaus/groovy/groovy-all/1.8.6/groovy-all-1.8.6-sources.jar!/groovy/lang/Writable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="11" selection-start="2214" selection-end="2214" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#2265#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JsonOutput.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/m2/org/codehaus/groovy/groovy-all/1.8.6/groovy-all-1.8.6-sources.jar!/groovy/json/JsonOutput.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="32" selection-start="1501" selection-end="1508" vertical-scroll-proportion="0.0">
+            <state line="58" column="8" selection-start="2183" selection-end="2183" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -143,28 +129,52 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataSet.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/m2/org/codehaus/groovy/groovy-all/1.8.6/groovy-all-1.8.6-sources.jar!/groovy/sql/DataSet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="20" selection-start="2516" selection-end="2516" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="HashBuilderTest.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/groovy/bluemount/core/model/HashBuilderTest.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="5" selection-start="2064" selection-end="2064" vertical-scroll-proportion="0.0">
+            <state line="122" column="35" selection-start="2519" selection-end="2519" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GroovyCompileTest.groovy" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/groovy/bluemount/core/model/GroovyCompileTest.groovy">
+      <file leaf-file-name="DefaultGroovyMethods.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/m2/org/codehaus/groovy/groovy-all/1.8.6/groovy-all-1.8.6-sources.jar!/org/codehaus/groovy/runtime/DefaultGroovyMethods.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="141" selection-end="141" vertical-scroll-proportion="0.3611738">
+            <state line="2890" column="37" selection-start="113759" selection-end="113759" vertical-scroll-proportion="-5.1538463">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PogoMetaClassSite.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/m2/org/codehaus/groovy/groovy-all/1.8.6/groovy-all-1.8.6-sources.jar!/org/codehaus/groovy/runtime/callsite/PogoMetaClassSite.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="0" selection-start="1303" selection-end="1303" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#3376#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractCallSite.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/m2/org/codehaus/groovy/groovy-all/1.8.6/groovy-all-1.8.6-sources.jar!/org/codehaus/groovy/runtime/callsite/AbstractCallSite.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="119" column="0" selection-start="3498" selection-end="3498" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#12430#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NativeMethodAccessorImpl.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_29-b11-402.jdk/Contents/Classes/classes.jar!/sun/reflect/NativeMethodAccessorImpl.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="28" selection-start="470" selection-end="470" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -196,9 +206,9 @@
         <option value="$PROJECT_DIR$/rakefile" />
         <option value="$PROJECT_DIR$/artifacts.rb" />
         <option value="$PROJECT_DIR$/src/test/groovy/bluemount/core/model/ModelBuilderTest.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/bluemount/core/model/HashBuilder.groovy" />
-        <option value="$PROJECT_DIR$/src/test/groovy/bluemount/core/model/HashBuilderTest.groovy" />
         <option value="$PROJECT_DIR$/src/test/groovy/bluemount/core/model/GroovyCompileTest.groovy" />
+        <option value="$PROJECT_DIR$/src/test/groovy/bluemount/core/model/HashBuilderTest.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/bluemount/core/model/HashBuilder.groovy" />
       </list>
     </option>
   </component>
@@ -466,7 +476,7 @@
       <recent name="bluemount.service" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GroovyCompileTest.compile">
+  <component name="RunManager" selected="JUnit.HashBuilderTest">
     <configuration default="false" name="GroovyCompileTest.compile" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -555,6 +565,72 @@
       <patterns />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="HashBuilderTest.buildWithDefaults" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="bluemount.core.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="bluemount" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="bluemount.core.model" />
+      <option name="MAIN_CLASS_NAME" value="bluemount.core.model.HashBuilderTest" />
+      <option name="METHOD_NAME" value="buildWithDefaults" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-Djava.util.logging.config.file=src/main/resources/logging.properties -Dlogback.access.config.file=src/main/resources/logback-access.xml -Duser.timezone=UTC" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="HashBuilderTest.buildWithOverriddenDefaults" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="bluemount.core.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="bluemount" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="bluemount.core.model" />
+      <option name="MAIN_CLASS_NAME" value="bluemount.core.model.HashBuilderTest" />
+      <option name="METHOD_NAME" value="buildWithOverriddenDefaults" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-Djava.util.logging.config.file=src/main/resources/logging.properties -Dlogback.access.config.file=src/main/resources/logback-access.xml -Duser.timezone=UTC" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Debug" />
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -784,7 +860,7 @@
       <ConfigurationWrapper RunnerId="Debug" />
       <method />
     </configuration>
-    <list size="7">
+    <list size="9">
       <item index="0" class="java.lang.String" itemvalue="JUnit.GroovyCompileTest.compile" />
       <item index="1" class="java.lang.String" itemvalue="Application.Run Jetty" />
       <item index="2" class="java.lang.String" itemvalue="Cucumber.Acceptance Tests" />
@@ -792,6 +868,8 @@
       <item index="4" class="java.lang.String" itemvalue="Remote.localhost" />
       <item index="5" class="java.lang.String" itemvalue="JUnit.HashBuilderTest.build" />
       <item index="6" class="java.lang.String" itemvalue="JUnit.HashBuilderTest" />
+      <item index="7" class="java.lang.String" itemvalue="JUnit.HashBuilderTest.buildWithDefaults" />
+      <item index="8" class="java.lang.String" itemvalue="JUnit.HashBuilderTest.buildWithOverriddenDefaults" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -821,6 +899,11 @@
       <created>1304353628143</created>
       <updated>1304353628143</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added groovy&#10;Playing with groovy builder for hash building">
+      <created>1334621449517</created>
+      <updated>1334621449517</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -851,7 +934,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.67040676" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43957505" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35081148" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41434264" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959327" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -859,7 +942,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32756326" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2577242" sideWeight="0.37307152" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23457676" sideWeight="0.6533865" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34661356" sideWeight="0.98852223" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34661356" sideWeight="0.98852223" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Buildr" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24943481" sideWeight="0.67040676" order="0" side_tool="false" content_ui="tabs" />
@@ -907,7 +990,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="polymophic jackson serialisation/deserialiation by url path token" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added groovy&#10;Playing with groovy builder for hash building" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -920,7 +1003,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="first unit test" />
     <MESSAGE value="jetty, guice, jackson and mockito" />
     <MESSAGE value="fixed unsafe ops" />
     <MESSAGE value="cucumber and iml generation" />
@@ -945,6 +1027,7 @@
     <MESSAGE value="customised jackson converter and representation allow further configuration&#10;polymophic jackson serialisation/deserialiation via property&#10;removed spring restlet api from guice servlet module&#10;cucumber table diff allowing surplus row and col" />
     <MESSAGE value="polymophic jackson serialisation/deserialiation via property by name" />
     <MESSAGE value="polymophic jackson serialisation/deserialiation by url path token" />
+    <MESSAGE value="Added groovy&#10;Playing with groovy builder for hash building" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -954,46 +1037,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/artifacts.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="71" selection-start="1031" selection-end="1031" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/m2/org/codehaus/groovy/groovy-all/1.8.6/groovy-all-1.8.6-sources.jar!/groovy/util/BuilderSupport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="197" column="0" selection-start="7056" selection-end="7056" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/m2/org/codehaus/groovy/groovy-all/1.8.6/groovy-all-1.8.6-sources.jar!/groovy/util/AntBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="186" column="19" selection-start="7145" selection-end="7145" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/m2/org/codehaus/groovy/groovy-all/1.8.6/groovy-all-1.8.6-sources.jar!/groovy/xml/MarkupBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="300" column="0" selection-start="10323" selection-end="10323" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/m2/org/codehaus/groovy/groovy-all/1.8.6/groovy-all-1.8.6-sources.jar!/org/codehaus/groovy/ast/CodeVisitorSupport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="22" selection-start="1050" selection-end="1050" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#9700#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/m2/org/codehaus/groovy/groovy-all/1.8.6/groovy-all-1.8.6-sources.jar!/groovy/sql/SqlWhereVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="46" selection-start="1253" selection-end="1253" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#2978#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/m2/org/codehaus/groovy/groovy-all/1.8.6/groovy-all-1.8.6-sources.jar!/groovy/sql/DataSet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="67" column="20" selection-start="2516" selection-end="2516" vertical-scroll-proportion="0.0">
@@ -1011,13 +1054,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/m2/org/codehaus/groovy/groovy-all/1.8.6/groovy-all-1.8.6-sources.jar!/groovy/json/JsonDelegate.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="6" selection-start="776" selection-end="776" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/m2/org/codehaus/groovy/groovy-all/1.8.6/groovy-all-1.8.6-sources.jar!/groovy/json/JsonOutput.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="45" column="32" selection-start="1501" selection-end="1508" vertical-scroll-proportion="0.0">
@@ -1025,51 +1061,98 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/m2/org/codehaus/groovy/groovy-all/1.8.6/groovy-all-1.8.6-sources.jar!/groovy/lang/Closure.java">
+    <entry file="file://$PROJECT_DIR$/src/test/groovy/bluemount/core/model/GroovyCompileTest.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="527" column="22" selection-start="18145" selection-end="18145" vertical-scroll-proportion="0.0">
+        <state line="7" column="11" selection-start="121" selection-end="121" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/1.6.0_29-b11-402.jdk/Contents/Classes/classes.jar!/sun/reflect/NativeMethodAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="28" selection-start="470" selection-end="470" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/m2/org/codehaus/groovy/groovy-all/1.8.6/groovy-all-1.8.6-sources.jar!/groovy/json/JsonDelegate.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="6" selection-start="776" selection-end="776" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/m2/org/codehaus/groovy/groovy-all/1.8.6/groovy-all-1.8.6-sources.jar!/org/codehaus/groovy/runtime/callsite/CallSiteArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="0" selection-start="1490" selection-end="1490" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#0#38951#0" expanded="false" />
+            <element signature="e#0#6396#0" expanded="false" />
             <element signature="imports" expanded="false" />
-            <element signature="e#14364#14394#0" expanded="false" />
-            <element signature="e#37860#37890#0" expanded="false" />
-            <element signature="e#38644#38674#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/m2/org/codehaus/groovy/groovy-all/1.8.6/groovy-all-1.8.6-sources.jar!/org/codehaus/groovy/runtime/callsite/AbstractCallSite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="119" column="0" selection-start="3498" selection-end="3498" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#12430#0" expanded="false" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/m2/org/codehaus/groovy/groovy-all/1.8.6/groovy-all-1.8.6-sources.jar!/groovy/json/JsonBuilder.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="8" selection-start="2861" selection-end="2861" vertical-scroll-proportion="0.0">
+        <state line="58" column="8" selection-start="2183" selection-end="2183" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/m2/org/codehaus/groovy/groovy-all/1.8.6/groovy-all-1.8.6-sources.jar!/org/codehaus/groovy/runtime/callsite/PogoMetaClassSite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="0" selection-start="1303" selection-end="1303" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#3376#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/groovy/bluemount/core/model/ModelBuilderTest.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="22" selection-start="53" selection-end="53" vertical-scroll-proportion="0.0" />
+        <state line="2" column="0" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/bluemount/core/model/HashBuilder.groovy">
+    <entry file="jar://$PROJECT_DIR$/m2/org/codehaus/groovy/groovy-all/1.8.6/groovy-all-1.8.6-sources.jar!/groovy/lang/Closure.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="33" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#30#60#0" expanded="true" />
-          </folding>
+        <state line="789" column="7" selection-start="31344" selection-end="31344" vertical-scroll-proportion="0.9255814">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/m2/org/codehaus/groovy/groovy-all/1.8.6/groovy-all-1.8.6-sources.jar!/org/codehaus/groovy/runtime/DefaultGroovyMethods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2890" column="37" selection-start="113759" selection-end="113759" vertical-scroll-proportion="-5.1538463">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/groovy/bluemount/core/model/HashBuilderTest.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="5" selection-start="2064" selection-end="2064" vertical-scroll-proportion="0.0">
+        <state line="122" column="35" selection-start="2519" selection-end="2519" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/groovy/bluemount/core/model/GroovyCompileTest.groovy">
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/bluemount/core/model/HashBuilder.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="141" selection-end="141" vertical-scroll-proportion="0.3611738">
-          <folding />
+        <state line="21" column="50" selection-start="368" selection-end="368" vertical-scroll-proportion="0.46952596">
+          <folding>
+            <element signature="e#30#60#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

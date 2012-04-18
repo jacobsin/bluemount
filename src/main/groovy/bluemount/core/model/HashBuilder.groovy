@@ -7,18 +7,19 @@ import groovy.json.JsonOutput
 
 class HashBuilder extends JsonBuilder {
 
+  def content = [:]
+
   def call() {
     return toHash()
   }
 
   def call(Map m) {
-    this.content = (this.content ?: [:]) << m
+    this.content << m
     return toHash()
   }
 
   def call(Closure c) {
-    this.content = (this.content ?: [:]) << HashDelegate.cloneDelegateAndGetContent(c)
-    return toHash()
+    call(HashDelegate.cloneDelegateAndGetContent(c))
   }
 
   def toHash() {
@@ -59,8 +60,9 @@ class HashOutput {
 
 class HashDelegate extends JsonDelegate {
   def c = this.content
-  static cloneDelegateAndGetContent(Closure c) {
+  static cloneDelegateAndGetContent(Closure c, Map content=[:]) {
     def delegate = new HashDelegate()
+    if (content) delegate.content << content
     Closure cloned = c.clone()
     cloned.delegate = delegate
     cloned.resolveStrategy = Closure.DELEGATE_FIRST
