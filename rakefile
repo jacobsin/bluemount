@@ -1,4 +1,4 @@
-require 'artifacts'
+require 'ant'
 require 'cucumber/rake/task'
 
 VERSION_NUMBER = "1.0.0"
@@ -7,29 +7,105 @@ GROUP = "bluemount"
 TARGET_JAVA = 'target/java'
 TARGET_TEST_JAVA = 'target/test/java'
 
-#options.proxy.http = 'http://myproxy:8080'
 
-define 'bluemount' do
-  project.version = VERSION_NUMBER
-  project.group = GROUP
-  project.no_ipr
+task :default => :jar
 
-  iml.local_repository_env_override = nil
-
-  local_shipped = Dir[_("lib/shipped/*.jar")]
-  compile.into(TARGET_JAVA).with local_shipped, SHIPPED
-  resources.filter.into(TARGET_JAVA)
-
-  local_reference = Dir[_("lib/reference/*.jar")]
-  test.compile.into(TARGET_TEST_JAVA).with local_shipped, SHIPPED, local_reference, REFERENCE
-  test.resources.filter.into(TARGET_TEST_JAVA)
-#  test.enhance { Rake::Task['features'].execute }
-
-  package(:jar)
+def ivy_retrieve(lib_path, org, mod, rev, src=false)
+  lib_path << "/src" if src
+  conf = src ? "sources" : "default"
+  pattern = src ? "lib/#{lib_path}/[artifact]-[conf].[ext]" : "lib/#{lib_path}/[artifact].[ext]"
+  ant.retrieve :organisation => org,
+               :module => mod,
+               :revision => rev,
+               :pattern => pattern,
+               :inline => true,
+               :conf => conf
 end
+
+def ivy_retrieve_all(lib_path, artifacts, src=false)
+  artifacts.each_slice(3) do |*artifact|
+    artifact[0] << src
+    ivy_retrieve(lib_path, *artifact[0])
+  end
+end
+
+artifacts = {
+    :shipped => %w[
+  org.eclipse.jetty.aggregate jetty-webapp 7.3.0.v20110203
+  commons-io commons-io 2.0.1
+  org.restlet.jee org.restlet 2.1-M4
+  org.restlet.jee org.restlet.ext.servlet 2.1-M4
+  org.restlet.jee org.restlet.ext.jackson 2.1-M4
+  org.restlet.jee org.restlet.ext.spring 2.1-M4
+  com.google.inject guice 3.0
+  com.google.inject.extensions guice-servlet 3.0
+  com.google.inject.extensions guice-multibindings 3.0
+  javax.inject javax.inject 1
+  de.devsurf.injection.guice de.devsurf.injection.guice.core 0.8.7
+  de.devsurf.injection.guice.scanner de.devsurf.injection.guice.scanner.asm 0.8.7
+  org.codehaus.groovy groovy-all 1.8.6
+  org.slf4j slf4j-api 1.6.1
+  ch.qos.logback logback-core 0.9.27
+  ch.qos.logback logback-classic 0.9.27
+  ch.qos.logback logback-access 0.9.27
+],
+    :reference => %w[
+  org.apache.ant ant 1.8.0
+  junit junit 4.7
+  org.mockito mockito-core 1.8.5
+]
+}
+
+build_dir = TARGET_JAVA
+file build_dir
+
+task :setup => [build_dir, "ivy:install"] do
+  ant.property :name => "src.dir", :value => "src/main/java"
+  ant.path(:id => "project.class.path") do
+    pathelement :location => "classes"
+  end
+  ivy_retrieve_all 'shipped', artifacts[:shipped]
+  ivy_retrieve_all 'reference', artifacts[:reference]
+end
+
+task :compile => :setup do
+  mkdir_p build_dir
+  ant.javac(:destdir => build_dir) do
+    classpath :refid => "project.class.path"
+    src { pathelement :location => "${src.dir}" }
+  end
+end
+
+task :jar => :compile do
+  ant.jar :destfile => "urlverifier.jar", :basedir => build_dir
+end
+
 
 Cucumber::Rake::Task.new(:features => task('compile')) do |t|
   t.cucumber_opts = %w{--format junit    --out reports/cucumber
                        --format progress --out reports/cucumber/features.log
                        --format html     --out reports/cucumber/features.html}
+end
+
+namespace :ivy do
+  ivy_install_version = '2.3.0-rc1'
+  ivy_jar_dir = 'lib/reference'
+  ivy_jar_file = "#{ivy_jar_dir}/ivy.jar"
+
+  directory ivy_jar_dir
+
+  task :download => ivy_jar_dir do
+    ant.get :src => "http://repo1.maven.org/maven2/org/apache/ivy/ivy/#{ivy_install_version}/ivy-#{ivy_install_version}.jar",
+            :dest => ivy_jar_file,
+            :usetimestamp => true
+  end
+
+  task :install => :download do
+    ant.path :id => 'ivy.lib.path' do
+      fileset :dir => ivy_jar_dir, :includes => '*.jar'
+    end
+
+    ant.taskdef :resource => "org/apache/ivy/ant/antlib.xml",
+                :classpathref => "ivy.lib.path"
+  end
 end
