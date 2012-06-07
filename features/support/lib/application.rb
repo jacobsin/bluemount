@@ -1,5 +1,7 @@
 require 'singleton'
-require 'rjb'
+require 'java'
+
+java_import 'bluemount.web.RunJetty'
 
 class Application
   include Singleton
@@ -7,9 +9,8 @@ class Application
   attr_reader :port
 
   def initialize
-    rjb_load
     @port = 3333
-    @jetty = Rjb::import('bluemount.web.RunJetty').new(@port)
+    @jetty = RunJetty.new(@port)
     @jetty.start false
   end
 
@@ -29,18 +30,6 @@ class Application
 
   def debug?
     ENV['RUBYLIB'] =~ /ruby-debug-ide/
-  end
-
-  def rjb_load
-    classes = ["target/test/java", "target/java"]
-    classpath = (classes | jars('local') | jars('m2')).join(File::PATH_SEPARATOR)
-    jvmargs = [
-        '-Duser.timezone=UTC',
-        '-Djava.util.logging.config.file=src/main/resources/logging.properties',
-        '-Dlogback.access.config.file=src/main/resources/logback-access.xml'
-    ]
-    jvmargs |= ['-Xdebug', '-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005'] if debug?
-    Rjb::load(classpath, jvmargs)
   end
 
 end

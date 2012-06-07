@@ -3,12 +3,14 @@ package bluemount.core.service;
 import bluemount.core.model.Project;
 import bluemount.core.repository.ProjectRepository;
 import de.devsurf.injection.guice.annotations.Bind;
+import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.util.List;
 
 @Bind
+@Component
 public class ProjectServiceImpl implements ProjectService {
     private ProjectRepository projectRepository;
     private String defaultOwner;

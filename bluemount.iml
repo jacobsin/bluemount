@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module relativePaths="true" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="JRUBY" name="JRuby">
+      <configuration>
+        <JRUBY_FACET_CONFIG_ID NAME="JRUBY_SDK_NAME" VALUE="RVM: jruby-1.6.7.2" />
+        <LOAD_PATH number="0" />
+        <I18N_FOLDERS number="0" />
+      </configuration>
+    </facet>
+  </component>
   <component name="NewModuleRootManager" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/target/java" />
     <output-test url="file://$MODULE_DIR$/target/test/java" />
@@ -495,6 +504,36 @@
         </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="library" scope="PROVIDED" name="RVM: jruby-1.6.7.2 facet library" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="atoulme-Antwrap (v0.7.1, RVM: jruby-1.6.7.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bouncy-castle-java (v1.5.0146.1, RVM: jruby-1.6.7.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="builder (v2.1.2, RVM: jruby-1.6.7.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="buildr (v1.4.5, RVM: jruby-1.6.7.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.1.4, RVM: jruby-1.6.7.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="cucumber (v0.10.2, RVM: jruby-1.6.7.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.1.2, RVM: jruby-1.6.7.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="gherkin (v2.3.7, RVM: jruby-1.6.7.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="highline (v1.5.1, RVM: jruby-1.6.7.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="hoe (v2.3.3, RVM: jruby-1.6.7.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="jruby-openssl (v0.7.7, RVM: jruby-1.6.7.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="json (v1.5.1, RVM: jruby-1.6.7.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="json_pure (v1.4.3, RVM: jruby-1.6.7.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.16, RVM: jruby-1.6.7.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="minitar (v0.5.3, RVM: jruby-1.6.7.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="net-sftp (v2.0.4, RVM: jruby-1.6.7.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="net-ssh (v2.0.23, RVM: jruby-1.6.7.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rake (v0.8.7, RVM: jruby-1.6.7.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rest-client (v1.6.1, RVM: jruby-1.6.7.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec (v2.1.0, RVM: jruby-1.6.7.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-core (v2.1.0, RVM: jruby-1.6.7.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-expectations (v2.1.0, RVM: jruby-1.6.7.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-mocks (v2.1.0, RVM: jruby-1.6.7.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ruby-debug-base (v0.10.4, RVM: jruby-1.6.7.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ruby-debug-ide (v0.4.16, RVM: jruby-1.6.7.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rubyforge (v2.0.3, RVM: jruby-1.6.7.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rubyzip (v0.9.4, RVM: jruby-1.6.7.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="term-ansicolor (v1.0.5, RVM: jruby-1.6.7.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="xml-simple (v1.0.12, RVM: jruby-1.6.7.2) [gem]" level="application" />
   </component>
 </module>
 

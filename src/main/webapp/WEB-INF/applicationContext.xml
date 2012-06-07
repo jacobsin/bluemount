@@ -9,10 +9,7 @@
 
   <context:annotation-config/>
 
-  <context:component-scan base-package="bluemount">
-    <context:include-filter type="assignable" expression="org.restlet.resource.ServerResource"/>
-    <context:include-filter type="regex" expression="bluemount\.core.*"/>
-  </context:component-scan>
+  <context:component-scan base-package="bluemount"/>
 
   <bean name="project.defaultOwner" class="java.lang.String">
     <constructor-arg value="Mr Spring"/>
