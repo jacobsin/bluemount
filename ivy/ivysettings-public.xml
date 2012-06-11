@@ -1,0 +1,10 @@
+<ivysettings>
+    <resolvers>
+        <ibiblio name="public-default" m2compatible="true"/>
+        <ibiblio name="restlet" m2compatible="true" root="http://maven.restlet.org"/>
+        <chain name="public" returnFirst="true" checkmodified="true">
+            <resolver ref="public-default"/>
+            <resolver ref="restlet"/>
+        </chain>
+    </resolvers>
+</ivysettings>
