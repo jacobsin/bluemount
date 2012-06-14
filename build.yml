@@ -1,7 +1,0 @@
-gems:
-  #- buildr-twitter-notifier-addon >=1
-  #- mocha
-  #- ci_reporter
-
-artifacts:
-   servlet: javax.servlet:servlet-api:jar:2.5
