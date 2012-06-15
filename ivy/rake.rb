@@ -1,3 +1,5 @@
+require 'ant'
+
 namespace :ivy do
   ivy_install_version = '2.3.0-rc1'
   ivy_jar_dir = 'lib/reference'
@@ -41,7 +43,7 @@ namespace :ivy do
 
   task :setup => :install do
     ant.configure :file => 'ivy/ivysettings.xml'
-    require 'artifacts'
+    require 'ivy/artifacts'
     ARTIFACTS.each_pair  do |k,v|
       ivy_retrieve_all k, v
     end
