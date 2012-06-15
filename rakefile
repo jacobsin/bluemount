@@ -2,39 +2,108 @@ require 'ant'
 require 'ivy/rake'
 require 'cucumber/rake/task'
 
-VERSION_NUMBER = "1.0.0"
-GROUP = "bluemount"
-
-TARGET_JAVA = 'target/java'
-TARGET_TEST_JAVA = 'target/test/java'
+VERSION_NUMBER = '1.0.0'
+GROUP = 'bluemount'
 
 task :default => :jar
 
+main_src_dir = 'src/main/java'
+test_src_dir = 'src/test/java'
+main_resources_dir = 'src/main/resources'
+test_resources_dir = 'src/test/resources'
 
-build_dir = TARGET_JAVA
-file build_dir
+lib_shipped_dir = 'lib/shipped'
+lib_reference_dir = 'lib/reference'
 
-task :setup => [build_dir, "ivy:artifacts"] do
-  ant.property :name => "src.dir", :value => "src/main/java"
-  ant.path(:id => "project.class.path") do
-    pathelement :location => "classes"
+build_dir = 'build'
+main_classes_dir = "#{build_dir}/classes"
+test_classes_dir = "#{build_dir}/test-classes"
+reports_dir = "#{build_dir}/reports"
+reports_junit_dir = "#{reports_dir}/junit"
+
+directory build_dir
+directory main_classes_dir
+directory test_classes_dir
+directory reports_dir
+directory reports_junit_dir
+
+task :setup => [build_dir, 'ivy:artifacts'] do
+  ant.path :id => 'lib.shipped.path' do
+    fileset :dir => lib_shipped_dir, :includes => '*.jar'
+  end
+  ant.path :id => 'lib.reference.path' do
+    fileset :dir => lib_reference_dir, :includes => '*.jar'
+  end
+  ant.path(:id => 'main.class.path') do
+    pathelement :location => main_classes_dir
+    path :refid => 'lib.shipped.path'
+  end
+  ant.path(:id => 'test.class.path') do
+    pathelement :location => test_classes_dir
+    path :refid => 'lib.reference.path'
+    path :refid => 'main.class.path'
+  end
+  ant.taskdef :resource => 'org/codehaus/groovy/antlib.xml',
+              :classpathref => 'lib.shipped.path'
+  ant.taskdef :name => 'junit',
+              :classname => 'org.apache.tools.ant.taskdefs.optional.junit.JUnitTask',
+              :classpathref => 'lib.reference.path'
+end
+
+task :compile => %w(compile:main compile:test)
+
+namespace :compile do
+  task :main => [:setup, main_classes_dir] do
+    ant.groovyc(:destdir => main_classes_dir) do
+      classpath :refid => 'main.class.path'
+      src { pathelement :location => main_src_dir }
+      javac :source => '1.6', :target => '1.6'
+    end
+    ant.copy(:todir=>main_classes_dir) do
+      fileset :dir=>main_resources_dir do
+        include :name=> '**/*.*'
+      end
+    end
+  end
+
+  task :test => [:main, test_classes_dir] do
+    ant.groovyc(:destdir => test_classes_dir) do
+      classpath :refid => 'test.class.path'
+      src { pathelement :location => test_src_dir }
+      javac :source => '1.6', :target => '1.6'
+    end
+    ant.copy(:todir=>main_classes_dir) do
+      fileset :dir=>main_resources_dir do
+        include :name=> '**/*.*'
+      end
+    end
   end
 end
 
-task :compile => :setup do
-  mkdir_p build_dir
-  ant.javac(:destdir => build_dir) do
-    classpath :refid => "project.class.path"
-    src { pathelement :location => "${src.dir}" }
+namespace :test do
+  desc 'Run all unit tests'
+  task :setup => reports_junit_dir
+  task :unit => [:setup, :compile] do
+    ant.junit(:printsummary => true, :haltonfailure => false) do
+      classpath :refid => 'test.class.path'
+      formatter :type => 'xml'
+      batchtest(:fork => true, :todir => "#{reports_junit_dir}") do
+        fileset(:dir => test_src_dir) do
+          include :name => '**/*Test.java'
+          include :name => '**/*Test.groovy'
+        end
+      end
+    end
+  end
+
+  Cucumber::Rake::Task.new(:features => [:setup, :compile]) do |t|
+    t.cucumber_opts = %W{--format junit  --out #{reports_dir}/cucumber
+                       --format progress --out #{reports_dir}/cucumber/features.log
+                       --format html     --out #{reports_dir}/cucumber/features.html}
   end
 end
 
-task :jar => :compile do
-  ant.jar :destfile => "urlverifier.jar", :basedir => build_dir
+task :jar => 'compile:main' do
+  ant.jar :destfile => "#{build_dir}/#{GROUP}-#{VERSION_NUMBER}.jar", :basedir => main_classes_dir
 end
 
-Cucumber::Rake::Task.new(:features => task('compile')) do |t|
-  t.cucumber_opts = %w{--format junit    --out reports/cucumber
-                       --format progress --out reports/cucumber/features.log
-                       --format html     --out reports/cucumber/features.html}
-end

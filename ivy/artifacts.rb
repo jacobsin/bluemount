@@ -1,5 +1,5 @@
 ARTIFACTS = {
-    :shipped => %w[
+    :shipped => %w{
   org.eclipse.jetty.aggregate jetty-webapp 7.3.0.v20110203
   commons-io commons-io 2.0.1
   org.restlet.jee org.restlet 2.1-M4
@@ -17,9 +17,10 @@ ARTIFACTS = {
   ch.qos.logback logback-core 0.9.27
   ch.qos.logback logback-classic 0.9.27
   ch.qos.logback logback-access 0.9.27
-],
-    :reference => %w[
+},
+    :reference => %w{
   junit junit 4.7
+  org.apache.ant ant-junit 1.7.1
   org.mockito mockito-core 1.8.5
-]
+}
 }

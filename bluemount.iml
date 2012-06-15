@@ -10,17 +10,15 @@
     </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="false">
-    <output url="file://$MODULE_DIR$/target/java" />
-    <output-test url="file://$MODULE_DIR$/target/test/java" />
+    <output url="file://$MODULE_DIR$/build/classes" />
+    <output-test url="file://$MODULE_DIR$/build/test-classes" />
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/main/groovy" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/groovy" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/resources" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/reports" />
-      <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
@@ -41,6 +39,7 @@
     <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.16, RVM: jruby-1.6.7.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v0.8.7, RVM: jruby-1.6.7.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rest-client (v1.6.1, RVM: jruby-1.6.7.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-expectations (v2.1.0, RVM: jruby-1.6.7.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ruby-debug-base (v0.10.4, RVM: jruby-1.6.7.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ruby-debug-ide (v0.4.16, RVM: jruby-1.6.7.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="term-ansicolor (v1.0.5, RVM: jruby-1.6.7.2) [gem]" level="application" />

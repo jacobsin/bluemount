@@ -2,11 +2,11 @@
   <configuration default="false" name="Run Jetty" type="Application" factoryName="Application">
     <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
       <pattern>
-        <option name="PATTERN" value="bluemount.*" />
+        <option name="PATTERN" value="bluemount.core.builder.bluemount.*" />
         <option name="ENABLED" value="true" />
       </pattern>
     </extension>
-    <option name="MAIN_CLASS_NAME" value="bluemount.web.RunJetty" />
+    <option name="MAIN_CLASS_NAME" value="bluemount.core.builder.bluemount.web.RunJetty" />
     <option name="VM_PARAMETERS" value="-Djava.util.logging.config.file=src/main/resources/logging.properties -Dlogback.access.config.file=src/main/resources/logback-access.xml -Duser.timezone=UTC" />
     <option name="PROGRAM_PARAMETERS" value="" />
     <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/" />

@@ -2,7 +2,7 @@ package bluemount.web.resource;
 
 import bluemount.core.model.Project;
 import bluemount.core.service.ProjectService;
-import org.hamcrest.Matchers;
+import org.hamcrest.CoreMatchers;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -33,7 +33,7 @@ public class ProjectsResourceTest {
 
         List<Project> actual = projectsResource.list();
 
-        Assert.assertThat(actual, Matchers.sameInstance(expected));
+        Assert.assertThat(actual, CoreMatchers.sameInstance(expected));
         verify(projectService, times(1)).list();
     }
 }
