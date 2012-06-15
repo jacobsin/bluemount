@@ -59,9 +59,9 @@ namespace :compile do
       src { pathelement :location => main_src_dir }
       javac :source => '1.6', :target => '1.6'
     end
-    ant.copy(:todir=>main_classes_dir) do
-      fileset :dir=>main_resources_dir do
-        include :name=> '**/*.*'
+    ant.copy(:todir => main_classes_dir) do
+      fileset :dir => main_resources_dir do
+        include :name => '**/*.*'
       end
     end
   end
@@ -72,9 +72,9 @@ namespace :compile do
       src { pathelement :location => test_src_dir }
       javac :source => '1.6', :target => '1.6'
     end
-    ant.copy(:todir=>main_classes_dir) do
-      fileset :dir=>main_resources_dir do
-        include :name=> '**/*.*'
+    ant.copy(:todir => main_classes_dir) do
+      fileset :dir => test_resources_dir do
+        include :name => '**/*.*'
       end
     end
   end
