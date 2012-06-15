@@ -8,9 +8,8 @@ namespace :ivy do
   directory ivy_jar_dir
 
   def ivy_retrieve(lib_path, org, mod, rev, src=false)
-    lib_path << "/src" if src
     conf = src ? "sources" : "default"
-    pattern = src ? "lib/#{lib_path}/[artifact]-[conf].[ext]" : "lib/#{lib_path}/[artifact].[ext]"
+    pattern = src ? "lib/#{lib_path}/src/[artifact]-[conf].[ext]" : "lib/#{lib_path}/[artifact].[ext]"
     ant.retrieve :organisation => org,
                  :module => mod,
                  :revision => rev,
@@ -41,11 +40,23 @@ namespace :ivy do
                 :classpathref => "ivy.lib.path"
   end
 
-  task :setup => :install do
+  task :configure do
     ant.configure :file => 'ivy/ivysettings.xml'
+  end
+
+  desc "Download all artifacts"
+  task :artifacts => [:install, :configure] do
     require 'ivy/artifacts'
     ARTIFACTS.each_pair  do |k,v|
       ivy_retrieve_all k, v
+    end
+  end
+
+  desc "Download all artifacts' sources"
+  task :sources => [:install, :configure] do
+    require 'ivy/artifacts'
+    ARTIFACTS.each_pair  do |k,v|
+      ivy_retrieve_all k, v, src=true
     end
   end
 end

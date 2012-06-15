@@ -14,7 +14,7 @@ task :default => :jar
 build_dir = TARGET_JAVA
 file build_dir
 
-task :setup => [build_dir, "ivy:setup"] do
+task :setup => [build_dir, "ivy:artifacts"] do
   ant.property :name => "src.dir", :value => "src/main/java"
   ant.path(:id => "project.class.path") do
     pathelement :location => "classes"
