@@ -88,9 +88,8 @@ namespace :test do
       classpath :refid => 'test.class.path'
       formatter :type => 'xml'
       batchtest(:fork => true, :todir => "#{reports_junit_dir}") do
-        fileset(:dir => test_src_dir) do
-          include :name => '**/*Test.java'
-          include :name => '**/*Test.groovy'
+        fileset(:dir => test_classes_dir) do
+          include :name => '**/*Test.*'
         end
       end
     end
