@@ -1,4 +1,5 @@
 require 'ant'
+require 'rake/clean'
 require 'ivy/rake'
 require 'cucumber/rake/task'
 
@@ -26,6 +27,10 @@ directory main_classes_dir
 directory test_classes_dir
 directory reports_dir
 directory reports_junit_dir
+
+CLEAN.include %w{build logs lib/**/*.jar}
+CLEAN.exclude 'lib/reference/ant.jar'
+CLEAN.exclude 'lib/reference/ant-launcher.jar'
 
 task :setup => [build_dir, 'ivy:artifacts'] do
   ant.path :id => 'lib.shipped.path' do
@@ -114,10 +119,6 @@ namespace :test do
       cucumber_opts.each { |v| arg :value=>v }
     end
   end
-
-  #Cucumber::Rake::Task.new(:features_raw => [:setup, :compile]) do |t|
-  #  t.cucumber_opts = cucumber_opts
-  #end
 end
 
 task :jar => 'compile:main' do
