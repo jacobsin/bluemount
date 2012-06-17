@@ -5,7 +5,9 @@
       <root url="file://$PROJECT_DIR$/lib/shipped" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/shipped/src/de.devsurf.injection.guice.core-sources.jar!/" />
+    </SOURCES>
     <jarDirectory url="file://$PROJECT_DIR$/lib/shipped" recursive="false" />
   </library>
 </component>
