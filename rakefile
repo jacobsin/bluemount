@@ -81,8 +81,9 @@ namespace :compile do
 end
 
 namespace :test do
-  desc 'Run all unit tests'
   task :setup => reports_junit_dir
+
+  desc 'Run all unit tests'
   task :unit => [:setup, :compile] do
     ant.junit(:printsummary => true, :haltonfailure => false) do
       classpath :refid => 'test.class.path'
@@ -95,11 +96,28 @@ namespace :test do
     end
   end
 
-  Cucumber::Rake::Task.new(:features => [:setup, :compile]) do |t|
-    t.cucumber_opts = %W{--format junit  --out #{reports_dir}/cucumber
-                       --format progress --out #{reports_dir}/cucumber/features.log
-                       --format html     --out #{reports_dir}/cucumber/features.html}
+  jvm_args = %w{-Duser.timezone=UTC
+                -Djava.util.logging.config.file=logging.properties
+                -Dlogback.access.config.file=logback-access.xml}
+
+  cucumber_opts = %W{--format junit    --out #{reports_dir}/cucumber
+                     --format progress --out #{reports_dir}/cucumber/features.log
+                     --format html     --out #{reports_dir}/cucumber/features.html}
+
+  desc 'Run all cucumber features'
+  task :features => [:setup, :compile] do
+    ant.java(:classname=>'org.jruby.Main', :fork=>true, :failonerror=>true) do
+      classpath :refid => 'test.class.path'
+      jvm_args.each { |v| jvmarg :value=>v }
+      arg :value=>'-S'
+      arg :value=>'cucumber'
+      cucumber_opts.each { |v| arg :value=>v }
+    end
   end
+
+  #Cucumber::Rake::Task.new(:features_raw => [:setup, :compile]) do |t|
+  #  t.cucumber_opts = cucumber_opts
+  #end
 end
 
 task :jar => 'compile:main' do

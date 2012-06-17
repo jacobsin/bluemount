@@ -22,5 +22,6 @@ ARTIFACTS = {
   junit junit 4.7
   org.apache.ant ant-junit 1.7.1
   org.mockito mockito-core 1.8.5
+  org.jruby jruby-complete 1.6.7.2
 }
 }
