@@ -1,6 +1,6 @@
 require 'ant'
 require 'ivy/rake'
-require 'cucumber/rake/task'
+#require 'cucumber/rake/task'
 
 VERSION_NUMBER = '1.0.0'
 GROUP = 'bluemount'
