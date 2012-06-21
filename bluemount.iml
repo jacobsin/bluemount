@@ -21,8 +21,8 @@
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
-    <orderEntry type="library" name="shipped" level="project" />
-    <orderEntry type="library" scope="TEST" name="reference" level="project" />
+    <orderEntry type="library" exported="" name="shipped" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="reference" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="RVM: jruby-1.6.7.2 facet library" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activemodel (v3.2.6, RVM: jruby-1.6.7.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activerecord (v3.2.6, RVM: jruby-1.6.7.2) [gem]" level="application" />

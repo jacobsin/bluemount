@@ -4,6 +4,9 @@ namespace :ivy do
   ivy_install_version = '2.3.0-rc1'
   ivy_jar_dir = 'lib/reference'
   ivy_jar_file = "#{ivy_jar_dir}/ivy.jar"
+  ant_proxy ={
+    #:proxyhost=>'hk-proxy.ap.hedani.net', :proxyport=>'8080'
+  }
 
   directory ivy_jar_dir
 
@@ -26,6 +29,7 @@ namespace :ivy do
   end
 
   task :download => ivy_jar_dir do
+    ant.setproxy ant_proxy
     ant.get :src => "http://repo1.maven.org/maven2/org/apache/ivy/ivy/#{ivy_install_version}/ivy-#{ivy_install_version}.jar",
             :dest => ivy_jar_file,
             :usetimestamp => true
