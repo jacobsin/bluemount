@@ -46,7 +46,7 @@ namespace :ivy do
 
   desc "Download all artifacts"
   task :artifacts => [:install, :configure] do
-    require 'ivy/artifacts'
+    require 'rake/artifacts'
     ARTIFACTS.each_pair  do |k,v|
       ivy_retrieve_all k, v
     end
@@ -54,7 +54,7 @@ namespace :ivy do
 
   desc "Download all artifacts' sources"
   task :sources => [:install, :configure] do
-    require 'ivy/artifacts'
+    require 'rake/artifacts'
     ARTIFACTS.each_pair  do |k,v|
       ivy_retrieve_all k, v, src=true
     end
