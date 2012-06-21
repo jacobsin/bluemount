@@ -12,6 +12,7 @@ ARTIFACTS = {
   de.devsurf.injection.guice de.devsurf.injection.guice.core 0.8.7
   de.devsurf.injection.guice.scanner de.devsurf.injection.guice.scanner.asm 0.8.7
   org.codehaus.groovy groovy-all 1.8.6
+  org.fusesource.scalate scalate-core 1.5.3
   org.slf4j slf4j-api 1.6.1
   ch.qos.logback logback-core 0.9.27
   ch.qos.logback logback-classic 0.9.27
