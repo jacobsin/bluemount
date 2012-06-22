@@ -28,7 +28,7 @@ public class JacksonRepresentation<T> extends org.restlet.ext.jackson.JacksonRep
     }
 
     @SuppressWarnings({"unchecked"})
-    public <O> O getObject(Class<O> objectClass) {
+    public <O> O getObject(Class<O> objectClass) throws java.io.IOException {
         setObjectClass((Class<T>) objectClass);
         return (O) getObject();
     }

@@ -13,6 +13,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -28,7 +29,7 @@ public class ProjectsResource extends ServerResource {
     }
 
     @Post("json")
-    public Project create(JacksonRepresentation<? extends Project> json) {
+    public Project create(JacksonRepresentation<? extends Project> json) throws IOException {
         return service.create(json.getObject(projectClass()));
     }
 

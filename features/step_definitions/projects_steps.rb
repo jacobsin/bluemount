@@ -1,5 +1,5 @@
 Given /^([A-z]*) project ([A-z]*) exists$/ do |project_type, title|
-  When "I create #{project_type} project #{title}"
+  step "I create #{project_type} project #{title}"
 end
 
 When /^I create ([A-z]*) project:$/ do |project_type, table|
