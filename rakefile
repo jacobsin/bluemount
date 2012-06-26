@@ -100,13 +100,14 @@ namespace :test do
     end
   end
 
-  jvm_args = %w{-Duser.timezone=UTC
+  jvm_args = %W{-Duser.timezone=UTC
                 -Djava.util.logging.config.file=logging.properties
-                -Dlogback.access.config.file=logback-access.xml}
+                -Dlogback.access.config.file=logback-access.xml
+                -Djruby.home=C:/dev/ruby/jruby-1.6.7.2}
 
   cucumber_opts = %W{--format junit    --out #{reports_dir}/cucumber
-                     --format progress --out #{reports_dir}/cucumber/features.log
-                     --format html     --out #{reports_dir}/cucumber/features.html}
+                     --format html     --out #{reports_dir}/cucumber/features.html
+                     --format pretty}
 
   desc 'Run all cucumber features'
   task :features => [:setup, :compile] do
