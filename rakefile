@@ -100,10 +100,12 @@ namespace :test do
     end
   end
 
+  jruby_home = RbConfig.datadir('').gsub("/share/", "")
+
   jvm_args = %W{-Duser.timezone=UTC
                 -Djava.util.logging.config.file=logging.properties
                 -Dlogback.access.config.file=logback-access.xml
-                -Djruby.home=C:/dev/ruby/jruby-1.6.7.2}
+                -Djruby.home=#{jruby_home}}
 
   cucumber_opts = %W{--format junit    --out #{reports_dir}/cucumber
                      --format html     --out #{reports_dir}/cucumber/features.html
