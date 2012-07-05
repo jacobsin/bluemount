@@ -2,16 +2,17 @@
   <configuration default="false" name="Acceptance Tests" type="CucumberRunConfigurationType" factoryName="Cucumber">
     <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
     <module name="bluemount" />
-    <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-J-Duser.timezone=UTC -J-Djava.util.logging.config.file=src/main/resources/logging.properties -J-Dlogback.access.config.file=src/main/resources/logback-access.xml" />
+    <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-J-Duser.timezone=UTC -J-Djava.util.logging.config.file=src/test/resources/logging.properties -J-Dlogback.access.config.file=src/main/resources/logback-access.xml" />
     <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$/" />
     <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-    <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="RVM: jruby-1.6.7.2" />
+    <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="jruby-1.6.7.2-p357" />
     <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
     <envs>
       <env name="RESTCLIENT_LOG" value="stdout" />
       <env name="ANSICON" value="" />
     </envs>
     <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+    <EXTENSION ID="JRubyRunConfigurationExtension" />
     <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" track_test_folders="true" runner="rcov">
       <COVERAGE_PATTERN ENABLED="true">
         <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
