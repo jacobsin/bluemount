@@ -7,6 +7,8 @@ APP = 'bluemount'
 
 task :default => :jar
 
+jruby_home = Gem.default_bindir().gsub('/bin', '')
+
 main_src_dir = 'src/main/java'
 test_src_dir = 'src/test/java'
 main_resources_dir = 'src/main/resources'
@@ -46,6 +48,9 @@ task :setup => [build_dir, 'ivy:artifacts'] do
     pathelement :location => test_classes_dir
     path :refid => 'lib.reference.path'
     path :refid => 'main.class.path'
+  end
+  ant.path(:id => 'jruby.jar.path') do
+    pathelement :location => "#{jruby_home}/lib/jruby.jar"
   end
   ant.taskdef :resource => 'org/codehaus/groovy/antlib.xml',
               :classpathref => 'lib.shipped.path'
@@ -100,22 +105,27 @@ namespace :test do
     end
   end
 
-  jvm_args = %w{-Duser.timezone=UTC
-                -Djava.util.logging.config.file=logging.properties
-                -Dlogback.access.config.file=logback-access.xml}
-
-  cucumber_opts = %W{--format junit    --out #{reports_dir}/cucumber
-                     --format progress --out #{reports_dir}/cucumber/features.log
-                     --format html     --out #{reports_dir}/cucumber/features.html}
-
   desc 'Run all cucumber features'
   task :features => [:setup, :compile] do
-    ant.java(:classname=>'org.jruby.Main', :fork=>true, :failonerror=>true) do
-      classpath :refid => 'test.class.path'
-      jvm_args.each { |v| jvmarg :value=>v }
-      arg :value=>'-S'
-      arg :value=>'cucumber'
-      cucumber_opts.each { |v| arg :value=>v }
+    jvm_args = %W{-Duser.timezone=UTC
+                  -Djava.util.logging.config.file=logging.properties
+                  -Dlogback.access.config.file=logback-access.xml
+                  -Djruby.home=#{jruby_home}}
+
+    cucumber_opts = %W{--format junit    --out #{reports_dir}/cucumber
+                       --format html     --out #{reports_dir}/cucumber/features.html
+                       --format pretty}
+
+    ant.java(:classname => 'org.jruby.Main', :fork => true, :failonerror => true) do
+      classpath do
+        path :refid => 'jruby.jar.path'
+        path :refid => 'test.class.path'
+      end
+      jvm_args.each { |v| jvmarg :value => v }
+      arg :value => '-S'
+      arg :value => "cucumber"
+      cucumber_opts.each { |v| arg :value => v }
+      env :key => 'JRUBY_OPTS', :value => '--1.9'
     end
   end
 end

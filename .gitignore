@@ -6,3 +6,4 @@ m2/
 .idea/dictionaries/
 .idea/workspace.xml
 .idea/.rakeTasks
+lib/*
