@@ -2,13 +2,15 @@ package bluemount.web.servlet;
 
 import bluemount.web.jackson.JacksonConverter;
 import bluemount.web.resource.ProjectsResource;
+import bluemount.web.restlet.Application;
 import bluemount.web.restlet.GuiceRouter;
 import bluemount.web.restlet.RestletUtils;
 import com.google.inject.Inject;
 import com.google.inject.Injector;
 import com.google.inject.Singleton;
-import org.restlet.Application;
+import org.restlet.Component;
 import org.restlet.Context;
+import org.restlet.data.Protocol;
 import org.restlet.ext.servlet.ServletAdapter;
 
 import javax.servlet.ServletException;
@@ -27,8 +29,7 @@ public class RestletServlet extends HttpServlet {
     @Override
     public void init() throws ServletException {
         context = new Context();
-        Application application = new Application();
-        application.setContext(context);
+        Application application = new Application(context);
         application.setInboundRoot(new GuiceRouter(injector, context) {
             @Override
             protected void attachRoutes() {
@@ -37,6 +38,11 @@ public class RestletServlet extends HttpServlet {
             }
         });
         RestletUtils.replaceConverter(org.restlet.ext.jackson.JacksonConverter.class, new JacksonConverter());
+
+        Component component = new Component();
+        component.getDefaultHost().attach(application);
+        component.getClients().add(Protocol.CLAP);
+
         adapter = new ServletAdapter(getServletContext());
         adapter.setNext(application);
     }

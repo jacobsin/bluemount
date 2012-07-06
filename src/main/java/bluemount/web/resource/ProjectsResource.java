@@ -5,7 +5,11 @@ import bluemount.core.model.OpenSourceProject;
 import bluemount.core.model.Project;
 import bluemount.core.service.ProjectService;
 import bluemount.web.jackson.JacksonRepresentation;
+import bluemount.web.restlet.Application;
 import com.google.common.collect.Maps;
+import org.restlet.data.MediaType;
+import org.restlet.ext.freemarker.TemplateRepresentation;
+import org.restlet.representation.Representation;
 import org.restlet.resource.Get;
 import org.restlet.resource.Post;
 import org.restlet.resource.ServerResource;
@@ -38,6 +42,15 @@ public class ProjectsResource extends ServerResource {
         return service.list();
     }
 
+    @Get("html")
+    public Representation listHtml() {
+        return freemarker(list(), "projects/list.ftl");
+    }
+
+    private TemplateRepresentation freemarker(Object dataModel, String templateName) {
+        return new TemplateRepresentation(templateName, getApplication().getConfiguration(), dataModel, MediaType.TEXT_HTML);
+    }
+
     private Class<? extends Project> projectClass() {
         return projectClasses().get((String) getRequestAttributes().get("projectType"));
     }
@@ -47,6 +60,10 @@ public class ProjectsResource extends ServerResource {
         classes.put("opensource", OpenSourceProject.class);
         classes.put("closesource", CloseSourceProject.class);
         return classes;
+    }
+
+    public Application getApplication() {
+        return (Application) super.getApplication();
     }
 
 }

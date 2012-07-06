@@ -6,6 +6,7 @@ ARTIFACTS = {
   org.restlet.jee org.restlet.ext.servlet 2.1-RC5
   org.restlet.jee org.restlet.ext.jackson 2.1-RC5
   org.restlet.jee org.restlet.ext.spring 2.1-RC5
+  org.restlet.jee org.restlet.ext.freemarker 2.1-RC5
   com.google.inject guice 3.0
   com.google.inject.extensions guice-servlet 3.0
   com.google.inject.extensions guice-multibindings 3.0
