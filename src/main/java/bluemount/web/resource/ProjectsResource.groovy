@@ -39,15 +39,15 @@ public class ProjectsResource extends ServerResource {
 
   @Get("html")
   public Representation listHtml() {
-    freemarker([projects: list()], "projects/list.ftl")
+    freemarker("projects/list", [projects: list()])
   }
 
-  private TemplateRepresentation freemarker(Object dataModel, String templateName) {
-    new TemplateRepresentation(templateName, application.configuration, dataModel, MediaType.TEXT_HTML)
+  private TemplateRepresentation freemarker(String templateName, Object dataModel) {
+    new TemplateRepresentation("${templateName}.ftl", application.configuration, dataModel, MediaType.TEXT_HTML)
   }
 
   private Class<? extends Project> projectClass() {
-    projectClasses()[requestAttributes.get("projectType")]
+    projectClasses()[requestAttributes["projectType"]]
   }
 
   private def projectClasses() {
