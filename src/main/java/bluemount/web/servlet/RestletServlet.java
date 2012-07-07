@@ -28,7 +28,10 @@ public class RestletServlet extends HttpServlet {
 
     @Override
     public void init() throws ServletException {
-        context = new Context();
+        Component component = new Component();
+        component.getClients().add(Protocol.CLAP);
+        context = component.getContext().createChildContext();
+
         Application application = new Application(context);
         application.setInboundRoot(new GuiceRouter(injector, context) {
             @Override
@@ -38,10 +41,6 @@ public class RestletServlet extends HttpServlet {
             }
         });
         RestletUtils.replaceConverter(org.restlet.ext.jackson.JacksonConverter.class, new JacksonConverter());
-
-        Component component = new Component();
-        component.getDefaultHost().attach(application);
-        component.getClients().add(Protocol.CLAP);
 
         adapter = new ServletAdapter(getServletContext());
         adapter.setNext(application);

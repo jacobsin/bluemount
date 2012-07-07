@@ -1,9 +1,11 @@
 package bluemount.web.servlet;
 
 import bluemount.web.resource.ProjectsResource;
+import bluemount.web.restlet.Application;
 import bluemount.web.restlet.SpringRouter;
-import org.restlet.Application;
+import org.restlet.Component;
 import org.restlet.Context;
+import org.restlet.data.Protocol;
 import org.restlet.ext.servlet.ServletAdapter;
 
 import javax.inject.Singleton;
@@ -22,9 +24,12 @@ public class RestletSpringServlet extends HttpServlet {
     @Override
     public void init() throws ServletException {
         ServletContext servletContext = getServletContext();
-        context = new Context();
-        Application application = new Application();
-        application.setContext(context);
+
+        Component component = new Component();
+        component.getClients().add(Protocol.CLAP);
+        context = component.getContext().createChildContext();
+
+        Application application = new Application(context);
         application.setInboundRoot(new SpringRouter(servletContext, context) {
 
             @Override

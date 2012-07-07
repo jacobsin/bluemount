@@ -10,6 +10,6 @@ class Application extends org.restlet.Application {
   Application(Context context) {
     super(context)
     configuration = new Configuration()
-    configuration.templateLoader = new ContextTemplateLoader(context, "war://templates")
+    configuration.templateLoader = new ContextTemplateLoader(context, "clap:///bluemount/web/templates")
   }
 }
