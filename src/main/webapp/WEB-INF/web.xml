@@ -14,12 +14,12 @@
   </listener>
 
   <listener>
-    <listener-class>bluemount.web.servlet.ServletConfig</listener-class>
+    <listener-class>bluemount.web.restlet.guice.ServletConfig</listener-class>
   </listener>
 
   <servlet>
     <servlet-name>restlet-spring</servlet-name>
-    <servlet-class>bluemount.web.servlet.RestletSpringServlet</servlet-class>
+    <servlet-class>bluemount.web.restlet.spring.RestletServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>

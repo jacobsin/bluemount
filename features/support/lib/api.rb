@@ -5,7 +5,7 @@ class Api
 
     def uri(path)
       uri_fragments = ["http://localhost:#{Application.instance.port}"]
-      uri_fragments << 'spring' if @@spring
+      uri_fragments << (@@spring ? 'spring' : 'guice')
       uri_fragments << path
       File.join uri_fragments
     end

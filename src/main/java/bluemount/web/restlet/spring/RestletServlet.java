@@ -1,8 +1,7 @@
-package bluemount.web.servlet;
+package bluemount.web.restlet.spring;
 
-import bluemount.web.resource.ProjectsResource;
+import bluemount.web.api.resource.ProjectsApiResource;
 import bluemount.web.restlet.Application;
-import bluemount.web.restlet.SpringRouter;
 import org.restlet.Component;
 import org.restlet.Context;
 import org.restlet.data.Protocol;
@@ -17,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @Singleton
-public class RestletSpringServlet extends HttpServlet {
+public class RestletServlet extends HttpServlet {
     private Context context;
     private ServletAdapter adapter;
 
@@ -34,8 +33,8 @@ public class RestletSpringServlet extends HttpServlet {
 
             @Override
             protected void attachRoutes() {
-                attach("/projects/{projectType}", ProjectsResource.class);
-                attach("/projects", ProjectsResource.class);
+                attach("/projects/{projectType}", ProjectsApiResource.class);
+                attach("/projects", ProjectsApiResource.class);
             }
         });
         adapter = new ServletAdapter(servletContext);

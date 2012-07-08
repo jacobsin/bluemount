@@ -1,4 +1,4 @@
-package bluemount.web.jackson;
+package bluemount.web.restlet.jackson;
 
 import org.codehaus.jackson.map.ObjectMapper;
 import org.restlet.data.MediaType;

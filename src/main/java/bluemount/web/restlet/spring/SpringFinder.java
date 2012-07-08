@@ -1,4 +1,4 @@
-package bluemount.web.restlet;
+package bluemount.web.restlet.spring;
 
 import org.restlet.Context;
 import org.restlet.Request;

@@ -1,4 +1,4 @@
-package bluemount.web.resource
+package bluemount.web.api.resource
 
 import bluemount.core.service.ProjectService
 import org.junit.Before
@@ -10,14 +10,14 @@ import org.mockito.runners.MockitoJUnitRunner
 import static org.mockito.Mockito.*
 
 @RunWith(MockitoJUnitRunner)
-public class ProjectsResourceTest {
+public class ProjectsApiResourceTest {
 
-    ProjectsResource projectsResource
+    ProjectsApiResource projectsResource
     @Mock ProjectService projectService
 
     @Before
     void setUp() throws Exception {
-        projectsResource = new ProjectsResource(projectService)
+        projectsResource = new ProjectsApiResource(projectService)
     }
 
     @Test

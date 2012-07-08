@@ -1,4 +1,4 @@
-package bluemount.web.jackson;
+package bluemount.web.restlet.jackson;
 
 import org.restlet.data.MediaType;
 import org.restlet.representation.Representation;
