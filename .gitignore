@@ -1,9 +1,9 @@
 build/
 logs/
-m2/
 *.iws
 .bundle/
 .idea/dictionaries/
 .idea/workspace.xml
 .idea/.rakeTasks
 lib/*
+.sass-cache/
