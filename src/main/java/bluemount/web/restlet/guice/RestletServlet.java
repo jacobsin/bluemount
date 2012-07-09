@@ -12,6 +12,7 @@ import org.restlet.Component;
 import org.restlet.Context;
 import org.restlet.data.Protocol;
 import org.restlet.ext.servlet.ServletAdapter;
+import org.restlet.ext.servlet.internal.ServletWarClient;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -21,42 +22,47 @@ import java.io.IOException;
 
 @Singleton
 public class RestletServlet extends HttpServlet {
-  @Inject
-  private Injector injector;
-  private Context context;
-  private ServletAdapter adapter;
+    @Inject
+    private Injector injector;
+    private Context context;
+    private ServletAdapter adapter;
 
-  @Override
-  public void init() throws ServletException {
-    Component component = new Component();
-    component.getClients().add(Protocol.CLAP);
-    context = component.getContext().createChildContext();
+    @Override
+    public void init() throws ServletException {
+        Component component = new Component();
 
-    Application application = new Application(context);
-    application.setInboundRoot(new RootRouter(injector, context));
+        component.getClients().add(Protocol.CLAP);
+        component.getClients().add(Protocol.FILE);
+        context = component.getContext().createChildContext();
 
-    RestletUtils.replaceConverter(org.restlet.ext.jackson.JacksonConverter.class, new JacksonConverter());
+        ServletWarClient warClient = new ServletWarClient(component.getContext(), getServletContext());
+        component.getClients().add(warClient);
 
-    adapter = new ServletAdapter(getServletContext());
-    adapter.setNext(application);
-  }
+        Application application = new Application(context);
+        application.setInboundRoot(new RootRouter(injector, context));
 
-  @Override
-  protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    adapter.service(request, response);
-  }
+        RestletUtils.replaceConverter(org.restlet.ext.jackson.JacksonConverter.class, new JacksonConverter());
 
-  private static class RootRouter extends GuiceRouter {
-    public RootRouter(Injector injector, Context context) {
-      super(injector, context);
+        adapter = new ServletAdapter(getServletContext());
+        adapter.setNext(application);
     }
 
     @Override
-    protected void attachRoutes() {
-      attach("/api", new ApiRouter(getInjector(), getContext()));
-      attach("/web", new UiRouter(getInjector(), getContext()));
+    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        adapter.service(request, response);
     }
-  }
+
+    private static class RootRouter extends GuiceRouter {
+        public RootRouter(Injector injector, Context context) {
+            super(injector, context);
+        }
+
+        @Override
+        protected void attachRoutes() {
+            attach("/api", new ApiRouter(getInjector(), getContext()));
+            attach("/web", new UiRouter(getInjector(), getContext()));
+        }
+    }
 
 }
 

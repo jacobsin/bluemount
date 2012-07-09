@@ -11,9 +11,11 @@ import javax.servlet.ServletContext;
 
 public abstract class SpringRouter extends Router {
     private final ApplicationContext applicationContext;
+    private ServletContext servletContext;
 
     public SpringRouter(ServletContext servletContext, Context context) {
         super(context);
+        this.servletContext = servletContext;
         this.applicationContext = (ApplicationContext) servletContext.getAttribute(WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE);
         attachRoutes();
     }
@@ -27,6 +29,10 @@ public abstract class SpringRouter extends Router {
 
     protected ApplicationContext getApplicationContext() {
         return applicationContext;
+    }
+
+    protected ServletContext getServletContext() {
+        return servletContext;
     }
 }
 

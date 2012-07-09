@@ -43,6 +43,7 @@ public class RunJetty {
         String webapp = webapp();
         context.setDescriptor(webapp + "/WEB-INF/web.xml");
         context.setResourceBase(webapp);
+//        context.setWar(webapp);
         context.setContextPath("/");
         context.setParentLoaderPriority(true);
         return context;
