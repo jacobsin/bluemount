@@ -1,6 +1,5 @@
 package bluemount.web.restlet
 
-import freemarker.cache.NullCacheStorage
 import freemarker.template.Configuration
 import freemarker.template.ObjectWrapper
 import org.restlet.Context
@@ -14,6 +13,5 @@ class Application extends org.restlet.Application {
     configuration = new Configuration()
     configuration.templateLoader = new ContextTemplateLoader(context, "war:///WEB-INF/templates")
     configuration.objectWrapper = ObjectWrapper.BEANS_WRAPPER
-    configuration.cacheStorage = new NullCacheStorage() //TODO might wanna do this only for dev
   }
 }
