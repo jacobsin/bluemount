@@ -3,9 +3,12 @@ package bluemount.web;
 import ch.qos.logback.access.jetty.v7.RequestLogImpl;
 import org.apache.commons.io.filefilter.DirectoryFileFilter;
 import org.apache.commons.io.filefilter.NameFileFilter;
+import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Server;
+import org.eclipse.jetty.server.bio.SocketConnector;
 import org.eclipse.jetty.server.handler.HandlerCollection;
 import org.eclipse.jetty.server.handler.RequestLogHandler;
+import org.eclipse.jetty.server.nio.SelectChannelConnector;
 import org.eclipse.jetty.webapp.WebAppContext;
 
 import java.io.File;
@@ -15,13 +18,16 @@ import java.io.IOException;
 public class RunJetty {
 
     private Server server;
+    private int port;
 
     public static void main(String[] args) throws Exception {
         new RunJetty(3000).start(true);
     }
 
     public RunJetty(int port) throws IOException {
-        server = new Server(port);
+        this.port = port;
+        server = new Server();
+        server.setConnectors(new Connector[]{connector(false)});
 
         HandlerCollection handlers = new HandlerCollection();
         handlers.addHandler(context());
@@ -54,6 +60,12 @@ public class RunJetty {
         handler.setRequestLog(log);
         log.setFileName(System.getProperty("logback.access.config.file", "logback-access.xml"));
         return handler;
+    }
+
+    private Connector connector(boolean isProduction) {
+        Connector connector = isProduction ? new SelectChannelConnector() : new SocketConnector();
+        connector.setPort(port);
+        return connector;
     }
 
     private static String webapp() throws IOException {
