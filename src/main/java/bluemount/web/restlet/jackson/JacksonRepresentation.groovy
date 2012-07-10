@@ -5,30 +5,30 @@ import org.restlet.data.MediaType
 import org.restlet.representation.Representation
 
 class JacksonRepresentation<T> extends org.restlet.ext.jackson.JacksonRepresentation<T> {
-    public JacksonRepresentation(MediaType mediaType, T object) {
-        super(mediaType, object)
-    }
+  JacksonRepresentation(MediaType mediaType, T object) {
+    super(mediaType, object)
+  }
 
-    public JacksonRepresentation(Representation representation, Class<T> objectClass) {
-        super(representation, objectClass)
-    }
+  JacksonRepresentation(Representation representation, Class<T> objectClass) {
+    super(representation, objectClass)
+  }
 
-    public JacksonRepresentation(T object) {
-        super(object)
-    }
+  JacksonRepresentation(T object) {
+    super(object)
+  }
 
-    @Override
-    protected ObjectMapper createObjectMapper() {
-        ObjectMapper objectMapper = super.createObjectMapper()
-        configure(objectMapper)
-        return objectMapper
-    }
+  @Override
+  protected ObjectMapper createObjectMapper() {
+    ObjectMapper objectMapper = super.createObjectMapper()
+    configure(objectMapper)
+    objectMapper
+  }
 
-    private void configure(ObjectMapper objectMapper) {
-    }
+  private void configure(ObjectMapper objectMapper) {
+  }
 
-    public <O> O getObject(Class<O> objectClass) throws java.io.IOException {
-        setObjectClass((Class<T>) objectClass)
-        return (O) getObject()
-    }
+  public <O> O getObject(Class<O> objectClass) {
+    setObjectClass((Class<T>) objectClass)
+    (O) getObject()
+  }
 }

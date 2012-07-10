@@ -3,7 +3,7 @@ package bluemount.core.builder
 import org.junit.Test
 
 
-public class SampleHashBuilderTest {
+class SampleHashBuilderTest {
 
   @Test
   def void buildWithDefaults() {

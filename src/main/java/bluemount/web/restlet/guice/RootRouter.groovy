@@ -6,7 +6,7 @@ import bluemount.web.api.ApiRouter
 import bluemount.web.ui.UiRouter
 
 class RootRouter extends GuiceRouter {
-  public RootRouter(Injector injector, Context context) {
+  RootRouter(Injector injector, Context context) {
     super(injector, context)
   }
 

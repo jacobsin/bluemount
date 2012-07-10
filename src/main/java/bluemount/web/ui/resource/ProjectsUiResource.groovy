@@ -14,16 +14,16 @@ import javax.inject.Inject
 
 @Scope("prototype")
 @Component
-public class ProjectsUiResource extends ServerResource {
+class ProjectsUiResource extends ServerResource {
   private final ProjectService service
 
   @Inject
-  public ProjectsUiResource(ProjectService service) {
+  ProjectsUiResource(ProjectService service) {
     this.service = service
   }
 
   @Get("html")
-  public Representation list() {
+  Representation list() {
     freemarker("projects/list", [projects: service.list()])
   }
 
@@ -31,7 +31,7 @@ public class ProjectsUiResource extends ServerResource {
     new TemplateRepresentation("${templateName}.ftl", application.configuration, dataModel, MediaType.TEXT_HTML)
   }
 
-  public Application getApplication() {
+  Application getApplication() {
     (Application) super.application
   }
 

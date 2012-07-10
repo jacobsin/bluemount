@@ -9,8 +9,8 @@ import de.devsurf.injection.guice.scanner.asm.ASMClasspathScanner
 
 class ServletConfig extends GuiceServletContextListener {
 
-    @Override
-    protected Injector getInjector() {
-        Guice.createInjector(StartupModule.create(ASMClasspathScanner, PackageFilter.create("bluemount")))
-    }
+  @Override
+  protected Injector getInjector() {
+    Guice.createInjector(StartupModule.create(ASMClasspathScanner, PackageFilter.create("bluemount")))
+  }
 }

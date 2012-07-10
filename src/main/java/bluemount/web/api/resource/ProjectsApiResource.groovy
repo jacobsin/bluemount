@@ -19,17 +19,17 @@ class ProjectsApiResource extends ServerResource {
   private ProjectService service
 
   @Inject
-  public ProjectsApiResource(ProjectService service) {
+  ProjectsApiResource(ProjectService service) {
     this.service = service
   }
 
   @Post("json")
-  public Project create(JacksonRepresentation<? extends Project> json) throws IOException {
+  Project create(JacksonRepresentation<? extends Project> json) {
     service.create(json.getObject(projectClass()))
   }
 
   @Get("json")
-  public List<Project> list() {
+  List<Project> list() {
     service.list()
   }
 

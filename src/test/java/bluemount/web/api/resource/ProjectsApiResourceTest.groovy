@@ -10,7 +10,7 @@ import org.mockito.runners.MockitoJUnitRunner
 import static org.mockito.Mockito.*
 
 @RunWith(MockitoJUnitRunner)
-public class ProjectsApiResourceTest {
+class ProjectsApiResourceTest {
 
     ProjectsApiResource projectsResource
     @Mock ProjectService projectService
