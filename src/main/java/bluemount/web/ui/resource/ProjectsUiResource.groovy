@@ -10,16 +10,16 @@ import javax.inject.Inject
 
 @Scope("prototype")
 @Component
-public class ProjectsUiResource extends UiResource {
+class ProjectsUiResource extends UiResource {
   private final ProjectService service
 
   @Inject
-  public ProjectsUiResource(ProjectService service) {
+  ProjectsUiResource(ProjectService service) {
     this.service = service
   }
 
   @Get("html")
-  public Representation list() {
+  Representation list() {
     freemarker("projects/list", [projects: service.list()])
   }
 

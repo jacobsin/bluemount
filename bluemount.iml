@@ -41,6 +41,7 @@
     <orderEntry type="library" scope="PROVIDED" name="jruby-1.6.7.2-p357 facet library" level="application" />
     <orderEntry type="library" name="shipped" level="project" />
     <orderEntry type="library" name="shipped" level="project" />
+    <orderEntry type="library" name="shipped" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="activemodel (v3.2.6, jruby-1.6.7.2-p357) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activerecord (v3.2.6, jruby-1.6.7.2-p357) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v3.2.6, jruby-1.6.7.2-p357) [gem]" level="application" />
@@ -58,7 +59,6 @@
     <orderEntry type="library" scope="PROVIDED" name="i18n (v0.6.0, jruby-1.6.7.2-p357) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jruby-openssl (v0.7.7, jruby-1.6.7.2-p357) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="json (v1.7.3, jruby-1.6.7.2-p357) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="linecache (v0.46, jruby-1.6.7.2-p357) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.19, jruby-1.6.7.2-p357) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.3.6, jruby-1.6.7.2-p357) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v0.9.2.2, jruby-1.6.7.2-p357) [gem]" level="application" />
@@ -68,7 +68,6 @@
     <orderEntry type="library" scope="PROVIDED" name="ruby-debug-ide (v0.4.16, jruby-1.6.7.2-p357) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass (v3.1.20, jruby-1.6.7.2-p357) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v0.3.33, jruby-1.6.7.2-p357) [gem]" level="application" />
-    <orderEntry type="library" name="shipped" level="project" />
   </component>
 </module>
 
