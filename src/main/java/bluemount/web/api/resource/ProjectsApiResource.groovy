@@ -15,8 +15,8 @@ import javax.inject.Inject
 
 @Scope("prototype")
 @Component
-public class ProjectsApiResource extends ServerResource {
-  private final ProjectService service
+class ProjectsApiResource extends ServerResource {
+  private ProjectService service
 
   @Inject
   public ProjectsApiResource(ProjectService service) {
@@ -33,7 +33,7 @@ public class ProjectsApiResource extends ServerResource {
     service.list()
   }
 
-  private Class<? extends Project> projectClass() {
+  private def projectClass() {
     projectClasses()[requestAttributes["projectType"]]
   }
 
