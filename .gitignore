@@ -1,6 +1,7 @@
 build/
 logs/
 *.iws
+*.iml
 .bundle/
 .idea/dictionaries/
 .idea/workspace.xml
