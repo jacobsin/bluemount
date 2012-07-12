@@ -1,10 +1,10 @@
 [#ftl]
 <!DOCTYPE html>
 <html lang="en">
-[#include "partials/head.ftl"]
+[#include "*/partials/head.ftl"]
 <body>
 
-[#include "partials/navbar.ftl"]
+[#include "*/partials/navbar.ftl"]
 
 <div class="container">
 
@@ -13,7 +13,7 @@
 
 </div> <!-- /container -->
 
-[#include 'partials/scripts.ftl']
+[#include '*/partials/scripts.ftl']
 
 </body>
 </html>

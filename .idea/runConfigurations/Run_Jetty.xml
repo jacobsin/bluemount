@@ -25,6 +25,8 @@
     <RunnerSettings RunnerId="Run" />
     <ConfigurationWrapper RunnerId="Debug" />
     <ConfigurationWrapper RunnerId="Run" />
-    <method />
+    <method>
+      <option name="RakeTask" enabled="true" TASK_CMD="sass:compile" />
+    </method>
   </configuration>
 </component>
