@@ -2,6 +2,7 @@ require 'ant'
 require 'rake/clean'
 require 'rake/ivy'
 require 'rake/sass'
+require 'rake/requirejs'
 
 VERSION_NUMBER = '1.0.0'
 APP = 'bluemount'
@@ -89,7 +90,8 @@ namespace :compile do
     end
   end
 
-  task :assets => 'sass:compile'
+  desc 'Compile and Optimise Assets'
+  task :assets => %w(setup sass:compile) # requirejs:optimise)
 end
 
 namespace :test do
