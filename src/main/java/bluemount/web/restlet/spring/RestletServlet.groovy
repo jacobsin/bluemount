@@ -14,6 +14,8 @@ import javax.servlet.ServletException
 import javax.servlet.http.HttpServlet
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
+import bluemount.web.restlet.RestletUtils
+import bluemount.web.restlet.jackson.JacksonConverter
 
 @Singleton
 class RestletServlet extends HttpServlet {
@@ -34,6 +36,9 @@ class RestletServlet extends HttpServlet {
 
     Application application = new Application(context)
     application.setInboundRoot(new SpringRootRouter(servletContext, context))
+
+    RestletUtils.replaceConverter(org.restlet.ext.jackson.JacksonConverter, new JacksonConverter())
+
     adapter = new ServletAdapter(servletContext)
     adapter.next = application
   }

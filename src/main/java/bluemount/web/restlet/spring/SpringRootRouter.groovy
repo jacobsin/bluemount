@@ -2,6 +2,7 @@ package bluemount.web.restlet.spring
 
 import javax.servlet.ServletContext
 import org.restlet.Context
+import org.restlet.resource.Directory
 
 class SpringRootRouter extends SpringRouter {
 
@@ -11,7 +12,10 @@ class SpringRootRouter extends SpringRouter {
 
   @Override
   protected void attachRoutes() {
+    def web = new SpringUiRouter(servletContext, context)
+    attach("/web", web)
     attach("/api", new SpringApiRouter(servletContext, context))
-    attach("/web", new SpringUiRouter(servletContext, context))
+    attach("/assets", new Directory(context, "war:///assets/"))
+    attachDefault(web)
   }
 }

@@ -7,3 +7,4 @@ logs/
 .idea/.rakeTasks
 lib/*
 .sass-cache/
+*/stylesheets/*.css

@@ -60,7 +60,7 @@ task :setup => [build_dir, 'ivy:artifacts'] do
               :classpathref => 'lib.reference.path'
 end
 
-task :compile => %w(compile:main compile:test)
+task :compile => %w(compile:main compile:test compile:assets)
 
 namespace :compile do
   task :main => [:setup, main_classes_dir] do
@@ -88,6 +88,8 @@ namespace :compile do
       end
     end
   end
+
+  task :assets => 'sass:compile'
 end
 
 namespace :test do

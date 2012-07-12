@@ -3,10 +3,10 @@ require 'bootstrap-sass'
 
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "src/main/webapp/stylesheets"
-sass_dir = "src/main/webapp/stylesheets/sass"
-images_dir = "src/main/webapp/images"
-javascripts_dir = "src/main/webapp/javascripts"
+css_dir = "src/main/webapp/assets/stylesheets"
+sass_dir = "src/main/webapp/assets/stylesheets/sass"
+images_dir = "src/main/webapp/assets/images"
+javascripts_dir = "src/main/webapp/assets/javascripts"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed

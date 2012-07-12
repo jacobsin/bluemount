@@ -15,5 +15,6 @@ class UiRouter extends GuiceRouter {
   protected void attachRoutes() {
     attach("/projects.html", ProjectsUiResource)
     attach("/index.html", HomeUiResource)
+    attachDefault(HomeUiResource)
   }
 }
