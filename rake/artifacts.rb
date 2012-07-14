@@ -24,5 +24,6 @@ ARTIFACTS = {
   org.apache.ant ant-junit 1.8.4
   org.mockito mockito-core 1.9.0
   org.mozilla rhino 1.7R4
+  org.codehaus.jstestrunner jstestrunner-junit 1.0.2
 }
 }
