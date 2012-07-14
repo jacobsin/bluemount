@@ -10,4 +10,4 @@
 </script>
 --]
 <script src="/assets/javascripts/require-config.js"></script>
-<script data-main="/assets/javascripts/app" src="/assets/javascripts/require-jquery.js"></script>
+<script data-main="app" src="/assets/javascripts/require-jquery.js"></script>

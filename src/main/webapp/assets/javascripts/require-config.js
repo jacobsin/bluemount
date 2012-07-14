@@ -1,5 +1,5 @@
 var require = require || {};
-require.baseUrl = '../../../main/webapp/assets/javascripts/lib';
+require.baseUrl = '/assets/javascripts/lib';
 require.paths = {
   app:'../app'
 };

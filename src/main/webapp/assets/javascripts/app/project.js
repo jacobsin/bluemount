@@ -1,4 +1,4 @@
-require(['backbone', 'moment', 'underscore.string'], function(Backbone, moment) {
+define(['backbone', 'moment', 'underscore.string'], function(Backbone, moment) {
 
   window.Project = Backbone.Model.extend({
     defaults: {
@@ -10,4 +10,5 @@ require(['backbone', 'moment', 'underscore.string'], function(Backbone, moment) 
     }
   });
 
+  return window.Project;
 });

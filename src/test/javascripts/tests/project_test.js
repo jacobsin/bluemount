@@ -1,4 +1,4 @@
-require(['app/project', 'sinon-qunit'], function () {
+require(['app/project', 'sinon-qunit'], function (Project) {
 
   module("project", {
     setup:function () {
