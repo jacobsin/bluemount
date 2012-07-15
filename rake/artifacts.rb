@@ -25,5 +25,6 @@ ARTIFACTS = {
   org.mockito:mockito-core:1.9.0
   org.mozilla:rhino:1.7R4
   org.codehaus.jstestrunner:jstestrunner-junit:1.0.2:false
+  org.codehaus.plexus:plexus-utils:1.5.15
 }
 }
