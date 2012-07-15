@@ -133,6 +133,16 @@ namespace :test do
       env :key => 'JRUBY_OPTS', :value => '--1.9'
     end
   end
+
+  desc "Run all qunit tests"
+  task :qunit => [:setup, :compile] do
+    ant.junit(:printsummary => true, :haltonfailure => false) do
+      classpath :refid => 'test.class.path'
+      formatter :type => 'xml'
+      #sysproperty(:key=> 'org.codehaus.jstestrunner.commandPattern', :value=> "/usr/local/bin/phantomjs '%1$s' %2$s")
+      test(:name=> 'bluemount.test.QUnitTestSuite', :fork => true, :todir => "#{reports_junit_dir}")
+    end
+  end
 end
 
 task :jar => 'compile:main' do
