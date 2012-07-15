@@ -10,21 +10,24 @@ namespace :ivy do
 
   directory ivy_jar_dir
 
-  def ivy_retrieve(lib_path, org, mod, rev, src=false)
-    conf = src ? "sources" : "default"
-    pattern = src ? "lib/#{lib_path}/src/[artifact]-[conf].[ext]" : "lib/#{lib_path}/[artifact].[ext]"
-    ant.retrieve :organisation => org,
-                 :module => mod,
-                 :revision => rev,
+  def ivy_retrieve(opts={})
+    opts = {:transitive=>true}.merge(opts)
+    conf = opts[:src] ? "sources" : "default"
+    pattern = opts[:src] ? "lib/#{opts[:lib_path]}/src/[artifact]-[conf].[ext]" : "lib/#{opts[:lib_path]}/[artifact].[ext]"
+    puts opts
+    ant.retrieve :organisation => opts[:org],
+                 :module => opts[:mod],
+                 :revision => opts[:rev],
                  :pattern => pattern,
                  :inline => true,
-                 :conf => conf
+                 :conf => conf,
+                 :transitive => opts[:transitive]
   end
 
   def ivy_retrieve_all(lib_path, artifacts, src=false)
-    artifacts.each_slice(3) do |*artifact|
-      artifact[0] << src
-      ivy_retrieve(lib_path, *artifact[0])
+    artifacts.each do |artifact|
+      args = artifact.split(':')
+      ivy_retrieve(:lib_path=>lib_path, :org=>args[0], :mod=>args[1], :rev=>args[2], :transitive=>args[3], :src=>src)
     end
   end
 
