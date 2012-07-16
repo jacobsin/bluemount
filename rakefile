@@ -13,6 +13,7 @@ jruby_home = Gem.default_bindir().gsub('/bin', '')
 
 main_src_dir = 'src/main/java'
 test_src_dir = 'src/test/java'
+qunit_src_dir = 'src/test/javascripts'
 main_resources_dir = 'src/main/resources'
 test_resources_dir = 'src/test/resources'
 
@@ -91,7 +92,15 @@ namespace :compile do
     end
   end
 
-  task :assets => %w(sass:compile)
+  task :qunit => [:setup, test_classes_dir] do
+    ant.groovyc(:destdir => test_classes_dir) do
+      classpath :refid => 'test.class.path'
+      src { pathelement :location => qunit_src_dir }
+      javac :source => '1.6', :target => '1.6'
+    end
+  end
+  
+  task :assets => %w(sass:compile js)
 
   desc 'Compile js'
   task :js => %w(setup rjs:optimize)
@@ -101,8 +110,8 @@ namespace :test do
   task :setup => reports_junit_dir
 
   desc 'Run all unit tests'
-  task :unit => [:setup, :compile] do
-    ant.junit(:printsummary => true, :haltonfailure => false) do
+  task :unit => [:setup, 'compile:test'] do
+    ant.junit(:printsummary => true, :haltonfailure => false, :haltonerror => true) do
       classpath :refid => 'test.class.path'
       formatter :type => 'xml'
       batchtest(:fork => true, :todir => "#{reports_junit_dir}") do
@@ -134,6 +143,16 @@ namespace :test do
       arg :value => "cucumber"
       cucumber_opts.each { |v| arg :value => v }
       env :key => 'JRUBY_OPTS', :value => '--1.9'
+    end
+  end
+
+  desc "Run all qunit tests"
+  task :qunit => [:setup, 'compile:qunit'] do
+    ant.junit(:printsummary => true, :haltonfailure => false, :haltonerror => true) do
+      classpath :refid => 'test.class.path'
+      formatter :type => 'xml'
+      #sysproperty(:key=> 'org.codehaus.jstestrunner.commandPattern', :value=> "/usr/local/bin/phantomjs '%1$s' %2$s")
+      test(:name=> 'bluemount.test.QUnitTestSuite', :fork => true, :todir => "#{reports_junit_dir}")
     end
   end
 end
