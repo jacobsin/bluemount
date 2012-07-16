@@ -1,14 +1,15 @@
 //noinspection BadExpressionStatementJS
 ({
-  appDir: "../../",
-  baseUrl: "/assets/javascripts/",
-  dir: "../../../../build/webapp",
+  appDir: "../webapp",
+  baseUrl: "assets/javascripts/lib",
+  dir: "../../../build/deploy/webapp",
   //Comment out the optimize line if you want
   //the code minified by UglifyJS
   //optimize: "none",
 
   paths: {
-    "jquery": "empty:"
+    "jquery": "empty:",
+    "app": "../app"
   },
 
   modules: [
