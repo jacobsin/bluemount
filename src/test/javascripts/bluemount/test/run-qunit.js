@@ -78,13 +78,19 @@ function processTestAndLoadNext(testUrls) {
             passes = 0;
             messages = "";
 
+            var tests, testName;
+            tests = {};
+
             for (j = 0; j < testResults.length; ++j) {
               testResult = testResults[j];
               if (testResult.moduleName !== null) {
                 message = "[" + testResult.moduleName + "] ";
+                testName = testResult.moduleName + ": " + testResult.testName;
               } else {
                 message = "";
+                testName = testResult.testName;
               }
+              tests[testName] = (testResult.failed == 0);
               message += testResult.testName + ": failed: " + testResult.failed
                   + " passed: " + testResult.passed;
               for (i = 0; i < testResult.details.length; ++i) {
@@ -113,11 +119,19 @@ function processTestAndLoadNext(testUrls) {
             xhr.open("POST", "/testResults", false);
             xhr.setRequestHeader("Content-Type", "application/json");
             try {
+              console.log(JSON.stringify({
+                testUrl : testUrl,
+                passes : passes,
+                failures : failures,
+                message : messages,
+                tests : tests
+              }));
               xhr.send(JSON.stringify({
                 testUrl : testUrl,
                 passes : passes,
                 failures : failures,
-                message : messages
+                message : messages,
+                tests : tests
               }));
             } catch (e) {
               // Just swallow exceptions as we can't do anything useful if there are
