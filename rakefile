@@ -148,10 +148,11 @@ namespace :test do
 
   desc "Run all qunit tests"
   task :qunit => [:setup, 'compile:qunit'] do
+    #phantomjs = 'C:\dev\tools\phamtomjs\phantomjs-1.6.0-win32-static\phantomjs'
     ant.junit(:printsummary => true, :haltonfailure => false, :haltonerror => true) do
       classpath :refid => 'test.class.path'
       formatter :type => 'xml'
-      #sysproperty(:key=> 'org.codehaus.jstestrunner.commandPattern', :value=> "/usr/local/bin/phantomjs '%1$s' %2$s")
+      sysproperty(:key=> 'org.codehaus.jstestrunner.commandPattern', :value=> "#{phantomjs} '%1$s' %2$s") if phantomjs
       test(:name=> 'bluemount.test.QUnitTestSuite', :fork => true, :todir => "#{reports_junit_dir}")
     end
   end
