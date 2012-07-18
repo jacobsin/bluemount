@@ -6,6 +6,8 @@ import org.junit.runner.RunWith
 @JSTestSuiteRunner.Include("**/*.html")
 @JSTestSuiteRunner.ResourceBase(["src"])
 @JSTestSuiteRunner.TestRunnerFilePath("src/test/javascripts/bluemount/test")
-@RunWith(JSTestSuiteRunner)
+@TestResourceBase("test/javascripts/tests/")
+
+@RunWith(QUnitTestSuiteRunner)
 class QUnitTestSuite {
 }
