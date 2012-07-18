@@ -8,4 +8,4 @@ logs/
 .idea/.rakeTasks
 lib/*
 .sass-cache/
-*/stylesheets/*.css
+src/main/webapp/assets/stylesheets/*.css
