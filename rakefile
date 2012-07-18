@@ -37,8 +37,8 @@ CLEAN.exclude 'lib/reference/ant.jar'
 CLEAN.exclude 'lib/reference/ant-launcher.jar'
 
 require 'rbconfig'
-puts Config::CONFIG['target_cpu']   # => 'i386','x86_64'
-puts Config::CONFIG['target_os']    # => 'linux','darwin'
+puts Config::CONFIG['target_cpu']   # => 'i386','x86_64','x86'
+puts Config::CONFIG['target_os']    # => 'linux','darwin','mswin32'
 
 task :setup => [build_dir, 'ivy:artifacts'] do
   ant.path :id => 'lib.shipped.path' do
@@ -152,7 +152,7 @@ namespace :test do
 
   desc "Run all qunit tests"
   task :qunit => [:setup, 'compile:qunit'] do
-    phantomjs = '/usr/local/bin/phantomjs'
+    phantomjs = (Config::CONFIG['target_os'] =~ /mswin32/ ? 'C:\dev\phantomjs-1.6.0-win32-static\phantomjs.exe' : '/usr/local/bin/phantomjs')
     ant.junit(:printsummary => true, :haltonfailure => false, :haltonerror => true) do
       classpath :refid => 'test.class.path'
       formatter :type => 'xml'
