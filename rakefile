@@ -36,6 +36,10 @@ CLEAN.include %w{build logs lib/**/*.jar}
 CLEAN.exclude 'lib/reference/ant.jar'
 CLEAN.exclude 'lib/reference/ant-launcher.jar'
 
+require 'rbconfig'
+puts Config::CONFIG['target_cpu']   # => 'i386','x86_64'
+puts Config::CONFIG['target_os']    # => 'linux','darwin'
+
 task :setup => [build_dir, 'ivy:artifacts'] do
   ant.path :id => 'lib.shipped.path' do
     fileset :dir => lib_shipped_dir, :includes => '*.jar'
