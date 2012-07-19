@@ -63,6 +63,7 @@
     <orderEntry type="library" scope="PROVIDED" name="ruby-debug-base (v0.10.4, RVM: jruby-1.6.7.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ruby-debug-ide (v0.4.17.beta9, RVM: jruby-1.6.7.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass (v3.1.20, RVM: jruby-1.6.7.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="term-ansicolor (v1.0.7, RVM: jruby-1.6.7.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v0.3.33, RVM: jruby-1.6.7.2) [gem]" level="application" />
   </component>
 </module>
