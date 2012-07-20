@@ -3,6 +3,7 @@
   appDir: "../webapp",
   baseUrl: "assets/javascripts/lib",
   dir: "../../../build/deploy/webapp",
+  preserveLicenseComments: false,
   //Comment out the optimize line if you want
   //the code minified by UglifyJS
   //optimize: "none",

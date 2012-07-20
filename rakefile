@@ -40,30 +40,35 @@ require 'rbconfig'
 puts Config::CONFIG['target_cpu']   # => 'i386','x86_64','x86'
 puts Config::CONFIG['target_os']    # => 'linux','darwin','mswin32'
 
-task :setup => [build_dir, 'ivy:artifacts'] do
-  ant.path :id => 'lib.shipped.path' do
-    fileset :dir => lib_shipped_dir, :includes => '*.jar'
+task :setup => [build_dir, 'ivy:artifacts', 'ant:setup']
+
+namespace :ant do
+  task :setup do
+    ant.path :id => 'lib.shipped.path' do
+      fileset :dir => lib_shipped_dir, :includes => '*.jar'
+      fileset :dir => lib_shipped_thunderhead_dir, :includes => '*.jar'
+    end
+    ant.path :id => 'lib.reference.path' do
+      fileset :dir => lib_reference_dir, :includes => '*.jar'
+    end
+    ant.path(:id => 'main.class.path') do
+      pathelement :location => main_classes_dir
+      path :refid => 'lib.shipped.path'
+    end
+    ant.path(:id => 'test.class.path') do
+      pathelement :location => test_classes_dir
+      path :refid => 'lib.reference.path'
+      path :refid => 'main.class.path'
+    end
+    ant.path(:id => 'jruby.jar.path') do
+      pathelement :location => "#{jruby_home}/lib/jruby.jar"
+    end
+    ant.taskdef :resource => 'org/codehaus/groovy/antlib.xml',
+                :classpathref => 'lib.shipped.path'
+    ant.taskdef :name => 'junit',
+                :classname => 'org.apache.tools.ant.taskdefs.optional.junit.JUnitTask',
+                :classpathref => 'lib.reference.path'
   end
-  ant.path :id => 'lib.reference.path' do
-    fileset :dir => lib_reference_dir, :includes => '*.jar'
-  end
-  ant.path(:id => 'main.class.path') do
-    pathelement :location => main_classes_dir
-    path :refid => 'lib.shipped.path'
-  end
-  ant.path(:id => 'test.class.path') do
-    pathelement :location => test_classes_dir
-    path :refid => 'lib.reference.path'
-    path :refid => 'main.class.path'
-  end
-  ant.path(:id => 'jruby.jar.path') do
-    pathelement :location => "#{jruby_home}/lib/jruby.jar"
-  end
-  ant.taskdef :resource => 'org/codehaus/groovy/antlib.xml',
-              :classpathref => 'lib.shipped.path'
-  ant.taskdef :name => 'junit',
-              :classname => 'org.apache.tools.ant.taskdefs.optional.junit.JUnitTask',
-              :classpathref => 'lib.reference.path'
 end
 
 desc 'Compile all'
@@ -152,7 +157,7 @@ namespace :test do
 
   desc "Run all qunit tests"
   task :qunit => [:setup, 'compile:qunit'] do
-    phantomjs = (Config::CONFIG['target_os'] =~ /mswin32/ ? 'C:\dev\phantomjs-1.6.0-win32-static\phantomjs.exe' : '/usr/local/bin/phantomjs')
+    phantomjs = (Config::CONFIG['target_os'] =~ /mswin32/ ? 'C:\dev\tools\phantomjs\phantomjs-1.6.0-win32-static\phantomjs.exe' : '/usr/local/bin/phantomjs')
     ant.junit(:printsummary => true, :haltonfailure => false, :haltonerror => true) do
       classpath :refid => 'test.class.path'
       formatter :type => 'xml'
