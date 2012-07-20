@@ -8,6 +8,9 @@ require.shim = {
     deps:['underscore', 'jquery'],
     exports:'Backbone'
   },
+  'backbone-super': {
+    deps:['backbone']
+  },
   'underscore.string':{
     deps:['underscore']
   }

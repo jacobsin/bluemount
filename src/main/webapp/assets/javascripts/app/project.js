@@ -1,4 +1,4 @@
-define(['backbone', 'moment', 'underscore.string'], function(Backbone, moment) {
+define(['backbone', 'moment', 'underscore.string', 'backbone-super'], function(Backbone, moment) {
 
   window.Project = Backbone.Model.extend({
     defaults: {
@@ -7,6 +7,17 @@ define(['backbone', 'moment', 'underscore.string'], function(Backbone, moment) {
 
     initialize: function() {
       this.set({created : moment().utc().format()});
+    },
+
+    start: function() {
+      this.set({started : true});
+    }
+  });
+
+  window.OpenSourceProject = Project.extend({
+    start: function() {
+      this._super();
+      this.set({incubating : true});
     }
   });
 

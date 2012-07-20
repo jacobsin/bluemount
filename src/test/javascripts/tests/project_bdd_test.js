@@ -20,7 +20,34 @@ require(['app/project', 'sinon-qunit'], function (Project) {
       it("should have Created time", function(){
         assert(project.get("created")).equals(now.utc().format());
       });
-    })
+
+      describe("start", function() {
+        before(function() {
+          project.start();
+        });
+
+        it("should be started", function () {
+          assert(project.get("started")).isTrue();
+        });
+      });
+
+      describe("OpenSourceProject start", function() {
+        before(function() {
+          project = new OpenSourceProject();
+          project.start();
+        });
+
+        it("should be started", function () {
+          assert(project.get("started")).isTrue();
+        });
+
+        it("should be incubating", function () {
+          assert(project.get("incubating")).isTrue();
+        });
+      });
+
+    });
+
   });
 
 });
