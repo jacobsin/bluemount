@@ -1,5 +1,5 @@
 define(['underscore', 'super'], function () {
-  window.Templates = Class.extend({
+  var Templates = Class.extend({
 
     init:function () {
       this.templates ={};
@@ -13,6 +13,8 @@ define(['underscore', 'super'], function () {
       return this.templates[name](context);
     }
   });
+
+  window.Templates = new Templates();
 
   return window.Templates;
 });
