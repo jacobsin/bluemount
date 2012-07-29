@@ -9,6 +9,7 @@ define(['backbone', 'pdf'], function () {
 
     render:function () {
       this.renderPdf();
+      return this;
     },
 
     renderPdf:function () {

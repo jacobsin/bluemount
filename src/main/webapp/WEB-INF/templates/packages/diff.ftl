@@ -1,6 +1,6 @@
 [#ftl]
 [#include  "*/layouts/base.ftl"]
-[@base_layout]
+[@base_layout data_main="app/packages/document_diff_main"]
 <div id="main" class="container-fluid">
 
   <h2>LA - New Warrant ETF</h2>

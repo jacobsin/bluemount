@@ -1,7 +1,8 @@
 var require = require || {};
 require.baseUrl = '/assets/javascripts/lib';
 require.paths = {
-  app:'../app'
+  app:'../app',
+  templates:'../templates'
 };
 require.shim = {
   backbone:{
