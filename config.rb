@@ -8,6 +8,8 @@ sass_dir = "src/main/webapp/assets/stylesheets/sass"
 images_dir = "src/main/webapp/assets/images"
 javascripts_dir = "src/main/webapp/assets/javascripts"
 
+http_images_path = "/assets/images"
+
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
 

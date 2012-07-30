@@ -1,6 +1,7 @@
 package bluemount.web.ui
 
 import bluemount.web.restlet.guice.GuiceRouter
+import bluemount.web.ui.resource.DocumentDiffUiResource
 import bluemount.web.ui.resource.HomeUiResource
 import bluemount.web.ui.resource.ProjectsUiResource
 import com.google.inject.Injector
@@ -13,6 +14,7 @@ class UiRouter extends GuiceRouter {
 
   @Override
   protected void attachRoutes() {
+    attach("/packages/diff.html", DocumentDiffUiResource)
     attach("/projects.html", ProjectsUiResource)
     attach("/index.html", HomeUiResource)
     attachDefault(HomeUiResource)

@@ -1,4 +1,5 @@
 [#ftl]
+[#if !data_main?has_content][#assign data_main="app"][/#if]
 <!-- Le javascript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
@@ -10,4 +11,4 @@
 </script>
 --]
 <script src="/assets/javascripts/require-config.js"></script>
-<script data-main="app" src="/assets/javascripts/require-jquery.js"></script>
+<script data-main="${data_main}" src="/assets/javascripts/require-jquery.js"></script>
