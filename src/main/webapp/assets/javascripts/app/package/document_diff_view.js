@@ -1,4 +1,4 @@
-define(['app/packages/pdf_view', 'templates/packages'], function () {
+define(['app/package/pdf_view', 'templates/package'], function () {
   window.DocumentDiffView = Backbone.View.extend({
 
     render:function () {

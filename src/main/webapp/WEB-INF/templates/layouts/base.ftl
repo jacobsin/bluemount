@@ -1,5 +1,6 @@
 [#ftl]
-[#macro base_layout data_main="app"]
+[#include '*/partials/scripts.ftl']
+[#macro base_layout]
 <!DOCTYPE html>
 <html lang="en">
   [#include "*/partials/head.ftl"]
@@ -8,8 +9,6 @@
   [#include "*/partials/navbar.ftl"]
 
   [#nested]
-
-  [#include '*/partials/scripts.ftl']
 
 </body>
 </html>
