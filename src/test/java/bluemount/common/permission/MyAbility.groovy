@@ -8,11 +8,9 @@ import static bluemount.common.permission.Role.*
 class MyAbility {
   MyAbility(user) {
     can read, Public
-    can read, History
-    can read, Confidential
+    can read, [History, Confidential]
     can update, All
-    cannot update, History
-    cannot update, User
+    cannot update, [History, User]
 
     switch(user.role) {
       case Standard:

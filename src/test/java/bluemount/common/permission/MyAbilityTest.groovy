@@ -94,6 +94,20 @@ class MyAbilityTest {
     }
   }
 
+  @Test
+  def void canRuleWithMultipleSubjects() {
+    [Confidential, History].each {
+      assert ability(Standard).ableTo(read, it)
+    }
+  }
+
+  @Test
+  def void cannotRuleWithMultipleSubjects() {
+    [User, History].each {
+      assert !ability(Standard).ableTo(update, it)
+    }
+  }
+
   def ability(role) {
     abilities[role.name()]
   }

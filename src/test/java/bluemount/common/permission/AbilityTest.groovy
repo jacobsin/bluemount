@@ -103,5 +103,21 @@ class AbilityTest {
     assert !ability.ableTo(read, Public)
     assert !ability.ableTo(update, Public)
   }
+
+  @Test
+  def void canRuleWithMultipleSubjects() {
+    ability.can(read, [Public, Confidential])
+
+    assert ability.ableTo(read, Public)
+    assert ability.ableTo(read, Confidential)
+  }
+
+  @Test
+  def void cannotRuleWithMultipleSubjects() {
+    ability.cannot(read, [Public, Confidential])
+
+    assert !ability.ableTo(read, Public)
+    assert !ability.ableTo(read, Confidential)
+  }
 }
 
