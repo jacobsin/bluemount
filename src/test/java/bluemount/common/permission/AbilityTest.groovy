@@ -1,142 +1,107 @@
 package bluemount.common.permission
 
-import org.junit.Before
 import org.junit.Test
 
 import static bluemount.common.permission.Action.manage
-import static bluemount.common.permission.MyAction.*
-import static bluemount.common.permission.Role.*
+import static bluemount.common.permission.MyAction.read
+import static bluemount.common.permission.MyAction.update
 
 class AbilityTest {
 
-  Map<String, Ability> abilities = [:]
-
-  @Before
-  def void before() {
-    setupAbilities()
-  }
+  def ability = new Ability()
 
   @Test
   def void canRuleOnClass() {
-    assert ability(Standard).ableTo(read, Public)
+    ability.can read, Public
+    assert ability.ableTo(read, Public)
   }
 
   @Test
   def void canRuleOnInstance() {
-    assert ability(Standard).ableTo(read, new Public())
+    ability.can read, Public
+    assert ability.ableTo(read, new Public())
   }
 
   @Test
   def void missingRuleOnClass() {
-    assert ability(Standard).notAbleTo(delete, User)
+    assert !ability.ableTo(read, Public)
   }
 
   @Test
   def void missingRuleOnInstance() {
-    assert ability(Standard).notAbleTo(delete, new User())
+    assert !ability.ableTo(read, new Public())
   }
 
   @Test
   def void cannotRuleOnClass() {
-    assert ability(Standard).notAbleTo(update, History)
+    ability.cannot read, Public
+    assert !ability.ableTo(read, Public)
   }
 
   @Test
   def void cannotRuleOnInstance() {
-    assert ability(Standard).notAbleTo(update, new History())
+    ability.cannot read, Public
+    assert !ability.ableTo(read, new Public())
   }
 
   @Test
   def void laterCanRuleAddPermission() {
-    assert ability(Standard).ableTo(read, Public)
-    assert ability(Standard).ableTo(read, History)
+    ability.can read, Public
+    ability.can read, Confidential
+    assert ability.ableTo(read, Public)
+    assert ability.ableTo(read, Confidential)
   }
 
   @Test
   def void laterCanRuleOverridesEarlierCannotRule() {
-    assert ability(Standard).notAbleTo(update, User)
-    assert ability(Admin).ableTo(update, User)
+    ability.cannot read, Public
+    ability.can read, Public
+    assert ability.ableTo(read, Public)
   }
 
   @Test
   def void laterCannotRuleOverridesEarlierCanRule() {
-    assert ability(Standard).ableTo(read, History)
-    assert ability(Guest).notAbleTo(read, History)
+    ability.can read, Public
+    ability.cannot read, Public
+    assert !ability.ableTo(read, Public)
   }
 
   @Test
   def void canAllRuleMatchesAnyClass() {
-    assert ability(Standard).ableTo(update, Public)
-    assert ability(Standard).ableTo(update, Confidential)
+    ability.can read, All
+    assert ability.ableTo(read, Public)
+    assert ability.ableTo(read, Confidential)
   }
 
   @Test
   def void canAllRuleOnMatchesInstancesOfAnyClass() {
-    assert ability(Standard).ableTo(update, new Public())
-    assert ability(Standard).ableTo(update, new Confidential())
+    ability.can read, All
+    assert ability.ableTo(read, new Public())
+    assert ability.ableTo(read, new Confidential())
   }
 
   @Test
   def void canManageRuleMatchesAnyAction() {
-    assert ability(Admin).ableTo(read, Public)
-    assert ability(Admin).ableTo(create, Public)
-    assert ability(Admin).ableTo(update, Public)
-    assert ability(Admin).ableTo(delete, Public)
-    assert ability(Admin).ableTo(disable, Public)
-  }
-
-  def ability(role) {
-    abilities[role.name()]
-  }
-
-  void setupAbilities() {
-    abilities << Role.values().collectEntries {[(it.name()): new MyAbility(new User(role: it))]}
-  }
-}
-
-class Confidential {}
-class Public {}
-class History {}
-
-enum Role {
-  Admin, Standard, Readonly, Guest
-}
-
-class User {
-  Role role
-}
-
-enum MyAction implements Action {
-  read, create, update, delete, disable
-}
-
-@Mixin(Ability)
-class MyAbility {
-  MyAbility(user) {
-    can read, Public
-    can read, History
-    can read, Confidential
-    can update, All
-    cannot update, History
-    cannot update, User
-
-    switch(user.role) {
-      case Standard:
-        break
-
-      case Admin:
-        can manage, Public
-        can update, User
-        break
-
-      case Readonly:
-        break
-
-      case Guest:
-      default:
-        cannot read, History
-        break
+    ability.can manage, Public
+    MyAction.values().each {
+      assert ability.ableTo(it, Public)
     }
   }
 
+  @Test
+  def void canRuleWithMultipleActions() {
+    ability.can([read, update], Public)
+
+    assert ability.ableTo(read, Public)
+    assert ability.ableTo(update, Public)
+  }
+
+  @Test
+  def void cannotRuleWithMultipleActions() {
+    ability.cannot([read, update], Public)
+
+    assert !ability.ableTo(read, Public)
+    assert !ability.ableTo(update, Public)
+  }
 }
+
