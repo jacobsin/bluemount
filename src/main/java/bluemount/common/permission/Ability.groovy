@@ -20,3 +20,4 @@ class Ability {
     !ableTo(action, subject)
   }
 }
+

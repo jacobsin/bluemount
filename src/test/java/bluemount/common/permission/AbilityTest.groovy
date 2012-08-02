@@ -3,6 +3,7 @@ package bluemount.common.permission
 import org.junit.Before
 import org.junit.Test
 
+import static bluemount.common.permission.Action.manage
 import static bluemount.common.permission.MyAction.*
 import static bluemount.common.permission.Role.*
 
@@ -17,32 +18,32 @@ class AbilityTest {
 
   @Test
   def void canRuleOnClass() {
-    assert ability(Guest).ableTo(read, Public)
+    assert ability(Standard).ableTo(read, Public)
   }
 
   @Test
   def void canRuleOnInstance() {
-    assert ability(Guest).ableTo(read, new Public())
+    assert ability(Standard).ableTo(read, new Public())
   }
 
   @Test
   def void missingRuleOnClass() {
-    assert ability(Guest).notAbleTo(delete, User)
+    assert ability(Standard).notAbleTo(delete, User)
   }
 
   @Test
   def void missingRuleOnInstance() {
-    assert ability(Guest).notAbleTo(delete, new User())
+    assert ability(Standard).notAbleTo(delete, new User())
   }
 
   @Test
   def void cannotRuleOnClass() {
-    assert ability(Admin).notAbleTo(delete, History)
+    assert ability(Standard).notAbleTo(update, History)
   }
 
   @Test
   def void cannotRuleOnInstance() {
-    assert ability(Admin).notAbleTo(delete, new History())
+    assert ability(Standard).notAbleTo(update, new History())
   }
 
   @Test
@@ -61,6 +62,27 @@ class AbilityTest {
   def void laterCannotRuleOverridesEarlierCanRule() {
     assert ability(Standard).ableTo(read, History)
     assert ability(Guest).notAbleTo(read, History)
+  }
+
+  @Test
+  def void canAllRuleMatchesAnyClass() {
+    assert ability(Standard).ableTo(update, Public)
+    assert ability(Standard).ableTo(update, Confidential)
+  }
+
+  @Test
+  def void canAllRuleOnMatchesInstancesOfAnyClass() {
+    assert ability(Standard).ableTo(update, new Public())
+    assert ability(Standard).ableTo(update, new Confidential())
+  }
+
+  @Test
+  def void canManageRuleMatchesAnyAction() {
+    assert ability(Admin).ableTo(read, Public)
+    assert ability(Admin).ableTo(create, Public)
+    assert ability(Admin).ableTo(update, Public)
+    assert ability(Admin).ableTo(delete, Public)
+    assert ability(Admin).ableTo(disable, Public)
   }
 
   def ability(role) {
@@ -94,7 +116,8 @@ class MyAbility {
     can read, Public
     can read, History
     can read, Confidential
-    cannot delete, History
+    can update, All
+    cannot update, History
     cannot update, User
 
     switch(user.role) {
@@ -102,6 +125,7 @@ class MyAbility {
         break
 
       case Admin:
+        can manage, Public
         can update, User
         break
 

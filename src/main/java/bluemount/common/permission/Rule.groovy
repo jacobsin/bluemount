@@ -1,5 +1,6 @@
 package bluemount.common.permission
 
+import static bluemount.common.permission.Action.manage
 
 class Rule {
   boolean baseBehaviour
@@ -11,10 +12,12 @@ class Rule {
   }
 
   private boolean matchesSubject(subject) {
-    (this.subject == subject || subject.class.isAssignableFrom(this.subject))
+    (this.subject == All|| this.subject == subject || subject.class.isAssignableFrom(this.subject))
   }
 
   private boolean matchesAction(Action action) {
-    this.action == action
+    (this.action == manage || this.action == action)
   }
 }
+
+class All {}
