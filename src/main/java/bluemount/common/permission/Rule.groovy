@@ -6,9 +6,11 @@ class Rule {
   boolean baseBehaviour
   private List<Action> actions = []
   private List<Class> subjects
+  private Closure block
 
   boolean matchesConditions(Action action, subject) {
-    matchesAction(action) && matchesSubject(subject)
+    matchesAction(action) && matchesSubject(subject) &&
+        (!block || !(subject instanceof Class) && block.call(subject))
   }
 
   private boolean matchesSubject(subject) {

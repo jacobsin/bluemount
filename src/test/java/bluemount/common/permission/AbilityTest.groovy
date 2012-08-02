@@ -119,5 +119,35 @@ class AbilityTest {
     assert !ability.ableTo(read, Public)
     assert !ability.ableTo(read, Confidential)
   }
+
+  @Test
+  def void canRuleWithClosure() {
+    ability.can(read, Public) {
+      it.readable
+    }
+
+    assert ability.ableTo(read, new Public(readable: true))
+    assert !ability.ableTo(read, new Public(readable: false))
+  }
+
+  @Test
+  def void canRuleWithClosureReturnFalseForClass() {
+    ability.can(read, Public) {
+      it.readable
+    }
+
+    assert !ability.ableTo(read, Public)
+  }
+
+  @Test
+  def void cannotRuleWithClosure() {
+    ability.can(update, Public)
+    ability.cannot(update, Public) {
+      it.readonly
+    }
+
+    assert !ability.ableTo(update, new Public(readonly: true))
+    assert ability.ableTo(update, new Public(readonly: false))
+  }
 }
 

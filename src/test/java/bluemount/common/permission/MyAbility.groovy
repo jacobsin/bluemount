@@ -6,10 +6,16 @@ import static bluemount.common.permission.Role.*
 
 @Mixin(Ability)
 class MyAbility {
+  def User user
+
   MyAbility(user) {
+    this.user = user
     can read, Public
     can read, [History, Confidential]
     can update, All
+    cannot([update,delete], Public) {
+      it.readonly
+    }
     cannot update, [History, User]
 
     switch(user.role) {
@@ -18,6 +24,9 @@ class MyAbility {
 
       case Admin:
         can manage, Public
+        can manage, Confidential, {
+          it.owner == user
+        }
         can update, User
         can([create, update], User)
         break
@@ -36,8 +45,13 @@ class MyAbility {
 
 }
 
-class Confidential {}
-class Public {}
+class Confidential {
+  User owner
+}
+class Public {
+  boolean readable
+  boolean readonly
+}
 class History {}
 
 enum Role {

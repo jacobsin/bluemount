@@ -7,7 +7,7 @@ import static bluemount.common.permission.MyAction.*
 import static bluemount.common.permission.Role.*
 
 class MyAbilityTest {
-  Map<String, Ability> abilities = [:]
+  Map<String, MyAbility> abilities = [:]
 
   @Before
   def void before() {
@@ -106,6 +106,24 @@ class MyAbilityTest {
     [User, History].each {
       assert !ability(Standard).ableTo(update, it)
     }
+  }
+
+  @Test
+  def void canRuleWithClosure() {
+    def ability = ability(Admin)
+    assert ability.ableTo(delete, new Confidential(owner: ability.user))
+    assert !ability.ableTo(delete, new Confidential(owner: new User()))
+  }
+
+  @Test
+  def void cannotRuleWithClosure() {
+    assert !ability(Standard).ableTo(update, new Public(readonly: true))
+    assert ability(Standard).ableTo(update, new Public(readonly: false))
+  }
+
+  @Test
+  def void cannotRuleWithClosureReturnFalseForClass() {
+    assert !ability(Standard).ableTo(delete, Public)
   }
 
   def ability(role) {

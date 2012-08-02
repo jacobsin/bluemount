@@ -4,12 +4,12 @@ package bluemount.common.permission
 class Ability {
   List<Rule> rules = []
 
-  void can(actions, subjects) {
-    rules << new Rule(baseBehaviour: true, actions: actions, subjects: subjects)
+  void can(actions, subjects, Closure block=null) {
+    rules << new Rule(baseBehaviour: true, actions: actions, subjects: subjects, block: block)
   }
 
-  void cannot(actions, subjects) {
-    rules << new Rule(baseBehaviour: false, actions: actions, subjects: subjects)
+  void cannot(actions, subjects, Closure block=null) {
+    rules << new Rule(baseBehaviour: false, actions: actions, subjects: subjects, block: block)
   }
 
   boolean ableTo(Action action, subject) {
