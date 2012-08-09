@@ -21,7 +21,7 @@ class FileUploadApiResource extends ServerResource {
 
     def uploaded = []
 
-    if (MediaType.MULTIPART_FORM_DATA.equals(entity.getMediaType(), true)) {
+    if (MediaType.MULTIPART_FORM_DATA.equals(entity.mediaType, true)) {
       def storeDirectory = new File("/tmp/")
 
       def factory = new DiskFileItemFactory()
