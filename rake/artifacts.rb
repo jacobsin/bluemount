@@ -2,11 +2,13 @@ ARTIFACTS = {
     :shipped => %w{
   org.eclipse.jetty.aggregate:jetty-webapp:7.6.0.v20120127
   commons-io:commons-io:2.3
+  commons-fileupload:commons-fileupload:1.2.2
   org.restlet.jee:org.restlet:2.1-RC5
   org.restlet.jee:org.restlet.ext.servlet:2.1-RC5
   org.restlet.jee:org.restlet.ext.jackson:2.1-RC5
   org.restlet.jee:org.restlet.ext.spring:2.1-RC5
   org.restlet.jee:org.restlet.ext.freemarker:2.1-RC5
+  org.restlet.jee:org.restlet.ext.fileupload:2.1-RC5
   org.freemarker:freemarker:2.3.19
   com.google.inject:guice:3.0
   com.google.inject.extensions:guice-servlet:3.0
