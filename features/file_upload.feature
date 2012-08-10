@@ -6,5 +6,5 @@ Feature: File Upload
   Scenario: upload file
     When I upload test.txt
     Then it should give these:
-      | name     | contentType | size | fieldName |
-      | test.txt | text/plain  | 28   | myfile    |
+      | name     | contentType | size             | fieldName |
+      | test.txt | text/plain  | size of test.txt | myfile    |

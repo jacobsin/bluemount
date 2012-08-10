@@ -18,7 +18,7 @@ class RunJetty {
   private int port
 
   static void main(String[] args) throws Exception {
-    new RunJetty(3000).start(true)
+    new RunJetty(4000).start(true)
   }
 
   RunJetty(int port) throws IOException {

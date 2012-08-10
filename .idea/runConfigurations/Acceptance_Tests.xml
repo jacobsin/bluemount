@@ -2,7 +2,7 @@
   <configuration default="false" name="Acceptance Tests" type="CucumberRunConfigurationType" factoryName="Cucumber">
     <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
     <module name="bluemount" />
-    <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="`" />
+    <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-J-server -J-Xms64m -J-Xmx256m -J-XX:MaxPermSize=128m -J-XX:+UseConcMarkSweepGC -J-XX:+CMSClassUnloadingEnabled -J-Duser.timezone=UTC -J-Dfile.encoding=UTF-8 -J-Djava.util.logging.config.file=src/test/resources/logging.properties -J-Dlogback.access.config.file=src/main/resources/logback-access.xml -J-Xdebug -J-Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005" />
     <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$/" />
     <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
     <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />

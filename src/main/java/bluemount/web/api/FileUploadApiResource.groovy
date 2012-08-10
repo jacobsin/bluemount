@@ -22,7 +22,7 @@ class FileUploadApiResource extends ServerResource {
     def uploaded = []
 
     if (MediaType.MULTIPART_FORM_DATA.equals(entity.mediaType, true)) {
-      def storeDirectory = new File("/tmp/")
+      def storeDirectory = storeDirectory
 
       def factory = new DiskFileItemFactory()
       factory.sizeThreshold = 1000240
@@ -39,5 +39,11 @@ class FileUploadApiResource extends ServerResource {
     }
 
     new JacksonRepresentation(uploaded)
+  }
+
+  private File getStoreDirectory() {
+    def tmpDir = new File("/tmp/")
+    if (!tmpDir.exists()) tmpDir = new File("c:/temp/")
+    tmpDir
   }
 }
