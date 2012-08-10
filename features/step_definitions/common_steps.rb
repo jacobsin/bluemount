@@ -7,4 +7,9 @@ end
 Then /^it should give at least these:$/ do |expected|
   actual = Cucumber::Ast::Table.new @result
   expected.diff!(actual, {:surplus_row => false})
+  end
+
+Then /^it should give these:$/ do |expected|
+  actual = Cucumber::Ast::Table.new @result
+  expected.diff!(actual, {:surplus_row => true})
 end

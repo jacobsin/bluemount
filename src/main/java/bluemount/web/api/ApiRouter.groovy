@@ -14,5 +14,6 @@ class ApiRouter extends GuiceRouter {
   protected void attachRoutes() {
     attach("/projects/{projectType}", ProjectsApiResource)
     attach("/projects", ProjectsApiResource)
+    attach("/fileupload", FileUploadApiResource)
   }
 }
