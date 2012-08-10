@@ -1,12 +1,54 @@
 <configuration scan="true">
   <!--<statusListener class="ch.qos.logback.core.status.OnConsoleStatusListener" />-->
+  <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator"/>
   <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
     <encoder>
       <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{15} - %msg%n</pattern>
     </encoder>
   </appender>
 
-  <root level="info">
+  <appender name="bluemount" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>logs/bluemount.log</file>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <!-- daily rollover -->
+      <fileNamePattern>logs/bluemount.%d{yyyy-MM-dd}.log.zip</fileNamePattern>
+
+      <!-- keep 5 days' worth of history -->
+      <maxHistory>5</maxHistory>
+    </rollingPolicy>
+
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{15} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <appender name="api" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>logs/api.log</file>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <!-- daily rollover -->
+      <fileNamePattern>logs/api.%d{yyyy-MM-dd}.log.zip</fileNamePattern>
+
+      <!-- keep 5 days' worth of history -->
+      <maxHistory>5</maxHistory>
+    </rollingPolicy>
+
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{15} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <logger name="bluemount" level="INFO"/>
+  <logger name="org.eclipse.jetty" level="INFO"/>
+  <logger name="org.springframework.web" level="INFO"/>
+
+  <logger name="bluemount.web.api" level="DEBUG" additivity="false">
+    <appender-ref ref="api" />
+  </logger>
+
+  <logger name="de.devsurf.injection.guice.scanner.asm.ASMClasspathScanner" level="TRACE"/>
+
+  <root level="WARN">
+    <appender-ref ref="bluemount" />
     <appender-ref ref="console" />
   </root>
 </configuration>

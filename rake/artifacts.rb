@@ -17,6 +17,8 @@ ARTIFACTS = {
   de.devsurf.injection.guice.scanner:de.devsurf.injection.guice.scanner.asm:0.8.7
   org.codehaus.groovy:groovy-all:1.8.6
   org.slf4j:slf4j-api:1.6.1
+  org.slf4j:jul-to-slf4j:1.6.1
+  org.slf4j:jcl-over-slf4j:1.6.1
   ch.qos.logback:logback-core:0.9.27
   ch.qos.logback:logback-classic:0.9.27
   ch.qos.logback:logback-access:0.9.27

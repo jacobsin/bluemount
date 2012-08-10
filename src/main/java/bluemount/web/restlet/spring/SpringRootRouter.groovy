@@ -1,8 +1,10 @@
 package bluemount.web.restlet.spring
 
-import javax.servlet.ServletContext
+import bluemount.web.restlet.filters.Filters
 import org.restlet.Context
 import org.restlet.resource.Directory
+
+import javax.servlet.ServletContext
 
 class SpringRootRouter extends SpringRouter {
 
@@ -14,7 +16,7 @@ class SpringRootRouter extends SpringRouter {
   protected void attachRoutes() {
     def web = new SpringUiRouter(servletContext, context)
     attach("/web", web)
-    attach("/api", new SpringApiRouter(servletContext, context))
+    attach("/api", Filters.api(new SpringApiRouter(servletContext, context), context))
     attach("/assets", new Directory(context, "war:///assets/"))
     attachDefault(web)
   }
