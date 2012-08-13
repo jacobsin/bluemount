@@ -10,5 +10,5 @@
     [/#foreach]
   </ul>
 
-</div> <!-- /container -->
+</div>
 [/@base_layout]

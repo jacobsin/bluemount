@@ -4,12 +4,12 @@ class TestFiles
       "#{File.dirname(__FILE__)}/../files/#{filename}"
     end
 
-    def size(filename)
-      File.stat(path(filename)).size
+    def file(filename)
+      File.new(path(filename), 'rb')
     end
 
-    def file(filename, mode)
-      File.new(path(filename), mode)
+    def size(filename)
+      File.stat(path(filename)).size
     end
   end
 end
