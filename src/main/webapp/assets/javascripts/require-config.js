@@ -2,6 +2,7 @@ var require = require || {};
 require.baseUrl = '/assets/javascripts/lib';
 require.paths = {
   app:'../app',
+  template:'../plugins/template',
   templates:'../templates'
 };
 require.shim = {

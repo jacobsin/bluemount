@@ -9,6 +9,10 @@ define(['underscore', 'super'], function () {
       this.templates[name] = _.template(templateSrc);
     },
 
+    get:function (name) {
+      return this.templates[name];
+    },
+
     apply:function (name, context) {
       return this.templates[name](context);
     }
