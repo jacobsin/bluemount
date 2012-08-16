@@ -21,6 +21,6 @@ class UiRouter extends GuiceRouter {
     attach("/projects", ProjectsUiResource)
     attach("/{path}", StaticUiResource).template.variables['path'] = new Variable(Variable.TYPE_URI_PATH)
     attach("/index", HomeUiResource)
-    attach("/", new Redirector(context, "/index", Redirector.MODE_CLIENT_PERMANENT))
+    attach("/", new Redirector(context, "/guice/index", Redirector.MODE_CLIENT_PERMANENT))
   }
 }

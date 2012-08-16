@@ -1,7 +1,7 @@
 require 'ant'
 
 namespace :rjs do
-  jvm_args = %w{}
+  jvm_args = %w{-Xmx256m}
   args = %w{r.js -o app.build.js}
 
   task :optimize do
