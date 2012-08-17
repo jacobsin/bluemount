@@ -16,6 +16,9 @@
           </value>
         </option>
         <option name="HTML_ATTRIBUTE_WRAP" value="0" />
+        <JSCodeStyleSettings>
+          <option name="SPACE_AFTER_PROPERTY_COLON" value="true" />
+        </JSCodeStyleSettings>
         <XML>
           <option name="XML_LEGACY_SETTINGS_IMPORTED" value="true" />
         </XML>
