@@ -10,10 +10,7 @@
   //optimize: 'none',
 
   paths: {
-    jquery: 'empty:',
-    app: '../app',
-    template:'../plugins/template',
-    templates:'../templates'
+    jquery: 'empty:'
   },
 
   inlineText: true,

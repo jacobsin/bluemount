@@ -3,14 +3,15 @@
 <!-- Le javascript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-[#-- TODO enable cache busting by app version
+[#assign cacheBusting=true]
+[#if cacheBusting]
 <script type="text/javascript">
   var require = {
     urlArgs: "bust=" +  (new Date()).getTime()
   };
 </script>
---]
-<script src="/assets/javascripts/require-config.js"></script>
+[/#if]
 <script src="/assets/javascripts/require-jquery.js"></script>
-[#nested]
+<script src="/assets/javascripts/require-config.js"></script>
+  [#nested]
 [/#macro]
