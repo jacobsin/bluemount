@@ -18,11 +18,8 @@
   modules: [
     //Optimize the application files. jQuery is not
     //included since it is already in require-jquery.js
-//    {
-//      name: 'app'
-//    },
     {
-      name: 'app/package/document_diff_view'
+      name: 'app'
     }
   ]
 })
