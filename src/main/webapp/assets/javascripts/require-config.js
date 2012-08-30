@@ -2,6 +2,7 @@ require.config({
   baseUrl : '/assets/javascripts/lib',
   paths : {
     app:'../app',
+    text:'../plugins/text',
     template:'../plugins/template',
     templates:'../templates'
   },
