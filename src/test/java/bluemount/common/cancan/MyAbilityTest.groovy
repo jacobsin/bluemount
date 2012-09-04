@@ -1,10 +1,10 @@
-package bluemount.common.permission
+package bluemount.common.cancan
 
 import org.junit.Before
 import org.junit.Test
 
-import static bluemount.common.permission.MyAction.*
-import static bluemount.common.permission.Role.*
+import static bluemount.common.cancan.MyAction.*
+import static bluemount.common.cancan.Role.*
 
 class MyAbilityTest {
   Map<String, MyAbility> abilities = [:]

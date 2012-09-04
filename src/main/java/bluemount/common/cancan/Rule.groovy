@@ -1,11 +1,12 @@
-package bluemount.common.permission
+package bluemount.common.cancan
 
-import static bluemount.common.permission.Action.manage
+import groovy.transform.ToString
 
+@ToString
 class Rule {
   boolean baseBehaviour
-  private List<Action> actions = []
-  private List<Class> subjects
+  List<Action> actions = []
+  List<Class> subjects
   private Closure block
 
   boolean matchesConditions(Action action, subject) {
@@ -18,7 +19,7 @@ class Rule {
   }
 
   private boolean matchesAction(Action action) {
-    (this.actions.contains(manage) || this.actions.contains(action))
+    (this.actions.contains(Action.manage) || this.actions.contains(action))
   }
 
   void setActions(actions) {
@@ -28,6 +29,7 @@ class Rule {
   void setSubjects(subjects) {
     this.subjects = subjects instanceof Collection ? subjects.toList() : [subjects]
   }
+
 }
 
 class All {}

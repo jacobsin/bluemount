@@ -13,6 +13,6 @@ class SpringApiRouter extends SpringRouter {
   @Override
   protected void attachRoutes() {
     attach("/projects/{projectType}", ProjectsApiResource)
-    attach("/projects", ProjectsApiResource)
+    attach("/projects/", ProjectsApiResource)
   }
 }

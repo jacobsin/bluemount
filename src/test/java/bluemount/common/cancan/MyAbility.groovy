@@ -1,8 +1,8 @@
-package bluemount.common.permission
+package bluemount.common.cancan
 
-import static bluemount.common.permission.Action.manage
-import static bluemount.common.permission.MyAction.*
-import static bluemount.common.permission.Role.*
+import static bluemount.common.cancan.MyAction.*
+import static bluemount.common.cancan.Role.*
+import static bluemount.common.cancan.Action.*
 
 @Mixin(Ability)
 class MyAbility {

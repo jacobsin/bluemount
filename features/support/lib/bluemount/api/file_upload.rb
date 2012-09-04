@@ -1,16 +1,16 @@
-class FileUpload
-  @@path = '/api/fileupload'
+class FileUpload < Api
+  @path_template = '/api/fileupload/:id'
 
   class << self
 
     def upload(files)
       files = [files] if (files.is_a? File)
-      response = RestClient.post Application.uri(@@path), to_file_fields(files)
+      response = TestClient.post path, to_file_fields(files)
       JSON.parse(response.to_str)
     end
 
     def get(id)
-      response = RestClient.get Application.uri("#{@@path}/#{id}")
+      response = TestClient.get path({:id=>id})
     end
 
     def to_file_fields(files)

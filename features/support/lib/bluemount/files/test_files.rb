@@ -1,7 +1,7 @@
 class TestFiles
   class << self
     def path(filename)
-      "#{File.dirname(__FILE__)}/../files/#{filename}"
+      "#{File.dirname(__FILE__)}/#{filename}"
     end
 
     def file(filename)

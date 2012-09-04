@@ -3,12 +3,13 @@ require.config({
   paths : {
     test : '../../../../../test/javascripts/tests',
     sinon : '../../../../../test/javascripts/lib/sinon',
-    'sinon-qunit' :'../../../../../test/javascripts/lib/sinon-qunit',
+    'sinon-qunit' :'../../../../../test/javascripts/lib/sinon-qunit'
   },
   shim : {
     'sinon-qunit' : {
       deps : ['sinon']
     }
-  }
+  },
+  urlArgs: "bust=" +  (new Date()).getTime()
 });
 

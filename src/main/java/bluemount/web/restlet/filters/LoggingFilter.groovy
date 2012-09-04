@@ -38,7 +38,6 @@ class LoggingFilter extends Filter {
   }
 
   boolean shouldInclude(Representation entity) {
-    println entity.mediaType.mainType
     entity.available && entity.mediaType in includedMediaTypes
   }
 

@@ -32,6 +32,8 @@ directory test_classes_dir
 directory reports_dir
 directory reports_junit_dir
 
+#ENV.each {|key, value| puts "#{key} = #{value}" }
+
 CLEAN.include %w{build logs lib/**/*.jar}
 CLEAN.exclude 'lib/reference/ant.jar'
 CLEAN.exclude 'lib/reference/ant-launcher.jar'
@@ -138,9 +140,10 @@ namespace :test do
                   -Dlogback.access.config.file=logback-access.xml
                   -Djruby.home=#{jruby_home}}
 
-    cucumber_opts = %W{--format junit    --out #{reports_dir}/cucumber
-                       --format html     --out #{reports_dir}/cucumber/features.html
-                       --format pretty}
+    cucumber_opts = ENV['CUCUMBER_OPTS'] ? ENV['CUCUMBER_OPTS'].split(' '): %W{--expand --format pretty}
+
+    cucumber_opts += %W{--format junit    --out #{reports_dir}/cucumber
+                        --format html     --out #{reports_dir}/cucumber/features.html}
 
     ant.java(:classname => 'org.jruby.Main', :fork => true, :failonerror => true) do
       classpath do
@@ -152,6 +155,7 @@ namespace :test do
       arg :value => "cucumber"
       cucumber_opts.each { |v| arg :value => v }
       env :key => 'JRUBY_OPTS', :value => '--1.9'
+      env :key => 'TEAMCITY_RAKE_RUNNER_MODE', :value=>'buildserver' if ENV['CUCUMBER_OPTS']
     end
   end
 

@@ -6,6 +6,8 @@ logs/
 .idea/dictionaries/
 .idea/workspace.xml
 .idea/.rakeTasks
+!lib/reference/
+!lib/reference/mockito-groovy-support-1.0.jar
 lib/*
 .sass-cache/
 src/main/webapp/assets/stylesheets/*.css
