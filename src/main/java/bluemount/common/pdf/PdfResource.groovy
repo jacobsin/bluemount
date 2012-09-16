@@ -5,8 +5,8 @@ import org.apache.pdfbox.pdmodel.PDDocument
 
 
 @Category(PDDocument)
-class PDDocumentResource {
-  def <V> V use(Closure<V> closure) {
+class PdfResource {
+  def <V> V using(Closure<V> closure) {
     try {
       closure(this)
     } finally {
