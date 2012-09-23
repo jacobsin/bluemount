@@ -34,12 +34,12 @@ class ApprovalDocumentsGeneratorTest {
     assertPairs(documentSet.documentPairs)
   }
 
-//  @Test
-//  def void actorsGenerate() {
-//    generator = new ActorsBasedGenerator(generator)
-//    def documentSet = generator.generateDocuments()
-//    assertPairs(documentSet.documentPairs)
-//  }
+  @Test
+  def void actorsGenerate() {
+    generator = new ActorsBasedGenerator(generator)
+    def documentSet = generator.generateDocuments()
+    assertPairs(documentSet.documentPairs)
+  }
 
   private void assertPairs(List<DocumentPair> pairs) {
     assert pairs.size() == 72

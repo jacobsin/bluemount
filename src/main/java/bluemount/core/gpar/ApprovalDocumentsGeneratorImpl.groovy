@@ -2,6 +2,10 @@ package bluemount.core.gpar
 
 import bluemount.common.utils.Timing
 import groovyx.gpars.GParsExecutorsPool
+import groovyx.gpars.actor.Actor
+import groovyx.gpars.actor.DefaultActor
+
+import java.util.concurrent.CountDownLatch
 
 import static groovyx.gpars.GParsPool.withExistingPool
 import static groovyx.gpars.GParsPool.withPool
@@ -118,53 +122,151 @@ class ExecutorsBasedGenerator implements ApprovalDocumentsGenerator {
   }
 }
 
-//@ActiveObject
-//@Mixin(Timing)
-//class ActorsBasedGenerator implements ApprovalDocumentsGenerator {
-//
-//  ApprovalDocumentsGeneratorImpl decorated
-//
-//  ActorsBasedGenerator(ApprovalDocumentsGeneratorImpl decorated) {
-//    this.decorated = decorated
-//  }
-//
-//  void buildPairs(List<DocumentPair> pairs) {
-//    def built = []
-//    pairs.each {pair->
-//      built << this.buildPair(pair)
-//    }
-//    built*.get()
-//  }
-//
-//  @ActiveMethod
-//  def buildPair(DocumentPair pair) {
-//    pair.before = generate(pair.documentType, pair.permutation, "prod").get()
-//    pair.after = generate(pair.documentType, pair.permutation, "dev").get()
-//    pair.diffResult = diff(pair).get()
-//    pair
-//  }
-//
-//  @ActiveMethod
-//  def generate(String documentType, String permutation, String env) {
-//    decorated.generate(documentType, permutation, env)
-//  }
-//
-//  @ActiveMethod
-//  def diff(DocumentPair pair) {
-//    decorated.diff(pair)
-//  }
-//
-//  @Override
-//  DocumentSet generateDocuments() {
-//    timed {
-//      def pairs = decorated.initPairs()
-//      buildPairs(pairs)
-//      new DocumentSet(documentPairs: pairs)
-//    }
-//  }
-//}
+class Generator extends DefaultActor {
+  ApprovalDocumentsGeneratorImpl decorated
 
+  void act() {
+    loop {
+      react {msg->
+        switch(msg) {
+          case GenerateRequest:
+            def request = msg as GenerateRequest
+            def pair = request.pair
+            pair[request.side] = decorated.generate(pair.documentType, pair.permutation, request.env)
+            reply pair
+        }
+      }
+    }
+  }
+}
 
+class Differ extends DefaultActor {
+  ApprovalDocumentsGeneratorImpl decorated
+
+  void act() {
+    loop {
+      react {msg->
+        switch(msg) {
+          case DocumentPair:
+            def pair = msg as DocumentPair
+            pair.diffResult =  decorated.diff(msg)
+            reply pair
+        }
+      }
+    }
+  }
+}
+
+class PairBuilder extends DefaultActor {
+  ApprovalDocumentsGeneratorImpl decorated
+  Actor generator1
+  Actor generator2
+  Actor differ
+  Actor master
+
+  void beginWorks() {
+    createWorkers()
+  }
+
+  void createWorkers() {
+    generator1 = new Generator(decorated: decorated).start()
+    generator2 = new Generator(decorated: decorated).start()
+    differ = new Differ(decorated: decorated).start()
+  }
+
+  void act() {
+    beginWorks()
+    loop {
+      react {msg->
+        switch (msg) {
+          case DocumentPair:
+            def pair = msg as DocumentPair
+            if (!pair.before) generator1 << new GenerateRequest(pair: pair, side: "before", env: "prod")
+            if (pair.before && !pair.after) generator2 << new GenerateRequest(pair: pair, side: "after", env: "dev")
+            if (pair.before && pair.after && !pair.diffSet) differ << pair
+            if (pair.diffSet) master <<  pair
+        }
+      }
+    }
+  }
+}
+
+class Master extends DefaultActor {
+  ApprovalDocumentsGeneratorImpl decorated
+  List<DocumentPair> pairs
+
+  int numWorkers = 1
+
+  private CountDownLatch startupLatch = new CountDownLatch(1)
+  private CountDownLatch doneLatch
+
+  void beginGenerating() {
+    int count = sendTasksToWorkers()
+    doneLatch = new CountDownLatch(count)
+  }
+
+  int sendTasksToWorkers() {
+    List<Actor> workers = createWorkers()
+    int count = 0
+    pairs.each{pair->
+      workers[count % numWorkers] << pair
+      count ++
+    }
+    count
+  }
+
+  List<Actor> createWorkers() {
+    (1..numWorkers).collect {new PairBuilder(decorated: decorated, master: this).start()}
+  }
+
+  void waitUntilDone() {
+    startupLatch.await()
+    doneLatch.await()
+  }
+
+  void act() {
+    beginGenerating()
+    startupLatch.countDown()
+    loop {
+      react {msg->
+        switch(msg) {
+          case DocumentPair:
+            doneLatch.countDown()
+        }
+      }
+    }
+  }
+}
+
+@Mixin(Timing)
+class ActorsBasedGenerator implements ApprovalDocumentsGenerator {
+
+  ApprovalDocumentsGeneratorImpl decorated
+
+  ActorsBasedGenerator(ApprovalDocumentsGeneratorImpl decorated) {
+    this.decorated = decorated
+  }
+
+  void buildPairs(List<DocumentPair> pairs) {
+    def master = new Master(pairs: pairs, decorated: decorated, numWorkers: 20).start()
+    master.waitUntilDone()
+  }
+
+  @Override
+  DocumentSet generateDocuments() {
+    timed {
+      def pairs = decorated.initPairs()
+      buildPairs(pairs)
+      new DocumentSet(documentPairs: pairs)
+    }
+  }
+}
+
+class GenerateRequest {
+  DocumentPair pair
+  String side
+  String env
+}
 
 @Mixin(Timing)
 class DocumentGenerator {
