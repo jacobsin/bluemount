@@ -4,19 +4,43 @@ import org.junit.Before
 import org.junit.Test
 
 class ApprovalDocumentsGeneratorTest {
-  ApprovalDocumentsGenerator generator
+  def generator
   DocumentGenerator documentGenerator = new DocumentGenerator()
   DocumentDiffer documentDiffer = new DocumentDiffer()
 
   @Before
   def void before() {
-    generator = new ApprovalDocumentsGenerator(documentGenerator, documentDiffer)
+    generator = new ApprovalDocumentsGeneratorImpl(documentGenerator, documentDiffer)
   }
 
   @Test
   def void sequentialGenerate() {
     def documentSet = generator.generateDocuments()
-    def pairs = documentSet.documentPairs
+    assertPairs(documentSet.documentPairs)
+  }
+
+  @Test
+  def void parallelCollectionGenerate() {
+    generator = new ParallelCollectionBasedGenerator(generator)
+    def documentSet = generator.generateDocuments()
+    assertPairs(documentSet.documentPairs)
+  }
+
+  @Test
+  def void executorsGenerate() {
+    generator = new ExecutorsBasedGenerator(generator)
+    def documentSet = generator.generateDocuments()
+    assertPairs(documentSet.documentPairs)
+  }
+
+//  @Test
+//  def void actorsGenerate() {
+//    generator = new ActorsBasedGenerator(generator)
+//    def documentSet = generator.generateDocuments()
+//    assertPairs(documentSet.documentPairs)
+//  }
+
+  private void assertPairs(List<DocumentPair> pairs) {
     assert pairs.size() == 72
     assert pairs.every {it.before}
     assert pairs.every {it.after}

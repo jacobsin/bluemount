@@ -23,6 +23,7 @@ ARTIFACTS = {
   ch.qos.logback:logback-classic:0.9.27
   ch.qos.logback:logback-access:0.9.27
   org.apache.pdfbox:pdfbox:1.7.1
+  org.codehaus.gpars:gpars:0.12
 },
     :reference => %w{
   junit:junit:4.10
