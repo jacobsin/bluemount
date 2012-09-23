@@ -1,6 +1,7 @@
 package bluemount.core.gpar
 
 import org.junit.Before
+import org.junit.Ignore
 import org.junit.Test
 
 class ApprovalDocumentsGeneratorTest {
@@ -13,7 +14,7 @@ class ApprovalDocumentsGeneratorTest {
     generator = new ApprovalDocumentsGeneratorImpl(documentGenerator, documentDiffer)
   }
 
-  @Test
+  @Test @Ignore('Too slow')
   def void sequentialGenerate() {
     def documentSet = generator.generateDocuments()
     assertPairs(documentSet.documentPairs)
