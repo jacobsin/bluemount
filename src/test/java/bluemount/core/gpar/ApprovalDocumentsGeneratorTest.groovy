@@ -1,5 +1,6 @@
 package bluemount.core.gpar
 
+import bluemount.core.gpar.actors.ActorsBasedGenerator
 import org.junit.Before
 import org.junit.Ignore
 import org.junit.Test
