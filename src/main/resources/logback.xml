@@ -37,9 +37,29 @@
     </encoder>
   </appender>
 
+  <appender name="timing" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>logs/timing.log</file>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <!-- daily rollover -->
+      <fileNamePattern>logs/timing.%d{yyyy-MM-dd}.log.zip</fileNamePattern>
+
+      <!-- keep 5 days' worth of history -->
+      <maxHistory>5</maxHistory>
+    </rollingPolicy>
+
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{15} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
   <logger name="bluemount" level="INFO"/>
   <logger name="org.eclipse.jetty" level="INFO"/>
   <logger name="org.springframework.web" level="INFO"/>
+
+  <logger name="bluemount.common.utils.Timing" level="DEBUG" additivity="false">
+    <appender-ref ref="timing" />
+    <appender-ref ref="console" />
+  </logger>
 
   <logger name="bluemount.web.api" level="DEBUG" additivity="false">
     <appender-ref ref="api" />
